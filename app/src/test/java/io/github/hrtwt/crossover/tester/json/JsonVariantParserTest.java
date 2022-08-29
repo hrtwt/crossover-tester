@@ -6,18 +6,18 @@ import java.nio.file.Paths;
 import java.util.List;
 import org.junit.Test;
 
-public class JsonImporterTest {
+public class JsonVariantParserTest {
 
   @Test
-  public void testImportAdam() throws Exception {
+  public void testParseAdam() throws Exception {
     final String json = Files.readString(Paths.get("../example/ABC139_A/variants.json"));
-    final JsonVariant adam = JsonImporter.importAdam(json);
+    final JsonVariant adam = JsonVariantParser.parseAdam(json);
   }
 
   @Test
-  public void testImportComplementaryVariants() throws Exception {
+  public void testParseComplementaryVariants() throws Exception {
     final String json = Files.readString(Paths.get("../example/ABC139_A/variants.json"));
-    final List<JsonVariant> parents = JsonImporter.importComplementaryVariants(json);
+    final List<JsonVariant> parents = JsonVariantParser.parseComplementaryVariants(json);
     assertThat(parents).hasSize(2);
   }
 }

@@ -9,7 +9,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import io.github.hrtwt.crossover.tester.json.JsonVariant.JsonBase;
 
-public class JsonImporter {
+public class JsonVariantParser {
 
   public static Gson setupGson() {
     return new GsonBuilder()
@@ -18,26 +18,26 @@ public class JsonImporter {
         .create();
   }
 
-  public static JsonVariant importVariant(final String json) {
+  public static JsonVariant parseVariant(final String json) {
     return setupGson().fromJson(json, JsonVariant.class);
   }
 
-  public static JsonVariant importVariant(final JsonElement json) {
+  public static JsonVariant parseVariant(final JsonElement json) {
     return setupGson().fromJson(json, JsonVariant.class);
   }
 
-  public static JsonVariant importAdam(final String json) {
+  public static JsonVariant parseAdam(final String json) {
     final JsonObject variants = new Gson().fromJson(json, JsonObject.class);
-    return JsonImporter.importVariant(variants.get("adam"));
+    return JsonVariantParser.parseVariant(variants.get("adam"));
   }
 
-  public static List<JsonVariant> importComplementaryVariants(final String json) {
+  public static List<JsonVariant> parseComplementaryVariants(final String json) {
     final JsonObject variants = new Gson().fromJson(json, JsonObject.class);
     final JsonArray parents = variants.get("parents").getAsJsonArray();
 
     final List<JsonVariant> ret = new ArrayList<>();
     for (final JsonElement e : parents) {
-      final JsonVariant parent = JsonImporter.importVariant(e);
+      final JsonVariant parent = JsonVariantParser.parseVariant(e);
       ret.add(parent);
     }
     return ret;
