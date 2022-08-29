@@ -10,6 +10,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+import io.github.hrtwt.crossover.tester.json.JsonVariant.JsonVariantBuilder;
 import jp.kusumotolab.kgenprog.project.TestFullyQualifiedName;
 
 public class VariantDeserializer implements JsonDeserializer<JsonVariant> {
@@ -18,28 +19,31 @@ public class VariantDeserializer implements JsonDeserializer<JsonVariant> {
   public JsonVariant deserialize(
       final JsonElement json, final Type type, final JsonDeserializationContext context)
       throws JsonParseException {
-    final JsonVariant variant = new JsonVariant();
-
     JsonObject obj = (JsonObject) json;
-
-    variant.id = obj.get("id").getAsLong();
-    variant.generationNumber = obj.get("generationNumber").getAsInt();
-    variant.bases =
-        context.deserialize(
-            obj.get("bases"), new TypeToken<Collection<JsonVariant.JsonBase>>() {}.getType());
-    variant.generatedSourceCode =
-        context.deserialize(
-            obj.get("generatedSourceCode"), new TypeToken<Collection<String>>() {}.getType());
+    final JsonVariantBuilder variantBuilder =
+        JsonVariant.builder()
+            .id(obj.get("id").getAsLong())
+            .generationNumber(obj.get("generationNumber").getAsInt())
+            .bases(
+                context.deserialize(
+                    obj.get("bases"),
+                    new TypeToken<Collection<JsonVariant.JsonBase>>() {}.getType()))
+            .generatedSourceCode(
+                context.deserialize(
+                    obj.get("generatedSourceCode"),
+                    new TypeToken<Collection<String>>() {}.getType()));
 
     final JsonObject testResults = (JsonObject) obj.get("testResults");
-    variant.testSuccessRate = testResults.get("successRate").getAsDouble();
-    variant.executedTestsCount = testResults.get("executedTestsCount").getAsInt();
-    variant.testResults = parseTestResults(testResults.get("testResults"));
+    variantBuilder
+        .testSuccessRate(testResults.get("successRate").getAsDouble())
+        .executedTestsCount(testResults.get("executedTestsCount").getAsInt())
+        .testResults(parseTestResults(testResults.get("testResults")));
 
-    variant.fitness = obj.get("fitness").getAsDouble();
-    variant.selectionCount = obj.get("selectionCount").getAsInt();
+    variantBuilder
+        .fitness(obj.get("fitness").getAsDouble())
+        .selectionCount(obj.get("selectionCount").getAsInt());
 
-    return variant;
+    return variantBuilder.build();
   }
 
   private Map<TestFullyQualifiedName, Boolean> parseTestResults(final JsonElement je) {

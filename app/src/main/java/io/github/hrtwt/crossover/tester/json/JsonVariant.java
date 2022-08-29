@@ -4,29 +4,35 @@ import java.util.List;
 import java.util.Map;
 import io.github.hrtwt.crossover.tester.kgp.OperationType;
 import jp.kusumotolab.kgenprog.project.TestFullyQualifiedName;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 
+@Builder
+@EqualsAndHashCode
 public class JsonVariant {
 
-  public long id;
-  public int generationNumber;
+  public final long id;
+  public final int generationNumber;
 
-  public List<JsonBase> bases;
+  public final List<JsonBase> bases;
 
-  public List<String> generatedSourceCode;
+  public final List<String> generatedSourceCode;
 
-  public double testSuccessRate;
-  public int executedTestsCount;
-  public Map<TestFullyQualifiedName, Boolean> testResults;
-  public double fitness;
-  public int selectionCount;
+  public final double testSuccessRate;
+  public final int executedTestsCount;
+  public final Map<TestFullyQualifiedName, Boolean> testResults;
+  public final double fitness;
+  public final int selectionCount;
 
+  @Builder
+  @EqualsAndHashCode
   public static class JsonBase {
 
-    public OperationType operationType;
-    public String sourcePath;
-    public String snippet;
-    public int startLineNo;
-    public int endLineNo;
-    public int baseIdentityHashCode;
+    public final OperationType operationType;
+    public final String sourcePath;
+    public final String snippet;
+    public final int startLineNo;
+    public final int endLineNo;
+    public final int baseIdentityHashCode;
   }
 }
