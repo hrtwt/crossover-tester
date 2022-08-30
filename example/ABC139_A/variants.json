@@ -15,8 +15,8 @@
       "parentIds": [],
       "name": ""
     },
-    "isSyntaxValid": true,
     "isBuildSuccess": true,
+    "isSyntaxValid": true,
     "patch": [],
     "fitness": 0.21428571428571427,
     "testResults": {
@@ -87,6 +87,202 @@
       "testResultsSingle": {},
       "fitnessSingle": {},
       "suspiciousnessListSingle": {},
+      "id": 105,
+      "generationNumber": 6,
+      "bases": [
+        {
+          "name": "insert_after",
+          "fileName": "src\\example\\ABC139_A.java",
+          "snippet": "if (X.charAt(0) == Y.charAt(0)) {\n}\n",
+          "lineNumberRange": {
+            "start": 6,
+            "end": 6
+          },
+          "identityHashCode": 253298631,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "src\\example\\ABC139_A.java",
+          "snippet": "",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 8
+          },
+          "identityHashCode": 1017677428,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "src\\example\\ABC139_A.java",
+          "snippet": "if (X.charAt(2) == Y.charAt(2)) {\n}\n",
+          "lineNumberRange": {
+            "start": 6,
+            "end": 6
+          },
+          "identityHashCode": 1683487513,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "src\\example\\ABC139_A.java",
+          "snippet": "",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 8
+          },
+          "identityHashCode": 544354189,
+          "snippetNodeType": 21
+        }
+      ],
+      "generatedSourceCode": [
+        "package example;\n\npublic class ABC139_A {\n\n  public static int solveA(String X, String Y) {\n    int n = 0;\n\t/*1683487513*/ if (X.charAt(2) == Y.charAt(2)) {\n\t\t/*544354189*/ ++n;\n\t\t\n\t}\n\t\n\t/*253298631*/ if (X.charAt(0) == Y.charAt(0)) {\n\t\t/*1017677428*/ ++n;\n\t\t\n\t}\n\t\n    return n;\n  }\n\n  public static int abc139a(String X, String Y) {\n    int n = 0;\n    if (X.charAt(0) == Y.charAt(0)) {\n    }\n    if (X.charAt(1) == Y.charAt(1)) {\n    }\n    if (X.charAt(2) == Y.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n    return n;\n  }\n}\n"
+      ],
+      "parentTestResults": [
+        {
+          "successRate": 0.2857142857142857,
+          "executedTestsCount": 14,
+          "testResults": [
+            {
+              "fqn": "example.ABC139_ATest.test0",
+              "isSuccess": true
+            },
+            {
+              "fqn": "example.ABC139_ATest.test1",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test10",
+              "isSuccess": true
+            },
+            {
+              "fqn": "example.ABC139_ATest.test11",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test12",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test13",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test2",
+              "isSuccess": true
+            },
+            {
+              "fqn": "example.ABC139_ATest.test3",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test4",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test5",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test6",
+              "isSuccess": true
+            },
+            {
+              "fqn": "example.ABC139_ATest.test7",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test8",
+              "isSuccess": false
+            },
+            {
+              "fqn": "example.ABC139_ATest.test9",
+              "isSuccess": false
+            }
+          ]
+        }
+      ],
+      "selectionCount": 5,
+      "operation": {
+        "parentIds": [],
+        "name": ""
+      },
+      "isBuildSuccess": true,
+      "isSyntaxValid": true,
+      "patch": [
+        {
+          "fileName": "example.ABC139_A",
+          "diff": "--- example.ABC139_A\n+++ example.ABC139_A\n@@ -4,6 +4,16 @@\n \n   public static int solveA(String X, String Y) {\n     int n = 0;\n+\t/*1683487513*/ if (X.charAt(2) == Y.charAt(2)) {\n+\t\t/*544354189*/ ++n;\n+\t\t\n+\t}\n+\t\n+\t/*253298631*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t\t/*1017677428*/ ++n;\n+\t\t\n+\t}\n+\t\n     return n;\n   }\n "
+        }
+      ],
+      "fitness": 0.42857142857142855,
+      "testResults": {
+        "successRate": 0.42857142857142855,
+        "executedTestsCount": 14,
+        "testResults": [
+          {
+            "fqn": "example.ABC139_ATest.test0",
+            "isSuccess": true
+          },
+          {
+            "fqn": "example.ABC139_ATest.test1",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test10",
+            "isSuccess": true
+          },
+          {
+            "fqn": "example.ABC139_ATest.test11",
+            "isSuccess": true
+          },
+          {
+            "fqn": "example.ABC139_ATest.test12",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test13",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test2",
+            "isSuccess": true
+          },
+          {
+            "fqn": "example.ABC139_ATest.test3",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test4",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test5",
+            "isSuccess": true
+          },
+          {
+            "fqn": "example.ABC139_ATest.test6",
+            "isSuccess": true
+          },
+          {
+            "fqn": "example.ABC139_ATest.test7",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test8",
+            "isSuccess": false
+          },
+          {
+            "fqn": "example.ABC139_ATest.test9",
+            "isSuccess": false
+          }
+        ]
+      }
+    },
+    {
+      "testResultsSingle": {},
+      "fitnessSingle": {},
+      "suspiciousnessListSingle": {},
       "id": 163,
       "generationNumber": 10,
       "bases": [
@@ -98,7 +294,8 @@
             "start": 6,
             "end": 6
           },
-          "identityHashCode": 1037558834
+          "identityHashCode": 948379588,
+          "snippetNodeType": 25
         },
         {
           "name": "insert_after",
@@ -108,7 +305,8 @@
             "start": 6,
             "end": 6
           },
-          "identityHashCode": 1600149453
+          "identityHashCode": 1916613252,
+          "snippetNodeType": 21
         },
         {
           "name": "insert_before",
@@ -118,7 +316,8 @@
             "start": 12,
             "end": 12
           },
-          "identityHashCode": 1837356392
+          "identityHashCode": 1202496532,
+          "snippetNodeType": 25
         },
         {
           "name": "insert_before",
@@ -128,7 +327,8 @@
             "start": 15,
             "end": 15
           },
-          "identityHashCode": 511205039
+          "identityHashCode": 1828589800,
+          "snippetNodeType": 25
         },
         {
           "name": "insert_before",
@@ -138,7 +338,8 @@
             "start": 18,
             "end": 18
           },
-          "identityHashCode": 1017367164
+          "identityHashCode": 965643208,
+          "snippetNodeType": 25
         },
         {
           "name": "insert_into_block",
@@ -148,11 +349,12 @@
             "start": 12,
             "end": 13
           },
-          "identityHashCode": 441487221
+          "identityHashCode": 2023036551,
+          "snippetNodeType": 21
         }
       ],
       "generatedSourceCode": [
-        "package example;\n\npublic class ABC139_A {\n\n  public static int solveA(String X, String Y) {\n    /*1037558834*/ if (X.charAt(1) == Y.charAt(1)) {\n\t}\n\t\n\tint n = 0;\n\t/*1600149453*/ ++n;\n\t\n    /*1837356392*/ if (X.charAt(0) == Y.charAt(0)) {\n\t\t/*441487221*/ ++n;\n\t\t\n\t}\n\t\n\t/*511205039*/ if (X.charAt(0) == Y.charAt(0)) {\n\t}\n\t\n\t/*1017367164*/ if (X.charAt(0) == Y.charAt(0)) {\n\t}\n\t\n\treturn n;\n  }\n\n  public static int abc139a(String X, String Y) {\n    int n = 0;\n    if (X.charAt(0) == Y.charAt(0)) {\n    }\n    if (X.charAt(1) == Y.charAt(1)) {\n    }\n    if (X.charAt(2) == Y.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n    return n;\n  }\n}\n"
+        "package example;\n\npublic class ABC139_A {\n\n  public static int solveA(String X, String Y) {\n    /*948379588*/ if (X.charAt(1) == Y.charAt(1)) {\n\t}\n\t\n\tint n = 0;\n\t/*1916613252*/ ++n;\n\t\n    /*1202496532*/ if (X.charAt(0) == Y.charAt(0)) {\n\t\t/*2023036551*/ ++n;\n\t\t\n\t}\n\t\n\t/*1828589800*/ if (X.charAt(0) == Y.charAt(0)) {\n\t}\n\t\n\t/*965643208*/ if (X.charAt(0) == Y.charAt(0)) {\n\t}\n\t\n\treturn n;\n  }\n\n  public static int abc139a(String X, String Y) {\n    int n = 0;\n    if (X.charAt(0) == Y.charAt(0)) {\n    }\n    if (X.charAt(1) == Y.charAt(1)) {\n    }\n    if (X.charAt(2) == Y.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n    return n;\n  }\n}\n"
       ],
       "parentTestResults": [
         {
@@ -223,12 +425,12 @@
         "parentIds": [],
         "name": ""
       },
-      "isSyntaxValid": true,
       "isBuildSuccess": true,
+      "isSyntaxValid": true,
       "patch": [
         {
           "fileName": "example.ABC139_A",
-          "diff": "--- example.ABC139_A\n+++ example.ABC139_A\n@@ -3,8 +3,24 @@\n public class ABC139_A {\n \n   public static int solveA(String X, String Y) {\n-    int n = 0;\n-    return n;\n+    /*1037558834*/ if (X.charAt(1) == Y.charAt(1)) {\n+\t}\n+\t\n+\tint n = 0;\n+\t/*1600149453*/ ++n;\n+\t\n+    /*1837356392*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t\t/*441487221*/ ++n;\n+\t\t\n+\t}\n+\t\n+\t/*511205039*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t}\n+\t\n+\t/*1017367164*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t}\n+\t\n+\treturn n;\n   }\n \n   public static int abc139a(String X, String Y) {"
+          "diff": "--- example.ABC139_A\n+++ example.ABC139_A\n@@ -3,8 +3,24 @@\n public class ABC139_A {\n \n   public static int solveA(String X, String Y) {\n-    int n = 0;\n-    return n;\n+    /*948379588*/ if (X.charAt(1) == Y.charAt(1)) {\n+\t}\n+\t\n+\tint n = 0;\n+\t/*1916613252*/ ++n;\n+\t\n+    /*1202496532*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t\t/*2023036551*/ ++n;\n+\t\t\n+\t}\n+\t\n+\t/*1828589800*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t}\n+\t\n+\t/*965643208*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t}\n+\t\n+\treturn n;\n   }\n \n   public static int abc139a(String X, String Y) {"
         }
       ],
       "fitness": 0.42857142857142855,
@@ -291,198 +493,6 @@
           {
             "fqn": "example.ABC139_ATest.test9",
             "isSuccess": false
-          }
-        ]
-      }
-    },
-    {
-      "testResultsSingle": {},
-      "fitnessSingle": {},
-      "suspiciousnessListSingle": {},
-      "id": 164,
-      "generationNumber": 10,
-      "bases": [
-        {
-          "name": "insert_after",
-          "fileName": "src\\example\\ABC139_A.java",
-          "snippet": "if (X.charAt(0) == Y.charAt(0)) {\n}\n",
-          "lineNumberRange": {
-            "start": 6,
-            "end": 6
-          },
-          "identityHashCode": 306389902
-        },
-        {
-          "name": "insert_into_block",
-          "fileName": "src\\example\\ABC139_A.java",
-          "snippet": "",
-          "lineNumberRange": {
-            "start": 7,
-            "end": 8
-          },
-          "identityHashCode": 266102565
-        },
-        {
-          "name": "insert_before",
-          "fileName": "src\\example\\ABC139_A.java",
-          "snippet": "++n;\n",
-          "lineNumberRange": {
-            "start": 8,
-            "end": 8
-          },
-          "identityHashCode": 1927389870
-        },
-        {
-          "name": "insert_after",
-          "fileName": "src\\example\\ABC139_A.java",
-          "snippet": "++n;\n",
-          "lineNumberRange": {
-            "start": 6,
-            "end": 6
-          },
-          "identityHashCode": 1088394559
-        }
-      ],
-      "generatedSourceCode": [
-        "package example;\n\npublic class ABC139_A {\n\n  public static int solveA(String X, String Y) {\n    int n = 0;\n\t/*1088394559*/ ++n;\n\t\n\t/*306389902*/ if (X.charAt(0) == Y.charAt(0)) {\n\t\t/*1927389870*/ ++n;\n\t\t\n\t\t/*266102565*/ ++n;\n\t\t\n\t}\n\t\n    return n;\n  }\n\n  public static int abc139a(String X, String Y) {\n    int n = 0;\n    if (X.charAt(0) == Y.charAt(0)) {\n    }\n    if (X.charAt(1) == Y.charAt(1)) {\n    }\n    if (X.charAt(2) == Y.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n    return n;\n  }\n}\n"
-      ],
-      "parentTestResults": [
-        {
-          "successRate": 0.35714285714285715,
-          "executedTestsCount": 14,
-          "testResults": [
-            {
-              "fqn": "example.ABC139_ATest.test0",
-              "isSuccess": true
-            },
-            {
-              "fqn": "example.ABC139_ATest.test1",
-              "isSuccess": true
-            },
-            {
-              "fqn": "example.ABC139_ATest.test10",
-              "isSuccess": true
-            },
-            {
-              "fqn": "example.ABC139_ATest.test11",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test12",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test13",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test2",
-              "isSuccess": true
-            },
-            {
-              "fqn": "example.ABC139_ATest.test3",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test4",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test5",
-              "isSuccess": true
-            },
-            {
-              "fqn": "example.ABC139_ATest.test6",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test7",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test8",
-              "isSuccess": false
-            },
-            {
-              "fqn": "example.ABC139_ATest.test9",
-              "isSuccess": false
-            }
-          ]
-        }
-      ],
-      "selectionCount": 0,
-      "operation": {
-        "parentIds": [],
-        "name": ""
-      },
-      "isSyntaxValid": true,
-      "isBuildSuccess": true,
-      "patch": [
-        {
-          "fileName": "example.ABC139_A",
-          "diff": "--- example.ABC139_A\n+++ example.ABC139_A\n@@ -4,6 +4,15 @@\n \n   public static int solveA(String X, String Y) {\n     int n = 0;\n+\t/*1088394559*/ ++n;\n+\t\n+\t/*306389902*/ if (X.charAt(0) == Y.charAt(0)) {\n+\t\t/*1927389870*/ ++n;\n+\t\t\n+\t\t/*266102565*/ ++n;\n+\t\t\n+\t}\n+\t\n     return n;\n   }\n "
-        }
-      ],
-      "fitness": 0.5,
-      "testResults": {
-        "successRate": 0.5,
-        "executedTestsCount": 14,
-        "testResults": [
-          {
-            "fqn": "example.ABC139_ATest.test0",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test1",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test10",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test11",
-            "isSuccess": true
-          },
-          {
-            "fqn": "example.ABC139_ATest.test12",
-            "isSuccess": true
-          },
-          {
-            "fqn": "example.ABC139_ATest.test13",
-            "isSuccess": true
-          },
-          {
-            "fqn": "example.ABC139_ATest.test2",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test3",
-            "isSuccess": true
-          },
-          {
-            "fqn": "example.ABC139_ATest.test4",
-            "isSuccess": true
-          },
-          {
-            "fqn": "example.ABC139_ATest.test5",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test6",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test7",
-            "isSuccess": false
-          },
-          {
-            "fqn": "example.ABC139_ATest.test8",
-            "isSuccess": true
-          },
-          {
-            "fqn": "example.ABC139_ATest.test9",
-            "isSuccess": true
           }
         ]
       }

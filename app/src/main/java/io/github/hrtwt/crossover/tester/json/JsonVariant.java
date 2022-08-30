@@ -34,5 +34,6 @@ public class JsonVariant {
     public final int startLineNo;
     public final int endLineNo;
     public final int baseIdentityHashCode;
+    public final int snippetNodeType;
   }
 }

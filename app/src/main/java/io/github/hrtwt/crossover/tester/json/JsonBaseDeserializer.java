@@ -28,7 +28,8 @@ public class JsonBaseDeserializer implements JsonDeserializer<JsonVariant.JsonBa
     baseBuilder
         .startLineNo(lineRange.get("start").getAsInt())
         .endLineNo(lineRange.get("end").getAsInt())
-        .baseIdentityHashCode(obj.get("identityHashCode").getAsInt());
+        .baseIdentityHashCode(obj.get("identityHashCode").getAsInt())
+        .snippetNodeType(obj.get("snippetNodeType").getAsInt());
     return baseBuilder.build();
   }
 }
