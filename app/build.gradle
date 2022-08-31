@@ -24,6 +24,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.0.1-jre'
+    implementation 'org.eclipse.jdt:org.eclipse.jdt.core:3.13.102'
     implementation files('../lib/kGenProg.jar')
 }
 
