@@ -30,12 +30,12 @@ import jp.kusumotolab.kgenprog.project.test.TestResults;
 
 public class VariantBuilder {
 
-  public static List<Variant> makeVariants(
-      final Collection<JsonVariant> jsons, VariantStore store) {
-    return jsons.stream()
-        .map(v -> VariantBuilder.makeVariant(v, store))
-        .collect(Collectors.toList());
-  }
+//  public static List<Variant> makeVariants(
+//      final Collection<JsonVariant> jsons, VariantStore store) {
+//    return jsons.stream()
+//        .map(v -> VariantBuilder.makeVariant(v, store)) //todo need reset variantStore
+//        .collect(Collectors.toList());
+//  }
 
   public static Variant makeVariant(final JsonVariant json, VariantStore store) {
     Variant parent = store.getInitialVariant();
