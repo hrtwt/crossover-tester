@@ -9,7 +9,7 @@ import jp.kusumotolab.kgenprog.Strategies;
 import jp.kusumotolab.kgenprog.fl.Ochiai;
 import jp.kusumotolab.kgenprog.ga.codegeneration.DefaultSourceCodeGeneration;
 import jp.kusumotolab.kgenprog.ga.selection.DefaultVariantSelection;
-import jp.kusumotolab.kgenprog.ga.validation.DefaultCodeValidation;
+import jp.kusumotolab.kgenprog.ga.validation.MultiObjectiveValidation;
 import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
 import jp.kusumotolab.kgenprog.project.factory.TargetProject;
 import jp.kusumotolab.kgenprog.project.factory.TargetProjectFactory;
@@ -35,7 +35,7 @@ public class Util {
         new Ochiai(),
         new JDTASTConstruction(),
         new DefaultSourceCodeGeneration(),
-        new DefaultCodeValidation(),
+        new MultiObjectiveValidation(),
         new LocalTestExecutor(config),
         new DefaultVariantSelection(10, new Random(0)));
   }
