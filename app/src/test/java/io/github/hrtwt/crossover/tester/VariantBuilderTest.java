@@ -34,6 +34,18 @@ public class VariantBuilderTest {
   }
 
   @Test
+  public void testMakeVariant02() throws Exception {
+    final JsonVariant jsonVariant0 = parsedVariants().get(0);
+    final Variant v0 = VariantBuilder.makeVariant(jsonVariant0, store);
+    assertThat(v0).isNotNull(); // todo strict check
+
+    setupVariantStore(); //need to reset variantStore
+    final JsonVariant jsonVariant1 = parsedVariants().get(1);
+    final Variant v1 = VariantBuilder.makeVariant(jsonVariant1, store);
+    assertThat(v1).isNotNull(); // todo strict check
+  }
+
+  @Test
   public void testHasSameTestResults01() throws Exception {
     final List<JsonVariant> jsonVariants = parsedVariants();
     final Variant v0 = VariantBuilder.makeVariant(jsonVariants.get(0), store);
