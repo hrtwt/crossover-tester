@@ -39,7 +39,7 @@ public class VariantBuilderTest {
     final Variant v0 = VariantBuilder.makeVariant(jsonVariant0, store);
     assertThat(v0).isNotNull(); // todo strict check
 
-    setupVariantStore(); //need to reset variantStore
+    setupVariantStore(); // need to reset variantStore
     final JsonVariant jsonVariant1 = parsedVariants().get(1);
     final Variant v1 = VariantBuilder.makeVariant(jsonVariant1, store);
     assertThat(v1).isNotNull(); // todo strict check

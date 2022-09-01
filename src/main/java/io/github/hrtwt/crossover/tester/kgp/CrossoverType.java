@@ -42,6 +42,12 @@ public enum CrossoverType {
     this.kgpCrossoverType = type;
   }
 
+  public static List<Crossover> newInstances(final int seed) {
+    return Arrays.stream(CrossoverType.values())
+        .map(co -> co.newInstance(new Random(seed)))
+        .collect(Collectors.toList());
+  }
+
   public List<Variant> makeVariants(
       final Variant v1, final Variant v2, Random random, final VariantStore vs) {
     final Crossover co = this.newInstance(random);
@@ -63,11 +69,5 @@ public enum CrossoverType {
         new SecondVariantRandomSelection(random),
         10,
         10);
-  }
-
-  public static List<Crossover> newInstances(final int seed) {
-    return Arrays.stream(CrossoverType.values())
-        .map(co -> co.newInstance(new Random(seed)))
-        .collect(Collectors.toList());
   }
 }

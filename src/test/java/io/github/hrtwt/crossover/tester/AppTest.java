@@ -1,7 +1,7 @@
 package io.github.hrtwt.crossover.tester;
 
-import org.junit.Test;
 import java.nio.file.Paths;
+import org.junit.Test;
 
 public class AppTest {
   @Test

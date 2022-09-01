@@ -1,7 +1,6 @@
 package io.github.hrtwt.crossover.tester;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

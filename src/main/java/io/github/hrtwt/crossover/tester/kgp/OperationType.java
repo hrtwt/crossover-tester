@@ -55,12 +55,12 @@ public enum OperationType {
     this.operationName = op.getName();
   }
 
-  public abstract Operation constructOperation(final ASTNode node);
-
   public static OperationType getByName(String name) {
     return Arrays.stream(OperationType.values())
         .filter(e -> e.operationName.equals(name))
         .findFirst()
         .orElse(NONE);
   }
+
+  public abstract Operation constructOperation(final ASTNode node);
 }

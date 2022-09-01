@@ -30,12 +30,12 @@ import jp.kusumotolab.kgenprog.project.test.TestResults;
 
 public class VariantBuilder {
 
-//  public static List<Variant> makeVariants(
-//      final Collection<JsonVariant> jsons, VariantStore store) {
-//    return jsons.stream()
-//        .map(v -> VariantBuilder.makeVariant(v, store)) //todo need reset variantStore
-//        .collect(Collectors.toList());
-//  }
+  //  public static List<Variant> makeVariants(
+  //      final Collection<JsonVariant> jsons, VariantStore store) {
+  //    return jsons.stream()
+  //        .map(v -> VariantBuilder.makeVariant(v, store)) //todo need reset variantStore
+  //        .collect(Collectors.toList());
+  //  }
 
   public static Variant makeVariant(final JsonVariant json, VariantStore store) {
     Variant parent = store.getInitialVariant();
@@ -45,14 +45,14 @@ public class VariantBuilder {
       bases.add(b);
       parent = store.createVariant(new Gene(bases), EmptyHistoricalElement.instance);
 
-      if (!parent.isBuildSucceeded()){
+      if (!parent.isBuildSucceeded()) {
         throw new IllegalStateException("failed to build variant: while making variant");
       }
-
     }
 
     if (!hasSameTestResults(parent, json)) {
-      throw new IllegalStateException("failed to build variant: generated variant does not have same test result");
+      throw new IllegalStateException(
+          "failed to build variant: generated variant does not have same test result");
     }
 
     return parent;
@@ -89,6 +89,7 @@ public class VariantBuilder {
     // so adding class and method definition is needed.
     final String javaCode = "class Temp{void temp(){" + snippet + "}}";
 
+    @SuppressWarnings({"deprecation"})
     final ASTParser parser = ASTParser.newParser(AST.JLS8);
     parser.setSource(javaCode.toCharArray());
     final CompilationUnit cu = (CompilationUnit) parser.createAST(null);
