@@ -3,7 +3,12 @@ plugins {
     id "io.freefair.lombok" version "6.5.0.3"
 }
 
-sourceCompatibility = JavaVersion.VERSION_11
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
 
 repositories {
     mavenCentral()
