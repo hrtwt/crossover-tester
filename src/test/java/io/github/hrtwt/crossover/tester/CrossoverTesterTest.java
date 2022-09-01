@@ -19,11 +19,11 @@ public class CrossoverTesterTest {
 
   @Before
   public void setupVariantStore() {
-    store = Util.createVariantStore(Paths.get("../example/ABC139_A/"));
+    store = Util.createVariantStore(Paths.get("./example/ABC139_A/"));
   }
 
   public List<Variant> variants() throws IOException {
-    final String json = Files.readString(Paths.get("../example/ABC139_A/variants.json"));
+    final String json = Files.readString(Paths.get("./example/ABC139_A/variants.json"));
     final List<JsonVariant> jsons = JsonVariantParser.parseComplementaryVariants(json);
 
     final Variant v0 = VariantBuilder.makeVariant(jsons.get(0), store);
