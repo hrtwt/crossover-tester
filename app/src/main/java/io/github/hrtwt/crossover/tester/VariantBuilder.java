@@ -44,10 +44,15 @@ public class VariantBuilder {
       final Base b = makeBase(jb, parent);
       bases.add(b);
       parent = store.createVariant(new Gene(bases), EmptyHistoricalElement.instance);
+
+      if (!parent.isBuildSucceeded()){
+        throw new IllegalStateException("failed to build variant: while making variant");
+      }
+
     }
 
     if (!hasSameTestResults(parent, json)) {
-      throw new IllegalStateException("failed to build variant");
+      throw new IllegalStateException("failed to build variant: generated variant does not have same test result");
     }
 
     return parent;
