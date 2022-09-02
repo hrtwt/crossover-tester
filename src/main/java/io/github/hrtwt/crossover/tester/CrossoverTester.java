@@ -21,10 +21,8 @@ public class CrossoverTester implements Runnable {
   private final int randomSeed;
 
   private final String json;
-
-  private int generatingVariants;
-
   private final List<Variant> parents = new ArrayList<>();
+  private final int generatingVariants;
 
   public CrossoverTester(
       final Path projectRootPath, final String json, final int generatingVariants, final int seed) {
@@ -49,19 +47,16 @@ public class CrossoverTester implements Runnable {
     return true;
   }
 
-  public List<CrossoverResult> execCrossover(final Collection<CrossoverType> types) {
+  public List<CrossoverResults> execCrossover(final Collection<CrossoverType> types) {
     return execCrossover(parents.get(0), parents.get(1), types);
   }
 
-  public List<CrossoverResult> execCrossover(
+  public List<CrossoverResults> execCrossover(
       final Variant v1, final Variant v2, final Collection<CrossoverType> types) {
-    return types.stream()
-        .map(type -> execCrossover(v1, v2, type))
-        .flatMap(Collection::stream)
-        .collect(Collectors.toList());
+    return types.stream().map(type -> execCrossover(v1, v2, type)).collect(Collectors.toList());
   }
 
-  public List<CrossoverResult> execCrossover(
+  public CrossoverResults execCrossover(
       final Variant v1, final Variant v2, final CrossoverType type) {
     final ArrayList<Variant> children = new ArrayList<>();
     final Random random = new Random(randomSeed); // reuse Random to generate various variants
@@ -70,9 +65,13 @@ public class CrossoverTester implements Runnable {
       children.addAll(v);
     }
 
-    return children.subList(0, this.generatingVariants).stream()
-        .map(v -> new CrossoverResult(v, parents, type, isDominateParents(parents, v)))
-        .collect(Collectors.toList());
+    final CrossoverResults results = new CrossoverResults(type, List.of(v1, v2));
+
+    children
+        .subList(0, this.generatingVariants)
+        .forEach(v -> results.addChild(v, isDominateParents(List.of(v1, v2), v)));
+
+    return results;
   }
 
   private VariantStore createInitialVariantStore() {
@@ -87,7 +86,7 @@ public class CrossoverTester implements Runnable {
     return VariantBuilder.makeVariant(variant, createInitialVariantStore());
   }
 
-  private String toJson(List<CrossoverResult> results) {
+  private String toJson(List<CrossoverResults> results) {
     final Gson gson = JSONExporter.setupGson();
 
     return gson.toJson(results);
@@ -98,7 +97,7 @@ public class CrossoverTester implements Runnable {
     final List<JsonVariant> jsonVariants = JsonVariantParser.parseComplementaryVariants(json);
     parents.addAll(makeVariant(jsonVariants));
 
-    final List<CrossoverResult> results = execCrossover(List.of(CrossoverType.values()));
+    final List<CrossoverResults> results = execCrossover(List.of(CrossoverType.values()));
 
     System.out.println(toJson(results));
   }
