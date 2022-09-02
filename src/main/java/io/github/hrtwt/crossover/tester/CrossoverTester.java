@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 import io.github.hrtwt.crossover.tester.json.JsonVariant;
 import io.github.hrtwt.crossover.tester.json.JsonVariantParser;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
-import jp.kusumotolab.kgenprog.ga.validation.Fitness;
+import jp.kusumotolab.kgenprog.ga.validation.MultiObjectiveFitness;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
 import jp.kusumotolab.kgenprog.output.JSONExporter;
@@ -32,9 +32,10 @@ public class CrossoverTester implements Runnable {
 
   /** returns true if the child dominates all parents. */
   public static boolean isDominateParents(final Collection<Variant> parents, final Variant child) {
-    final Fitness childFitness = child.getFitness();
+    // In order to check the dominance, we must use MultiObjectiveFitness
+    final MultiObjectiveFitness childFitness = (MultiObjectiveFitness) child.getFitness();
     for (final Variant parent : parents) {
-      final Fitness parentFitness = parent.getFitness();
+      final MultiObjectiveFitness parentFitness = (MultiObjectiveFitness) parent.getFitness();
       if (childFitness.compareTo(parentFitness) <= 0) {
         // if child is dominated by parents (in other words, parent is better than child)
         // or if there are no dominate relationships between child and parent
@@ -42,6 +43,10 @@ public class CrossoverTester implements Runnable {
       }
     }
     return true;
+  }
+
+  public List<CrossoverResult> execCrossover(final Collection<CrossoverType> types) {
+    return execCrossover(parents.get(0), parents.get(1), types);
   }
 
   public List<CrossoverResult> execCrossover(
@@ -54,8 +59,8 @@ public class CrossoverTester implements Runnable {
 
   public List<CrossoverResult> execCrossover(
       final Variant v1, final Variant v2, final CrossoverType type) {
-    final VariantStore variantStore = createInitialVariantStore();
-    final List<Variant> children = type.makeVariants(v1, v2, new Random(randomSeed), variantStore);
+    final List<Variant> children =
+        type.makeVariants(v1, v2, new Random(randomSeed), createInitialVariantStore());
 
     final List<Variant> parents = List.of(v1, v2);
 
@@ -68,6 +73,14 @@ public class CrossoverTester implements Runnable {
     return Util.createVariantStore(projectRootPath);
   }
 
+  private List<Variant> makeVariant(final Collection<JsonVariant> variants) {
+    return variants.stream().map(this::makeVariant).collect(Collectors.toList());
+  }
+
+  private Variant makeVariant(final JsonVariant variant) {
+    return VariantBuilder.makeVariant(variant, createInitialVariantStore());
+  }
+
   private String toJson(List<CrossoverResult> results) {
     final Gson gson = JSONExporter.setupGson();
 
@@ -77,14 +90,9 @@ public class CrossoverTester implements Runnable {
   @Override
   public void run() {
     final List<JsonVariant> jsonVariants = JsonVariantParser.parseComplementaryVariants(json);
+    parents.addAll(makeVariant(jsonVariants));
 
-    final Variant parent1 =
-        VariantBuilder.makeVariant(jsonVariants.get(0), createInitialVariantStore());
-    final Variant parent2 =
-        VariantBuilder.makeVariant(jsonVariants.get(1), createInitialVariantStore());
-
-    final List<CrossoverResult> results =
-        execCrossover(parent1, parent2, List.of(CrossoverType.values()));
+    final List<CrossoverResult> results = execCrossover(List.of(CrossoverType.values()));
 
     System.out.println(toJson(results));
   }
