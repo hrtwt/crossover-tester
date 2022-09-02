@@ -17,7 +17,11 @@ public class App {
     lunch(kgpRootPath, jsonPath, generatingVariants, randomSeed);
   }
 
-  public static void lunch(final Path rootPath, final Path jsonPath, final int generatingVariants, final int randomSeed) {
+  public static void lunch(
+      final Path rootPath,
+      final Path jsonPath,
+      final int generatingVariants,
+      final int randomSeed) {
     final String json = Util.readString(jsonPath);
 
     new CrossoverTester(rootPath, json, generatingVariants, randomSeed).run();
