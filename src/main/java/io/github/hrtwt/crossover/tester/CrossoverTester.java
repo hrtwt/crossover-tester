@@ -22,12 +22,16 @@ public class CrossoverTester implements Runnable {
 
   private final String json;
 
+  private int generatingVariants;
+
   private final List<Variant> parents = new ArrayList<>();
 
-  public CrossoverTester(final Path projectRootPath, final String json, final int seed) {
+  public CrossoverTester(
+      final Path projectRootPath, final String json, final int generatingVariants, final int seed) {
     this.projectRootPath = projectRootPath;
     this.randomSeed = seed;
     this.json = json;
+    this.generatingVariants = generatingVariants;
   }
 
   /** returns true if the child dominates all parents. */
@@ -59,12 +63,14 @@ public class CrossoverTester implements Runnable {
 
   public List<CrossoverResult> execCrossover(
       final Variant v1, final Variant v2, final CrossoverType type) {
-    final List<Variant> children =
-        type.makeVariants(v1, v2, new Random(randomSeed), createInitialVariantStore());
+    final ArrayList<Variant> children = new ArrayList<>();
+    final Random random = new Random(randomSeed); // reuse Random to generate various variants
+    while (children.size() < this.generatingVariants) {
+      final List<Variant> v = type.makeVariants(v1, v2, random, createInitialVariantStore());
+      children.addAll(v);
+    }
 
-    final List<Variant> parents = List.of(v1, v2);
-
-    return children.stream()
+    return children.subList(0, this.generatingVariants).stream()
         .map(v -> new CrossoverResult(v, parents, type, isDominateParents(parents, v)))
         .collect(Collectors.toList());
   }
