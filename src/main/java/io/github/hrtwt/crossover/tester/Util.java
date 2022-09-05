@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Random;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
 import jp.kusumotolab.kgenprog.Configuration;
 import jp.kusumotolab.kgenprog.Strategies;
 import jp.kusumotolab.kgenprog.fl.Ochiai;
@@ -48,5 +50,9 @@ public class Util {
       System.exit(1);
       return null;
     }
+  }
+
+  public static String formatJson(final String json) {
+    return new GsonBuilder().setPrettyPrinting().create().toJson(JsonParser.parseString(json));
   }
 }

@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import io.github.hrtwt.crossover.tester.json.JsonVariant;
 import io.github.hrtwt.crossover.tester.json.JsonVariantParser;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
@@ -20,15 +22,18 @@ public class CrossoverTester implements Runnable {
   private final Path projectRootPath;
   private final int randomSeed;
 
-  private final String json;
+  private final String inputJson;
   private final List<Variant> parents = new ArrayList<>();
   private final int generatingVariants;
 
   public CrossoverTester(
-      final Path projectRootPath, final String json, final int generatingVariants, final int seed) {
+      final Path projectRootPath,
+      final String inputJson,
+      final int generatingVariants,
+      final int seed) {
     this.projectRootPath = projectRootPath;
     this.randomSeed = seed;
-    this.json = json;
+    this.inputJson = inputJson;
     this.generatingVariants = generatingVariants;
   }
 
@@ -88,17 +93,48 @@ public class CrossoverTester implements Runnable {
 
   private String toJson(List<CrossoverResults> results) {
     final Gson gson = JSONExporter.setupGson();
+    final JsonObject ret = new JsonObject();
 
-    return gson.toJson(results);
+    ret.add("config", buildMetaInfoAsJson());
+
+    final List<JsonElement> stats =
+        results.stream().map(this::buildCrossoverStatsAsJson).collect(Collectors.toList());
+    ret.add("stats", gson.toJsonTree(stats));
+
+    ret.add("results", gson.toJsonTree(results));
+
+    return gson.toJson(ret);
+  }
+
+  private JsonElement buildCrossoverStatsAsJson(final CrossoverResults results) {
+    final JsonObject ret = new JsonObject();
+
+    ret.addProperty("crossoverType", results.crossoverType.name());
+    ret.addProperty("dominateChildrenCount", results.getDominateChildrenCount());
+    ret.addProperty("buildSuccessChildrenCount", results.getBuildSuccessChildrenCount());
+    ret.addProperty("syntaxValidChildrenCount", results.getSyntaxValidChildrenCount());
+
+    return ret;
+  }
+
+  private JsonElement buildMetaInfoAsJson() {
+    final JsonObject ret = new JsonObject();
+
+    ret.addProperty("projectRootPath", this.projectRootPath.toString());
+    ret.addProperty("generatingVariants", this.generatingVariants);
+    ret.addProperty("randomSeed", this.randomSeed);
+
+    return ret;
   }
 
   @Override
   public void run() {
-    final List<JsonVariant> jsonVariants = JsonVariantParser.parseComplementaryVariants(json);
+    final List<JsonVariant> jsonVariants = JsonVariantParser.parseComplementaryVariants(inputJson);
     parents.addAll(makeVariant(jsonVariants));
 
     final List<CrossoverResults> results = execCrossover(List.of(CrossoverType.values()));
 
-    System.out.println(toJson(results));
+    final String out = toJson(results);
+    System.out.println(Util.formatJson(out));
   }
 }
