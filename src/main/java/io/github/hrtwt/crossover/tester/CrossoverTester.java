@@ -1,5 +1,7 @@
 package io.github.hrtwt.crossover.tester;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +17,6 @@ import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
 import jp.kusumotolab.kgenprog.ga.validation.MultiObjectiveFitness;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
-import jp.kusumotolab.kgenprog.output.JSONExporter;
 
 public class CrossoverTester implements Runnable {
 
@@ -91,8 +92,27 @@ public class CrossoverTester implements Runnable {
     return VariantBuilder.makeVariant(variant, createInitialVariantStore());
   }
 
+  private Gson retrieveGsonFromKGP() {
+    Gson gson = null;
+    try {
+      Class<?> clazz = Class.forName("jp.kusumotolab.kgenprog.output.JSONExporter");
+
+      Constructor<?> constructor = clazz.getDeclaredConstructor(Path.class);
+      constructor.setAccessible(true);
+      Object obj = constructor.newInstance(Path.of(""));
+
+      Method method = clazz.getDeclaredMethod("setupGson");
+      method.setAccessible(true);
+      gson = (Gson) method.invoke(obj);
+    } catch (final ReflectiveOperationException e) {
+      e.printStackTrace();
+    }
+
+    return gson;
+  }
+
   private String toJson(List<CrossoverResults> results) {
-    final Gson gson = JSONExporter.setupGson();
+    final Gson gson = retrieveGsonFromKGP();
     final JsonObject ret = new JsonObject();
 
     ret.add("config", buildMetaInfoAsJson());
