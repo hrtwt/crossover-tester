@@ -5,23 +5,23 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import io.github.hrtwt.crossover.tester.json.JsonVariant;
 import io.github.hrtwt.crossover.tester.json.JsonVariantParser;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
 
-public class CrossoverTesterTest {
+class CrossoverTesterTest {
 
   VariantStore store;
 
-  @Before
-  public void setupVariantStore() {
+  @BeforeEach
+  void setupVariantStore() {
     store = Util.createVariantStore(Paths.get("./example/ABC139A/"));
   }
 
-  public List<Variant> variants() throws IOException {
+  List<Variant> variants() throws IOException {
     final String json = Files.readString(Paths.get("./example/ABC139A/variants.json"));
     final List<JsonVariant> jsons = JsonVariantParser.parseComplementaryVariants(json);
 
@@ -34,7 +34,7 @@ public class CrossoverTesterTest {
   }
 
   @Test
-  public void testIsDominateParents() throws Exception {
+  void testIsDominateParents() throws Exception {
     final List<Variant> parents = variants();
     assertThat(CrossoverTester.isDominateParents(List.of(parents.get(0)), parents.get(1)))
         .isFalse();
