@@ -18,11 +18,11 @@ public class VariantBuilderTest {
 
   @Before
   public void setupVariantStore() {
-    store = Util.createVariantStore(Paths.get("./example/ABC139_A/"));
+    store = Util.createVariantStore(Paths.get("./example/ABC139A/"));
   }
 
   public List<JsonVariant> parsedVariants() throws IOException {
-    final String json = Files.readString(Paths.get("./example/ABC139_A/variants.json"));
+    final String json = Files.readString(Paths.get("./example/ABC139A/variants.json"));
     return JsonVariantParser.parseComplementaryVariants(json);
   }
 

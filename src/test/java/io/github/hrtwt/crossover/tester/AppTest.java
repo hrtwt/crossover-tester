@@ -7,6 +7,6 @@ public class AppTest {
   @Test
   public void testLunch() {
     App.lunch(
-        Paths.get("./example/ABC139_A/"), Paths.get("./example/ABC139_A/variants.json"), 10, 0);
+        Paths.get("./example/ABC139A/"), Paths.get("./example/ABC139A/variants.json"), 10, 0);
   }
 }

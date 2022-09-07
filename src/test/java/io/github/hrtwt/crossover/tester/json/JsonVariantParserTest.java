@@ -10,13 +10,13 @@ public class JsonVariantParserTest {
 
   @Test
   public void testParseAdam() throws Exception {
-    final String json = Files.readString(Paths.get("./example/ABC139_A/variants.json"));
+    final String json = Files.readString(Paths.get("./example/ABC139A/variants.json"));
     final JsonVariant adam = JsonVariantParser.parseAdam(json);
   }
 
   @Test
   public void testParseComplementaryVariants() throws Exception {
-    final String json = Files.readString(Paths.get("./example/ABC139_A/variants.json"));
+    final String json = Files.readString(Paths.get("./example/ABC139A/variants.json"));
     final List<JsonVariant> parents = JsonVariantParser.parseComplementaryVariants(json);
     assertThat(parents).hasSize(2);
   }
