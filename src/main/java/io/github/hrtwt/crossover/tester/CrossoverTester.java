@@ -14,7 +14,6 @@ import com.google.gson.JsonObject;
 import io.github.hrtwt.crossover.tester.json.JsonVariant;
 import io.github.hrtwt.crossover.tester.json.JsonVariantParser;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
-import jp.kusumotolab.kgenprog.ga.validation.MultiObjectiveFitness;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
 
@@ -38,21 +37,6 @@ public class CrossoverTester implements Runnable {
     this.generatingVariants = generatingVariants;
   }
 
-  /** returns true if the child dominates all parents. */
-  public static boolean isDominateParents(final Collection<Variant> parents, final Variant child) {
-    // In order to check the dominance, we must use MultiObjectiveFitness
-    final MultiObjectiveFitness childFitness = (MultiObjectiveFitness) child.getFitness();
-    for (final Variant parent : parents) {
-      final MultiObjectiveFitness parentFitness = (MultiObjectiveFitness) parent.getFitness();
-      if (childFitness.compareTo(parentFitness) <= 0) {
-        // if child is dominated by parents (in other words, parent is better than child)
-        // or if there are no dominate relationships between child and parent
-        return false;
-      }
-    }
-    return true;
-  }
-
   public List<CrossoverResults> execCrossover(final Collection<CrossoverType> types) {
     return execCrossover(parents.get(0), parents.get(1), types);
   }
@@ -71,11 +55,11 @@ public class CrossoverTester implements Runnable {
       children.addAll(v);
     }
 
-    final CrossoverResults results = new CrossoverResults(type, List.of(v1, v2));
+    final List<Variant> parents = List.of(v1, v2);
 
-    children
-        .subList(0, this.generatingVariants)
-        .forEach(v -> results.addChild(v, isDominateParents(List.of(v1, v2), v)));
+    final CrossoverResults results = new CrossoverResults(type, parents);
+
+    children.subList(0, this.generatingVariants).forEach(v -> results.addChild(v, parents));
 
     return results;
   }
@@ -130,9 +114,14 @@ public class CrossoverTester implements Runnable {
     final JsonObject ret = new JsonObject();
 
     ret.addProperty("crossoverType", results.crossoverType.name());
-    ret.addProperty("dominateChildrenCount", results.getDominateChildrenCount());
+
     ret.addProperty("buildSuccessChildrenCount", results.getBuildSuccessChildrenCount());
     ret.addProperty("syntaxValidChildrenCount", results.getSyntaxValidChildrenCount());
+
+    ret.addProperty("dominateAllParentsCount", results.getDominateAllParentsCount());
+    ret.addProperty("dominateParentsCount", results.getDominateParentsCount());
+    ret.addProperty("dominatedByParentsCount", results.getDominatedByParentsCount());
+    ret.addProperty("dominatedByAllParentsCount", results.getDominatedByAllParentsCount());
 
     return ret;
   }
