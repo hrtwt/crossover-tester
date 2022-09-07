@@ -56,7 +56,11 @@ public class Util {
   }
 
   public static String formatJson(final String json) {
-    return new GsonBuilder().setPrettyPrinting().create().toJson(JsonParser.parseString(json));
+    return new GsonBuilder()
+        .setPrettyPrinting()
+        .disableHtmlEscaping()
+        .create()
+        .toJson(JsonParser.parseString(json));
   }
 
   /** returns true if the child dominates all parents. */
