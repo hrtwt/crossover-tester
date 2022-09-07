@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import io.github.hrtwt.crossover.tester.json.JsonVariant;
 import io.github.hrtwt.crossover.tester.json.JsonVariantParser;
@@ -14,21 +13,17 @@ import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
 
 class CrossoverTesterTest {
 
-  VariantStore store;
-
-  @BeforeEach
-  void setupVariantStore() {
-    store = Util.createVariantStore(Paths.get("./example/ABC139A/"));
+  VariantStore createVariantStore() {
+    return Util.createVariantStore(Paths.get("./example/ABC139A/"));
   }
 
   List<Variant> variants() throws IOException {
     final String json = Files.readString(Paths.get("./example/ABC139A/variants.json"));
     final List<JsonVariant> jsons = JsonVariantParser.parseComplementaryVariants(json);
 
-    final Variant v0 = VariantBuilder.makeVariant(jsons.get(0), store);
+    final Variant v0 = VariantBuilder.makeVariant(jsons.get(0), createVariantStore());
 
-    setupVariantStore();
-    final Variant v1 = VariantBuilder.makeVariant(jsons.get(1), store);
+    final Variant v1 = VariantBuilder.makeVariant(jsons.get(1), createVariantStore());
 
     return List.of(v0, v1);
   }
