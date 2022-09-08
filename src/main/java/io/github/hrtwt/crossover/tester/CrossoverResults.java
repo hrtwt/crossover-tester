@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
+import jp.kusumotolab.kgenprog.project.test.EmptyTestResults;
 
 public class CrossoverResults {
   public final CrossoverType crossoverType;
@@ -94,6 +95,7 @@ public class CrossoverResults {
 
   public static class VariantWithDominance {
     public final Variant child;
+    public final String failedCause;
     public final boolean isDominateAllParents;
     public final boolean isDominateParents;
     public final boolean isDominatedByParents;
@@ -101,6 +103,11 @@ public class CrossoverResults {
 
     public VariantWithDominance(final Variant child, final Collection<Variant> parents) {
       this.child = child;
+      if (child.getTestResults() instanceof EmptyTestResults) {
+        failedCause = ((EmptyTestResults) child.getTestResults()).getCause();
+      } else {
+        failedCause = "";
+      }
       this.isDominateAllParents = Util.isDominateAllParents(parents, child);
       this.isDominateParents = Util.isDominateParents(parents, child);
       this.isDominatedByParents = Util.isDominatedByParents(parents, child);
