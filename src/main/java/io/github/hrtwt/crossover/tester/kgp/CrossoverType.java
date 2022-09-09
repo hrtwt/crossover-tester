@@ -28,8 +28,8 @@ public enum CrossoverType {
             co.getClass()
                 .getDeclaredMethod("makeVariant", Variant.class, Variant.class, VariantStore.class);
         execMethod.setAccessible(true);
-        final Variant v = (Variant) execMethod.invoke(co, v1, v2, vs);
-        return List.of(v);
+        final List<?> v = (List<?>) execMethod.invoke(co, v1, v2, vs);
+        return (List<Variant>) v;
       } catch (final ReflectiveOperationException e) {
         throw new IllegalStateException("can not crossover with" + this.name(), e);
       }
