@@ -24,7 +24,7 @@ public class CrossoverTypeTest {
   @Test
   void linkageCrossoverTest() throws Exception {
     final Path project = Paths.get("./example/ABC102A/");
-    final List<JsonVariant> jsons = parsedVariants(project.resolve("ABC102A-0-1.json"));
+    final List<JsonVariant> jsons = parsedVariants(project.resolve("ABC102A-1-0.json"));
     final Variant v1 = VariantBuilder.makeVariant(jsons.get(0), Util.createVariantStore(project));
     final Variant v2 = VariantBuilder.makeVariant(jsons.get(1), Util.createVariantStore(project));
     //    final List<Variant> children =
