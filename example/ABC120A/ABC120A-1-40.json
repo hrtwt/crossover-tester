@@ -1,0 +1,3608 @@
+{
+  "adam": {
+    "testResultsSingle": {},
+    "fitnessSingle": {},
+    "suspiciousnessListSingle": {},
+    "id": 0,
+    "generationNumber": 0,
+    "bases": [],
+    "generatedSourceCode": [
+      "import java.util.*;\n\npublic class Main {\n\n    public static int solveA(int A, int B, int C) {\n        int unused = 0;\n        return unused;\n    }\n}\n",
+      "import java.util.*;\n\npublic class Reuse {\n\n  public static int abc101a(String S) {\n    int n = 0;\n    if (S.charAt(0) == '+') {\n    }\n    if (S.charAt(0) == '-') {\n    }\n    if (S.charAt(1) == '+') {\n    }\n    if (S.charAt(1) == '-') {\n    }\n    if (S.charAt(2) == '+') {\n    }\n    if (S.charAt(2) == '-') {\n    }\n    if (S.charAt(3) == '+') {\n    }\n    if (S.charAt(3) == '-') {\n    }\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    return n;\n  }\n\n  public static int abc102a(int N) {\n    int n = N;\n    if (N % 2 != 0) {\n    }\n    n = 2 * N;\n    return n;\n  }\n\n  public static int abc103a(int A1, int A2, int A3) {\n    return Math.max(Math.max(A1, A2), A3) - Math.min(Math.min(A1, A2), A3);\n  }\n\n  public static String abc104a(int N) {\n    String s = \"AGC\";\n    if (N < 1200) {\n    }\n    if (N < 2800) {\n    }\n    s = \"ABC\";\n    s = \"ARC\";\n    return s;\n  }\n\n  public static int abc105a(int N, int K) {\n    int n = 0;\n    if (N % K != 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static int abc106a(int A, int B) {\n    return (A - 1) * (B - 1);\n  }\n\n  public static int abc107a(int N, int i) {\n    return N + 1 - i;\n  }\n\n  public static int abc108a(int K) {\n    return (K / 2) * ((K + 1) / 2);\n  }\n\n  public static String abc109a(int A, int B) {\n    String s = \"Yes\";\n    if (A * B % 2 == 0) {\n    }\n    s = \"No\";\n    return s;\n  }\n\n  public static int abc110a(int A, int B, int C) {\n    int n = Math.max(Math.max(A, B), C);\n    return A + B + C + 9 * n;\n  }\n\n  public static int abc111a(int n) {\n    return 111 + 999 - n;\n  }\n\n  public static String abc112a(int N, int A, int B) {\n    String s = \"Hello World\";\n    if (N != 1) {\n    }\n    s = String.valueOf(A + B);\n    return s;\n  }\n\n  public static int abc113a(int X, int Y) {\n    return X + Y / 2;\n  }\n\n  public static String abc114a(int X) {\n    String s = \"NO\";\n    if (X == 3) {\n    }\n    if (X == 5) {\n    }\n    if (X == 7) {\n    }\n    s = \"YES\";\n    s = \"YES\";\n    s = \"YES\";\n    return s;\n  }\n\n  public static String abc115a(int D) {\n    String s = \"Christmas Eve Eve Eve\";\n    if (D == 25) {\n    }\n    if (D == 24) {\n    }\n    if (D == 23) {\n    }\n    s = \"Christmas\";\n    s = \"Christmas Eve\";\n    s = \"Christmas Eve Eve\";\n    return s;\n  }\n\n  public static int abc116a(int A, int B, int C) {\n    return A * B / 2;\n  }\n\n  public static float abc117a(int T, int X) {\n    return (float) T / X;\n  }\n\n  public static int abc118a(int A, int B) {\n    int n = B - A;\n    if (B % A == 0) {\n    }\n    n = A + B;\n    return n;\n  }\n\n  public static String abc119a(String S) {\n    String s = \"Heisei\";\n    if (S.compareTo(\"2019/04/30\") > 0) {\n    }\n    s = \"TBD\";\n    return s;\n  }\n\n  public static int abc120a(int A, int B, int C) {\n    int n = B / A;\n    if (n > C) {\n      n = C;\n    }\n    return n;\n  }\n\n  public static int abc121a(int H, int W, int h, int w) {\n    return (H - h) * (W - w);\n  }\n\n  public static String abc122a(String b) {\n    String s = \"G\";\n    if (b.equals(\"A\")) {\n    }\n    if (b.equals(\"T\")) {\n    }\n    if (b.equals(\"G\")) {\n    }\n    s = \"T\";\n    s = \"A\";\n    s = \"C\";\n    return s;\n  }\n\n  public static String abc123a(int A, int B, int C, int D, int E, int K) {\n    String s = \":(\";\n    if (E - A <= K) {\n    }\n    s = \"Yay!\";\n    return s;\n  }\n\n  public static int abc124a(int A, int B) {\n    int n = A + B;\n    if (A > B) {\n    }\n    if (B > A) {\n    }\n    n = A + (A - 1);\n    n = B + (B - 1);\n    return n;\n  }\n\n  public static int abc125a(int A, int B, int T) {\n    return T / A * B;\n  }\n\n  public static String abc126a(int N, int K, String S) {\n    String s = \"c\";\n    if (S.substring(K - 1, K)\n        .equals(\"A\")) {\n      s = \"a\";\n    }\n    if (S.substring(K - 1, K)\n        .equals(\"B\")) {\n      s = \"b\";\n    }\n\n    return S.substring(0, K - 1) + s + S.substring(K);\n  }\n\n  public static int abc127a(int A, int B) {\n    int n = B;\n    if (A < 6) {\n    }\n    if (A < 13) {\n    }\n    n = 0;\n    n = B / 2;\n    return n;\n  }\n\n  public static int abc128a(int A, int P) {\n    return (3 * A + P) / 2;\n  }\n\n  public static int abc129a(int P, int Q, int R) {\n    return P + Q + R - Math.max(Math.max(P, Q), R);\n  }\n\n  public static int abc130a(int X, int A) {\n    int n = 10;\n    if (X < A) {\n    }\n    n = 0;\n    return n;\n  }\n\n  public static String abc131a(String S) {\n    boolean isgood = true;\n    if (S.charAt(0) == S.charAt(1)) {\n    }\n    if (S.charAt(1) == S.charAt(2)) {\n    }\n    if (S.charAt(2) == S.charAt(3)) {\n    }\n    isgood = false;\n    isgood = false;\n    isgood = false;\n\n    String s = \"Bad\";\n    if (isgood) {\n    }\n    s = \"Good\";\n\n    return s;\n  }\n\n  public static String abc132a(String S) {\n    String s = \"No\";\n    if (S.charAt(0) == S.charAt(1) && S.charAt(1) != S.charAt(2) && S.charAt(2) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(2) && S.charAt(2) != S.charAt(1) && S.charAt(1) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(3) && S.charAt(3) != S.charAt(1) && S.charAt(1) == S.charAt(2)) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc133a(int N, int A, int B) {\n    int n = B;\n    if (N * A < B) {\n    }\n    n = N * A;\n\n    return n;\n  }\n\n  public static int abc134a(int r) {\n    return r * r * 3;\n  }\n\n  public static String abc135a(long A, long B) {\n    String s = \"\";\n    if (A % 2 != B % 2) {\n    }\n    if (A % 2 == B % 2) {\n    }\n    s = \"IMPOSSIBLE\";\n    s = String.valueOf((A + B) / 2);\n\n    return s;\n  }\n\n  public static int abc136a(int A, int B, int C) {\n    return C - Math.min(C, A - B);\n  }\n\n  public static int abc137a(int A, int B) {\n    return Math.max(Math.max(A + B, A - B), A * B);\n  }\n\n  public static String abc138a(int A, String S) {\n    String s = \"\";\n    if (A >= 3200) {\n    }\n    if (A < 3200) {\n    }\n    s = S;\n    s = \"red\";\n\n    return s;\n  }\n\n  public static int abc139a(String S, String T) {\n    int n = 0;\n    if (S.charAt(0) == T.charAt(0)) {\n    }\n    if (S.charAt(1) == T.charAt(1)) {\n    }\n    if (S.charAt(2) == T.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n\n    return n;\n  }\n\n  public static int abc140a(int N) {\n    return N * N * N;\n  }\n\n  public static String abc141a(String S) {\n    String s = \"\";\n    if (S.equals(\"Sunny\")) {\n    }\n    if (S.equals(\"Cloudy\")) {\n    }\n    if (S.equals(\"Rainy\")) {\n    }\n    s = \"Cloudy\";\n    s = \"Rainy\";\n    s = \"Sunny\";\n    return s;\n  }\n\n  public static double abc142a(int N) {\n    return (double) (N - N / 2) / (double) N;\n  }\n\n  public static int abc143a(int A, int B) {\n    return Math.max(0, A - 2 * B);\n  }\n\n  public static int abc144a(int A, int B) {\n    int n = -1;\n    if (A <= 9 && B <= 9) {\n    }\n    n = A * B;\n\n    return n;\n  }\n\n  public static int abc145a(int r) {\n    return r * r;\n  }\n\n  public static int abc146a(String S) {\n    int n = 0;\n    if (S.equals(\"SUN\")) {\n    }\n    if (S.equals(\"MON\")) {\n    }\n    if (S.equals(\"TUE\")) {\n    }\n    if (S.equals(\"WED\")) {\n    }\n    if (S.equals(\"THU\")) {\n    }\n    if (S.equals(\"FRI\")) {\n    }\n    if (S.equals(\"SAT\")) {\n    }\n    n = 1;\n    n = 2;\n    n = 3;\n    n = 4;\n    n = 5;\n    n = 6;\n    n = 7;\n\n    return n;\n  }\n\n  public static String abc147a(int A1, int A2, int A3) {\n    String s = \"win\";\n    if (A1 + A2 + A3 >= 22) {\n    }\n    s = \"bust\";\n\n    return s;\n  }\n\n  public static int abc148a(int A, int B) {\n    return 6 - A - B;\n  }\n\n  public static String abc149a(String S, String T) {\n    return T + S;\n  }\n\n  public static String abc150a(int K, int X) {\n    String s = \"No\";\n    if (500 * K >= X) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc151a(String C) {\n    return String.valueOf(C.charAt(0) + 1);\n  }\n\n  public static String abc152a(int N, int M) {\n    String s = \"No\";\n    if (N == M) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc153a(int H, int A) {\n    return (H + A - 1) / A;\n  }\n\n  public static String abc154a(String S, String T, int A, int B, String U) {\n    if (S.equals(U)) {\n    }\n    if (T.equals(U)) {\n\n    }\n    B--;\n    A--;\n\n    return A + \" \" + B;\n  }\n\n  public static String abc155a(int A, int B, int C) {\n    String s = \"No\";\n    if (A == B && B != C) {\n    }\n    if (B == C && C != A) {\n    }\n    if (C == A && A != B) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc156a(int N, int R) {\n    int n = R + 100 * (10 - N);\n    if (N >= 10) {\n    }\n    n = R;\n\n    return n;\n  }\n\n  public static int abc157a(int N) {\n    return (N + 1) / 2;\n  }\n\n  public static String abc158a(String S) {\n    String s = \"No\";\n    if (S.contains(\"A\") && S.contains(\"B\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc159a(int N, int M) {\n    return N * (N - 1) / 2 + M * (M - 1) / 2;\n  }\n\n  public static String abc160a(String S) {\n    String s = \"No\";\n    if (S.charAt(2) == S.charAt(3) && S.charAt(4) == S.charAt(5)) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc161a(int X, int Y, int Z) {\n    return Z + \" \" + X + \" \" + Y;\n  }\n\n  public static String abc162a(int N) {\n    String s = \"No\";\n    if (String.valueOf(N)\n        .contains(\"7\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static double abc163a(int R) {\n    return 2 * R * Math.PI;\n  }\n\n  public static String abc164a(int S, int W) {\n    String s = \"safe\";\n    if (W >= S) {\n    }\n    s = \"unsafe\";\n\n    return s;\n  }\n\n  public static String abc165a(int K, int A, int B) {\n    String s = \"NG\";\n    if (A <= (B / K) * K) {\n    }\n    s = \"OK\";\n\n    return s;\n  }\n\n  public static String abc166a(String S) {\n    String s = \"ABC\";\n    if (S.equals(\"ABC\")) {\n    }\n    s = \"ARC\";\n\n    return s;\n  }\n\n  public static String abc167a(String S, String T) {\n    String s = \"No\";\n    if (T.startsWith(S) && S.length() + 1 == T.length()) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc168a(int N) {\n    String s = \"bon\";\n    if (N % 10 == 2 || N % 10 == 4 || N % 10 == 5 || N % 10 == 7 || N % 10 == 9) {\n    }\n    if (N % 10 == 0 || N % 10 == 1 || N % 10 == 6 || N % 10 == 8) {\n    }\n    s = \"pon\";\n    s = \"hon\";\n\n    return s;\n  }\n\n  public static int abc169a(int A, int B) {\n    return A * B;\n  }\n\n  public static int abc170a(int x1, int x2, int x3, int x4, int x5) {\n    int n = 5;\n    if (x1 == 0) {\n    }\n    if (x2 == 0) {\n    }\n    if (x3 == 0) {\n    }\n    if (x4 == 0) {\n    }\n    n = 4;\n    n = 3;\n    n = 2;\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc117a(String S) {\n    String s = \"A\";\n    if (Character.isLowerCase(S.charAt(0))) {\n    }\n    s = \"a\";\n\n    return s;\n  }\n\n  public static int abc172a(int a) {\n    return a + a * a + a * a * a;\n  }\n\n  public static int abc173a(int N) {\n    return (1000 - N % 1000) % 1000;\n  }\n\n  public static String abc174a(int X) {\n    String s = \"\";\n    if (X >= 30) {\n    }\n    if (X < 30) {\n\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc175a(String S) {\n    int n = 0;\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    n = 0;\n    n = 1;\n    n = 1;\n    n = 1;\n    n = 2;\n    n = 2;\n    n = 2;\n    n = 3;\n\n    return n;\n  }\n\n  public static int abc176a(int N, int X, int T) {\n    return (N + X - 1) / X * T;\n  }\n\n  public static String abc177a(int D, int T, int S) {\n    String s = \"\";\n    if (T >= (double) D / S) {\n    }\n    if (T < (double) D / S) {\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc178a(int x) {\n    int n = 0;\n    if (x == 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc179a(String S) {\n    String s = S;\n    if (S.charAt(s.length() - 1) == 's') {\n    }\n    if (S.charAt(s.length() - 1) != 's') {\n\n    }\n    s += \"s\";\n    s += \"es\";\n\n    return s;\n  }\n\n  public static int abc180a(int N, int A, int B) {\n    return N - A + B;\n  }\n\n}\n"
+    ],
+    "parentTestResults": [],
+    "selectionCount": 8,
+    "operation": {
+      "parentIds": [],
+      "name": ""
+    },
+    "isBuildSuccess": true,
+    "isSyntaxValid": true,
+    "patch": [],
+    "fitness": 0.15384615384615385,
+    "testResults": {
+      "successRate": 0.15384615384615385,
+      "executedTestsCount": 13,
+      "testResults": [
+        {
+          "fqn": "MainTest.test0",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test1",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test10",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test11",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test12",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test2",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test3",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test4",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test5",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test6",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test7",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test8",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test9",
+          "isSuccess": false
+        }
+      ]
+    }
+  },
+  "parents": [
+    {
+      "testResultsSingle": {},
+      "fitnessSingle": {},
+      "suspiciousnessListSingle": {},
+      "id": 7712,
+      "generationNumber": 768,
+      "bases": [
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "boolean isgood=true;\n",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 7
+          },
+          "identityHashCode": 1728502333,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "String s=\"\";\n",
+          "lineNumberRange": {
+            "start": 6,
+            "end": 6
+          },
+          "identityHashCode": 978470049,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s+=\"s\";\n",
+          "lineNumberRange": {
+            "start": 9,
+            "end": 9
+          },
+          "identityHashCode": 870844967,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "isgood=false;\n",
+          "lineNumberRange": {
+            "start": 13,
+            "end": 13
+          },
+          "identityHashCode": 1454994088,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 9,
+            "end": 9
+          },
+          "identityHashCode": 1859125434,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 13,
+            "end": 13
+          },
+          "identityHashCode": 923187848,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Good\";\n",
+          "lineNumberRange": {
+            "start": 19,
+            "end": 19
+          },
+          "identityHashCode": 1311336999,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 11,
+            "end": 11
+          },
+          "identityHashCode": 1790623938,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 7
+          },
+          "identityHashCode": 103030629,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "int n=10;\n",
+          "lineNumberRange": {
+            "start": 21,
+            "end": 21
+          },
+          "identityHashCode": 1018002979,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Cloudy\";\n",
+          "lineNumberRange": {
+            "start": 8,
+            "end": 8
+          },
+          "identityHashCode": 2058196197,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 29,
+            "end": 29
+          },
+          "identityHashCode": 832177998,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 198116005,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Rainy\";\n",
+          "lineNumberRange": {
+            "start": 24,
+            "end": 24
+          },
+          "identityHashCode": 1292257880,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve Eve\";\n",
+          "lineNumberRange": {
+            "start": 33,
+            "end": 33
+          },
+          "identityHashCode": 100090922,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 29,
+            "end": 29
+          },
+          "identityHashCode": 762949370,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 24,
+            "end": 24
+          },
+          "identityHashCode": 1190090993,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A == B && B != C) {\n}\n",
+          "lineNumberRange": {
+            "start": 8,
+            "end": 8
+          },
+          "identityHashCode": 881593492,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 42,
+            "end": 42
+          },
+          "identityHashCode": 923415478,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"unsafe\";\n",
+          "lineNumberRange": {
+            "start": 38,
+            "end": 38
+          },
+          "identityHashCode": 949448471,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"unsafe\";\n",
+          "lineNumberRange": {
+            "start": 27,
+            "end": 27
+          },
+          "identityHashCode": 926162727,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 38,
+            "end": 38
+          },
+          "identityHashCode": 1485238700,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 27,
+            "end": 27
+          },
+          "identityHashCode": 1904577133,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"TBD\";\n",
+          "lineNumberRange": {
+            "start": 42,
+            "end": 42
+          },
+          "identityHashCode": 889442462,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 1402190017,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 32,
+            "end": 32
+          },
+          "identityHashCode": 162681863,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 47,
+            "end": 47
+          },
+          "identityHashCode": 1217415428,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 28,
+            "end": 28
+          },
+          "identityHashCode": 321435637,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "B--;\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 569919564,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (B > A) {\n}\n",
+          "lineNumberRange": {
+            "start": 63,
+            "end": 63
+          },
+          "identityHashCode": 1482475260,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 52,
+            "end": 52
+          },
+          "identityHashCode": 1251557174,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"C\";\n",
+          "lineNumberRange": {
+            "start": 46,
+            "end": 46
+          },
+          "identityHashCode": 409080073,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 30,
+            "end": 30
+          },
+          "identityHashCode": 1873117497,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Cloudy\";\n",
+          "lineNumberRange": {
+            "start": 76,
+            "end": 76
+          },
+          "identityHashCode": 1164098978,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=A * B;\n",
+          "lineNumberRange": {
+            "start": 58,
+            "end": 58
+          },
+          "identityHashCode": 1506592670,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A > B) {\n}\n",
+          "lineNumberRange": {
+            "start": 41,
+            "end": 41
+          },
+          "identityHashCode": 1045137494,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A > B) {\n}\n",
+          "lineNumberRange": {
+            "start": 69,
+            "end": 69
+          },
+          "identityHashCode": 2032161762,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 8,
+            "end": 9
+          },
+          "identityHashCode": 362066447,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 33,
+            "end": 34
+          },
+          "identityHashCode": 204976375,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B == C && C != A) {\n}\n",
+          "lineNumberRange": {
+            "start": 81,
+            "end": 81
+          },
+          "identityHashCode": 499034123,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 65,
+            "end": 65
+          },
+          "identityHashCode": 31267375,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"unsafe\";\n",
+          "lineNumberRange": {
+            "start": 21,
+            "end": 21
+          },
+          "identityHashCode": 1820039646,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 40,
+            "end": 40
+          },
+          "identityHashCode": 1896364206,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 72
+          },
+          "identityHashCode": 1218885289,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 44,
+            "end": 44
+          },
+          "identityHashCode": 1809667162,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s+=\"s\";\n",
+          "lineNumberRange": {
+            "start": 101,
+            "end": 101
+          },
+          "identityHashCode": 1787901053,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 89,
+            "end": 89
+          },
+          "identityHashCode": 1768035107,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 96,
+            "end": 96
+          },
+          "identityHashCode": 1591531651,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 93,
+            "end": 94
+          },
+          "identityHashCode": 1334214245,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"ABC\";\n",
+          "lineNumberRange": {
+            "start": 83,
+            "end": 84
+          },
+          "identityHashCode": 1370718061,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 69,
+            "end": 69
+          },
+          "identityHashCode": 1182364266,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 76,
+            "end": 76
+          },
+          "identityHashCode": 295348975,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 108,
+            "end": 108
+          },
+          "identityHashCode": 513467658,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 72
+          },
+          "identityHashCode": 97913183,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas\";\n",
+          "lineNumberRange": {
+            "start": 26,
+            "end": 26
+          },
+          "identityHashCode": 719048918,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 47,
+            "end": 47
+          },
+          "identityHashCode": 689809604,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 36,
+            "end": 36
+          },
+          "identityHashCode": 1887278481,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 44,
+            "end": 44
+          },
+          "identityHashCode": 262015462,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 13) {\n}\n",
+          "lineNumberRange": {
+            "start": 70,
+            "end": 70
+          },
+          "identityHashCode": 574621635,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"a\";\n",
+          "lineNumberRange": {
+            "start": 46,
+            "end": 46
+          },
+          "identityHashCode": 288219164,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 26,
+            "end": 26
+          },
+          "identityHashCode": 1112391084,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 13) {\n}\n",
+          "lineNumberRange": {
+            "start": 38,
+            "end": 38
+          },
+          "identityHashCode": 900781430,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=A * B;\n",
+          "lineNumberRange": {
+            "start": 129,
+            "end": 129
+          },
+          "identityHashCode": 227161955,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A < 6) {\n}\n",
+          "lineNumberRange": {
+            "start": 71,
+            "end": 71
+          },
+          "identityHashCode": 526994803,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"TBD\";\n",
+          "lineNumberRange": {
+            "start": 131,
+            "end": 131
+          },
+          "identityHashCode": 547373561,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s+=\"s\";\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 73
+          },
+          "identityHashCode": 1846138469,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 85,
+            "end": 85
+          },
+          "identityHashCode": 421007130,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 22,
+            "end": 22
+          },
+          "identityHashCode": 1182895402,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"ABC\";\n",
+          "lineNumberRange": {
+            "start": 100,
+            "end": 100
+          },
+          "identityHashCode": 1784188903,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A == B && B != C) {\n}\n",
+          "lineNumberRange": {
+            "start": 60,
+            "end": 60
+          },
+          "identityHashCode": 826339756,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 99,
+            "end": 99
+          },
+          "identityHashCode": 1964156559,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"C\";\n",
+          "lineNumberRange": {
+            "start": 28,
+            "end": 28
+          },
+          "identityHashCode": 952199556,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 89,
+            "end": 90
+          },
+          "identityHashCode": 1173437087,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 144,
+            "end": 145
+          },
+          "identityHashCode": 1091107745,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve Eve\";\n",
+          "lineNumberRange": {
+            "start": 73,
+            "end": 73
+          },
+          "identityHashCode": 2031198699,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B > A) {\n}\n",
+          "lineNumberRange": {
+            "start": 34,
+            "end": 34
+          },
+          "identityHashCode": 1189750257,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"ABC\";\n",
+          "lineNumberRange": {
+            "start": 83,
+            "end": 83
+          },
+          "identityHashCode": 340623236,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 104,
+            "end": 104
+          },
+          "identityHashCode": 1888347581,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 104,
+            "end": 104
+          },
+          "identityHashCode": 1039877916,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 146,
+            "end": 146
+          },
+          "identityHashCode": 165023852,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=A + (A - 1);\n",
+          "lineNumberRange": {
+            "start": 78,
+            "end": 78
+          },
+          "identityHashCode": 1699813749,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Rainy\";\n",
+          "lineNumberRange": {
+            "start": 106,
+            "end": 106
+          },
+          "identityHashCode": 1418220855,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (B == C && C != A) {\n}\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 429158666,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf(A + B);\n",
+          "lineNumberRange": {
+            "start": 59,
+            "end": 59
+          },
+          "identityHashCode": 1684182612,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=6;\n",
+          "lineNumberRange": {
+            "start": 104,
+            "end": 104
+          },
+          "identityHashCode": 440809554,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A >= 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 125,
+            "end": 125
+          },
+          "identityHashCode": 490403068,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 35,
+            "end": 35
+          },
+          "identityHashCode": 1816047579,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 114,
+            "end": 114
+          },
+          "identityHashCode": 1147957507,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 138,
+            "end": 138
+          },
+          "identityHashCode": 1465569238,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 55,
+            "end": 55
+          },
+          "identityHashCode": 424642338,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 121,
+            "end": 121
+          },
+          "identityHashCode": 1561311672,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas\";\n",
+          "lineNumberRange": {
+            "start": 43,
+            "end": 43
+          },
+          "identityHashCode": 415011411,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"hon\";\n",
+          "lineNumberRange": {
+            "start": 159,
+            "end": 159
+          },
+          "identityHashCode": 1466375486,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A <= 9 && B <= 9) {\n}\n",
+          "lineNumberRange": {
+            "start": 68,
+            "end": 68
+          },
+          "identityHashCode": 1903924467,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Sunny\";\n",
+          "lineNumberRange": {
+            "start": 94,
+            "end": 94
+          },
+          "identityHashCode": 1281682947,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 57,
+            "end": 57
+          },
+          "identityHashCode": 1732288024,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 204,
+            "end": 204
+          },
+          "identityHashCode": 1563701821,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=4;\n",
+          "lineNumberRange": {
+            "start": 83,
+            "end": 83
+          },
+          "identityHashCode": 1579885938,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 144,
+            "end": 144
+          },
+          "identityHashCode": 1320952011,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A > B) {\n}\n",
+          "lineNumberRange": {
+            "start": 208,
+            "end": 208
+          },
+          "identityHashCode": 1487222947,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 == B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 43,
+            "end": 43
+          },
+          "identityHashCode": 1245706371,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return C - Math.min(C,A - B);\n",
+          "lineNumberRange": {
+            "start": 24,
+            "end": 25
+          },
+          "identityHashCode": 107669729,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 210,
+            "end": 210
+          },
+          "identityHashCode": 2016295900,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 133,
+            "end": 133
+          },
+          "identityHashCode": 1322137683,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve\";\n",
+          "lineNumberRange": {
+            "start": 54,
+            "end": 54
+          },
+          "identityHashCode": 1347883908,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A <= 9 && B <= 9) {\n}\n",
+          "lineNumberRange": {
+            "start": 148,
+            "end": 148
+          },
+          "identityHashCode": 965527998,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"IMPOSSIBLE\";\n",
+          "lineNumberRange": {
+            "start": 107,
+            "end": 107
+          },
+          "identityHashCode": 145487296,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 53,
+            "end": 53
+          },
+          "identityHashCode": 427109984,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 111,
+            "end": 111
+          },
+          "identityHashCode": 583943344,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Cloudy\";\n",
+          "lineNumberRange": {
+            "start": 40,
+            "end": 40
+          },
+          "identityHashCode": 1086461616,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 245,
+            "end": 245
+          },
+          "identityHashCode": 37142837,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "if (A < 13) {\n}\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 73
+          },
+          "identityHashCode": 990459191,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 68,
+            "end": 69
+          },
+          "identityHashCode": 1716030575,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"ARC\";\n",
+          "lineNumberRange": {
+            "start": 73,
+            "end": 73
+          },
+          "identityHashCode": 488503332,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 247,
+            "end": 248
+          },
+          "identityHashCode": 668043766,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (C == A && A != B) {\n}\n",
+          "lineNumberRange": {
+            "start": 174,
+            "end": 174
+          },
+          "identityHashCode": 12811959,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Good\";\n",
+          "lineNumberRange": {
+            "start": 84,
+            "end": 84
+          },
+          "identityHashCode": 952146771,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 142,
+            "end": 142
+          },
+          "identityHashCode": 1672584004,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 251,
+            "end": 251
+          },
+          "identityHashCode": 876176330,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 14,
+            "end": 14
+          },
+          "identityHashCode": 1707670011,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 191,
+            "end": 191
+          },
+          "identityHashCode": 1819487237,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=7;\n",
+          "lineNumberRange": {
+            "start": 162,
+            "end": 162
+          },
+          "identityHashCode": 1776806427,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B % A == 0) {\n}\n",
+          "lineNumberRange": {
+            "start": 100,
+            "end": 100
+          },
+          "identityHashCode": 584364925,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 37,
+            "end": 37
+          },
+          "identityHashCode": 1525104572,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 71,
+            "end": 71
+          },
+          "identityHashCode": 2091213834,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 181,
+            "end": 181
+          },
+          "identityHashCode": 2062726996,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 14,
+            "end": 14
+          },
+          "identityHashCode": 2120433749,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 283,
+            "end": 283
+          },
+          "identityHashCode": 846002037,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 268,
+            "end": 268
+          },
+          "identityHashCode": 1321887490,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A * B % 2 == 0) {\n}\n",
+          "lineNumberRange": {
+            "start": 147,
+            "end": 147
+          },
+          "identityHashCode": 838927338,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 246,
+            "end": 246
+          },
+          "identityHashCode": 1692952558,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Sunny\";\n",
+          "lineNumberRange": {
+            "start": 58,
+            "end": 58
+          },
+          "identityHashCode": 801998484,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "isgood=false;\n",
+          "lineNumberRange": {
+            "start": 67,
+            "end": 67
+          },
+          "identityHashCode": 1053801511,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 122,
+            "end": 123
+          },
+          "identityHashCode": 1209708215,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 225,
+            "end": 225
+          },
+          "identityHashCode": 1752050574,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "--n;\n",
+          "lineNumberRange": {
+            "start": 81,
+            "end": 81
+          },
+          "identityHashCode": 1633377691,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 227,
+            "end": 227
+          },
+          "identityHashCode": 1816829236,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 6) {\n}\n",
+          "lineNumberRange": {
+            "start": 120,
+            "end": 120
+          },
+          "identityHashCode": 1740212762,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 150,
+            "end": 151
+          },
+          "identityHashCode": 336361819,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 226,
+            "end": 226
+          },
+          "identityHashCode": 833501284,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 142,
+            "end": 142
+          },
+          "identityHashCode": 1323484790,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 41,
+            "end": 41
+          },
+          "identityHashCode": 1401139743,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"TBD\";\n",
+          "lineNumberRange": {
+            "start": 66,
+            "end": 66
+          },
+          "identityHashCode": 39970579,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (B == C && C != A) {\n}\n",
+          "lineNumberRange": {
+            "start": 82,
+            "end": 82
+          },
+          "identityHashCode": 1481721770,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas\";\n",
+          "lineNumberRange": {
+            "start": 153,
+            "end": 153
+          },
+          "identityHashCode": 501678697,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 312,
+            "end": 312
+          },
+          "identityHashCode": 1976149508,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "isgood=false;\n",
+          "lineNumberRange": {
+            "start": 306,
+            "end": 306
+          },
+          "identityHashCode": 1174522108,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 127,
+            "end": 128
+          },
+          "identityHashCode": 212359818,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=4;\n",
+          "lineNumberRange": {
+            "start": 144,
+            "end": 144
+          },
+          "identityHashCode": 208845888,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"ARC\";\n",
+          "lineNumberRange": {
+            "start": 13,
+            "end": 13
+          },
+          "identityHashCode": 1069710230,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (n > C) {\n  n=C;\n}\n",
+          "lineNumberRange": {
+            "start": 262,
+            "end": 262
+          },
+          "identityHashCode": 656850855,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 340,
+            "end": 340
+          },
+          "identityHashCode": 839425136,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"bust\";\n",
+          "lineNumberRange": {
+            "start": 73,
+            "end": 73
+          },
+          "identityHashCode": 129966242,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 85,
+            "end": 85
+          },
+          "identityHashCode": 1647848463,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=A + B;\n",
+          "lineNumberRange": {
+            "start": 305,
+            "end": 305
+          },
+          "identityHashCode": 739039872,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=7;\n",
+          "lineNumberRange": {
+            "start": 154,
+            "end": 154
+          },
+          "identityHashCode": 160477100,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 227,
+            "end": 227
+          },
+          "identityHashCode": 236282115,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B > A) {\n}\n",
+          "lineNumberRange": {
+            "start": 169,
+            "end": 169
+          },
+          "identityHashCode": 1433114111,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 82,
+            "end": 83
+          },
+          "identityHashCode": 1026863368,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 140,
+            "end": 140
+          },
+          "identityHashCode": 1265980911,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "B--;\n",
+          "lineNumberRange": {
+            "start": 272,
+            "end": 272
+          },
+          "identityHashCode": 1642887206,
+          "snippetNodeType": 21
+        }
+      ],
+      "generatedSourceCode": [
+        "import java.util.*;\n\npublic class Main {\n\n    public static int solveA(int A, int B, int C) {\n        int unused = 0;\n\t\t/*978470049*/ String s=\"\";\n\t\t/*881593492*/ if (A == B && B != C) {\n\t\t\t/*362066447*/ s=\"No\";\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1069710230*/ s=\"ARC\";\n\t\t\n\t\t/*103030629*/ s=String.valueOf((A + B) / 2);\n\t\t/*2120433749*/ s=\"Yes\";\n\t\t\n\t\t/*2058196197*/ s=\"Cloudy\";\n\t\t/*1707670011*/ s=\"Yes\";\n\t\t\n\t\t\n\t\t\n\t\t\n        /*1859125434*/ s=\"No\";\n\t\t\n\t\t/*870844967*/ s+=\"s\";\n\t\t/*1790623938*/ s=\"Yay!\";\n\t\t/*1820039646*/ s=\"unsafe\";\n\t\t/*1182895402*/ s=String.valueOf((A + B) / 2);\n\t\t/*429158666*/ if (B == C && C != A) {\n\t\t\t/*107669729*/ return C - Math.min(C,A - B);\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t/*952199556*/ s=\"C\";\n\t\t\n\t\t/*1525104572*/ s=\"No\";\n\t\t\n\t\t/*1112391084*/ s=\"Yes\";\n\t\t/*1401139743*/ s=\"Yes\";\n\t\t\n\t\t\n\t\t/*1816047579*/ if (A < 3200) {\n\t\t}\n\t\t\n\t\t/*1086461616*/ s=\"Cloudy\";\n\t\t\n\t\t/*719048918*/ s=\"Christmas\";\n\t\t\n\t\t/*1189750257*/ if (B > A) {\n\t\t}\n\t\t\n\t\t/*415011411*/ s=\"Christmas\";\n\t\t/*1245706371*/ if (A % 2 == B % 2) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1728502333*/ boolean isgood=true;\n\t\t/*801998484*/ s=\"Sunny\";\n\t\t\n\t\t/*569919564*/ B--;\n\t\t\n\t\t/*923187848*/ s=String.valueOf((A + B) / 2);\n\t\t/*39970579*/ s=\"TBD\";\n\t\t\n\t\t/*427109984*/ s=\"No\";\n\t\t\n\t\t/*1402190017*/ s=\"Yes\";\n\t\t/*1347883908*/ s=\"Christmas Eve\";\n\t\t/*129966242*/ s=\"bust\";\n\t\t\n\t\t/*1053801511*/ isgood=false;\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t/*900781430*/ if (A < 13) {\n\t\t\t/*1026863368*/ s=\"YES\";\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1647848463*/ s=\"No\";\n\t\t\n\t\t/*1018002979*/ int n=10;\n\t\t/*2091213834*/ s=\"Yes\";\n\t\t/*1481721770*/ if (B == C && C != A) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1732288024*/ if (A < 3200) {\n\t\t\t/*1633377691*/ --n;\n\t\t\t\n\t\t\t/*1716030575*/ n=1;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1887278481*/ n=1;\n\t\t/*488503332*/ s=\"ARC\";\n\t\t\n\t\t/*424642338*/ if (A % 2 != B % 2) {\n\t\t\t/*990459191*/ if (A < 13) {\n\t\t\t}\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t/*1873117497*/ if (A % 2 != B % 2) {\n\t\t\t/*952146771*/ s=\"Good\";\n\t\t\t\n\t\t\t/*204976375*/ return n;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*262015462*/ n=2;\n\t\t/*1684182612*/ s=String.valueOf(A + B);\n\t\t/*1903924467*/ if (A <= 9 && B <= 9) {\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t/*1896364206*/ s=\"Yes\";\n\t\t/*584364925*/ if (B % A == 0) {\n\t\t}\n\t\t\n\t\t/*288219164*/ s=\"a\";\n\t\t\n\t\t\n\t\t/*321435637*/ s=\"Yes\";\n\t\t\n\t\t/*1740212762*/ if (A < 6) {\n\t\t\t/*212359818*/ n=1;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1265980911*/ n=2;\n\t\t\n\t\t/*1292257880*/ s=\"Rainy\";\n\t\t/*1579885938*/ n=4;\n\t\t\n\t\t/*1809667162*/ s=\"Yay!\";\n\t\t/*826339756*/ if (A == B && B != C) {\n\t\t\t/*1209708215*/ s=\"Yay!\";\n\t\t\t\n\t\t}\n\t\t\n\t\t/*689809604*/ ++n;\n\t\t\n\t\t\n\t\t/*1904577133*/ n=3;\n\t\t/*208845888*/ n=4;\n\t\t\n\t\t\n\t\t/*160477100*/ n=7;\n\t\t\n\t\t/*162681863*/ n=0;\n\t\t\n\t\t/*2031198699*/ s=\"Christmas Eve Eve\";\n\t\t\n\t\t/*926162727*/ s=\"unsafe\";\n\t\t/*1323484790*/ n=0;\n\t\t\n\t\t/*145487296*/ s=\"IMPOSSIBLE\";\n\t\t\n\t\t/*501678697*/ s=\"Christmas\";\n\t\t\n\t\t/*583943344*/ s=\"Yes\";\n\t\t\n\t\t/*1433114111*/ if (B > A) {\n\t\t}\n\t\t\n\t\t/*1281682947*/ s=\"Sunny\";\n\t\t\n\t\t/*1699813749*/ n=A + (A - 1);\n\t\t\n\t\t/*1045137494*/ if (A > B) {\n\t\t\t/*336361819*/ s=\"Yes\";\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t/*340623236*/ s=\"ABC\";\n\t\t\n\t\t/*1190090993*/ s=\"Yes\";\n\t\t/*526994803*/ if (A < 6) {\n\t\t\t/*838927338*/ if (A * B % 2 == 0) {\n\t\t\t}\n\t\t\t\n\t\t\t/*1846138469*/ s+=\"s\";\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t/*1672584004*/ n=1;\n\t\t\n\t\t/*198116005*/ s=\"Yes\";\n\t\t\n\t\t\n\t\t/*574621635*/ if (A < 13) {\n\t\t\t/*1173437087*/ n=1;\n\t\t\t/*440809554*/ n=6;\n\t\t\t\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1322137683*/ if (A < 3200) {\n\t\t}\n\t\t\n\t\t/*762949370*/ n=1;\n\t\t/*1147957507*/ s=\"No\";\n\t\t\n\t\t/*421007130*/ n=2;\n\t\t/*1776806427*/ n=7;\n\t\t\n\t\t\n\t\t/*1888347581*/ s=\"Yes\";\n\t\t/*1561311672*/ s=String.valueOf((A + B) / 2);\n\t\t\n\t\t/*1418220855*/ s=\"Rainy\";\n\t\t\n\t\t/*965527998*/ if (A <= 9 && B <= 9) {\n\t\t}\n\t\t\n\t\t/*2062726996*/ s=\"Yes\";\n\t\t\n\t\t/*1039877916*/ ++n;\n\t\t\n\t\t\n\t\t/*409080073*/ s=\"C\";\n\t\t/*236282115*/ ++n;\n\t\t\n\t\t\n\t\t\n\t\t/*1320952011*/ s=\"Yes\";\n\t\t\n\t\t/*1485238700*/ s=\"Yes\";\n\t\t/*12811959*/ if (C == A && A != B) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1454994088*/ isgood=false;\n\t\t/*1964156559*/ s=\"Yay!\";\n\t\t/*490403068*/ if (A >= 3200) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1819487237*/ s=\"YES\";\n\t\t\n\t\t/*1182364266*/ n=1;\n\t\t\n\t\t/*889442462*/ s=\"TBD\";\n\t\t/*1217415428*/ n=1;\n\t\t/*1465569238*/ n=1;\n\t\t/*833501284*/ ++n;\n\t\t\n\t\t\n\t\t/*1784188903*/ s=\"ABC\";\n\t\t\n\t\t/*97913183*/ ++n;\n\t\t\n\t\t/*1752050574*/ s=String.valueOf((A + B) / 2);\n\t\t/*1816829236*/ s=\"Yes\";\n\t\t\n\t\t\n\t\t/*31267375*/ n=2;\n\t\t\n\t\t/*1251557174*/ s=\"Yes\";\n\t\t/*1642887206*/ B--;\n\t\t\n\t\t/*1218885289*/ n=3;\n\t\t/*295348975*/ n=3;\n\t\t\n\t\t\n\t\t/*1506592670*/ n=A * B;\n\t\t/*656850855*/ if (n > C) {\n\t\t  n=C;\n\t\t}\n\t\t\n\t\t/*1466375486*/ s=\"hon\";\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t/*1311336999*/ s=\"Good\";\n\t\t/*2032161762*/ if (A > B) {\n\t\t\t/*1370718061*/ s=\"ABC\";\n\t\t\t\n\t\t}\n\t\t\n\t\t/*949448471*/ s=\"unsafe\";\n\t\t\n\t\t\n\t\t/*165023852*/ s=\"YES\";\n\t\t\n\t\t/*100090922*/ s=\"Christmas Eve Eve\";\n\t\t/*1692952558*/ s=\"Yes\";\n\t\t\n\t\t/*1768035107*/ s=\"No\";\n\t\t\n\t\t\n\t\t/*499034123*/ if (B == C && C != A) {\n\t\t\t/*1334214245*/ return n;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1591531651*/ if (A % 2 != B % 2) {\n\t\t\t/*1091107745*/ return n;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*739039872*/ n=A + B;\n\t\t\n\t\t/*832177998*/ s=\"Yes\";\n\t\t/*2016295900*/ n=0;\n\t\t\n\t\t/*547373561*/ s=\"TBD\";\n\t\t\n\t\t/*923415478*/ n=0;\n\t\t/*1487222947*/ if (A > B) {\n\t\t}\n\t\t\n\t\t/*513467658*/ n=3;\n\t\t/*1563701821*/ s=\"YES\";\n\t\t\n\t\t/*1321887490*/ if (A % 2 != B % 2) {\n\t\t}\n\t\t\n\t\t/*876176330*/ n=2;\n\t\t/*1174522108*/ isgood=false;\n\t\t\n\t\t\n\t\t/*227161955*/ n=A * B;\n\t\t\n\t\t\n\t\t/*1482475260*/ if (B > A) {\n\t\t\t/*1976149508*/ s=\"Yes\";\n\t\t\t\n\t\t\t/*668043766*/ s=\"Yes\";\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t/*37142837*/ ++n;\n\t\t\n\t\t/*1164098978*/ s=\"Cloudy\";\n\t\t/*1787901053*/ s+=\"s\";\n\t\t/*846002037*/ n=1;\n\t\t\n\t\t\n\t\t\n\t\t/*839425136*/ n=2;\n\t\t\n\t\treturn unused;\n    }\n}\n",
+        "import java.util.*;\n\npublic class Reuse {\n\n  public static int abc101a(String S) {\n    int n = 0;\n    if (S.charAt(0) == '+') {\n    }\n    if (S.charAt(0) == '-') {\n    }\n    if (S.charAt(1) == '+') {\n    }\n    if (S.charAt(1) == '-') {\n    }\n    if (S.charAt(2) == '+') {\n    }\n    if (S.charAt(2) == '-') {\n    }\n    if (S.charAt(3) == '+') {\n    }\n    if (S.charAt(3) == '-') {\n    }\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    return n;\n  }\n\n  public static int abc102a(int N) {\n    int n = N;\n    if (N % 2 != 0) {\n    }\n    n = 2 * N;\n    return n;\n  }\n\n  public static int abc103a(int A1, int A2, int A3) {\n    return Math.max(Math.max(A1, A2), A3) - Math.min(Math.min(A1, A2), A3);\n  }\n\n  public static String abc104a(int N) {\n    String s = \"AGC\";\n    if (N < 1200) {\n    }\n    if (N < 2800) {\n    }\n    s = \"ABC\";\n    s = \"ARC\";\n    return s;\n  }\n\n  public static int abc105a(int N, int K) {\n    int n = 0;\n    if (N % K != 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static int abc106a(int A, int B) {\n    return (A - 1) * (B - 1);\n  }\n\n  public static int abc107a(int N, int i) {\n    return N + 1 - i;\n  }\n\n  public static int abc108a(int K) {\n    return (K / 2) * ((K + 1) / 2);\n  }\n\n  public static String abc109a(int A, int B) {\n    String s = \"Yes\";\n    if (A * B % 2 == 0) {\n    }\n    s = \"No\";\n    return s;\n  }\n\n  public static int abc110a(int A, int B, int C) {\n    int n = Math.max(Math.max(A, B), C);\n    return A + B + C + 9 * n;\n  }\n\n  public static int abc111a(int n) {\n    return 111 + 999 - n;\n  }\n\n  public static String abc112a(int N, int A, int B) {\n    String s = \"Hello World\";\n    if (N != 1) {\n    }\n    s = String.valueOf(A + B);\n    return s;\n  }\n\n  public static int abc113a(int X, int Y) {\n    return X + Y / 2;\n  }\n\n  public static String abc114a(int X) {\n    String s = \"NO\";\n    if (X == 3) {\n    }\n    if (X == 5) {\n    }\n    if (X == 7) {\n    }\n    s = \"YES\";\n    s = \"YES\";\n    s = \"YES\";\n    return s;\n  }\n\n  public static String abc115a(int D) {\n    String s = \"Christmas Eve Eve Eve\";\n    if (D == 25) {\n    }\n    if (D == 24) {\n    }\n    if (D == 23) {\n    }\n    s = \"Christmas\";\n    s = \"Christmas Eve\";\n    s = \"Christmas Eve Eve\";\n    return s;\n  }\n\n  public static int abc116a(int A, int B, int C) {\n    return A * B / 2;\n  }\n\n  public static float abc117a(int T, int X) {\n    return (float) T / X;\n  }\n\n  public static int abc118a(int A, int B) {\n    int n = B - A;\n    if (B % A == 0) {\n    }\n    n = A + B;\n    return n;\n  }\n\n  public static String abc119a(String S) {\n    String s = \"Heisei\";\n    if (S.compareTo(\"2019/04/30\") > 0) {\n    }\n    s = \"TBD\";\n    return s;\n  }\n\n  public static int abc120a(int A, int B, int C) {\n    int n = B / A;\n    if (n > C) {\n      n = C;\n    }\n    return n;\n  }\n\n  public static int abc121a(int H, int W, int h, int w) {\n    return (H - h) * (W - w);\n  }\n\n  public static String abc122a(String b) {\n    String s = \"G\";\n    if (b.equals(\"A\")) {\n    }\n    if (b.equals(\"T\")) {\n    }\n    if (b.equals(\"G\")) {\n    }\n    s = \"T\";\n    s = \"A\";\n    s = \"C\";\n    return s;\n  }\n\n  public static String abc123a(int A, int B, int C, int D, int E, int K) {\n    String s = \":(\";\n    if (E - A <= K) {\n    }\n    s = \"Yay!\";\n    return s;\n  }\n\n  public static int abc124a(int A, int B) {\n    int n = A + B;\n    if (A > B) {\n    }\n    if (B > A) {\n    }\n    n = A + (A - 1);\n    n = B + (B - 1);\n    return n;\n  }\n\n  public static int abc125a(int A, int B, int T) {\n    return T / A * B;\n  }\n\n  public static String abc126a(int N, int K, String S) {\n    String s = \"c\";\n    if (S.substring(K - 1, K)\n        .equals(\"A\")) {\n      s = \"a\";\n    }\n    if (S.substring(K - 1, K)\n        .equals(\"B\")) {\n      s = \"b\";\n    }\n\n    return S.substring(0, K - 1) + s + S.substring(K);\n  }\n\n  public static int abc127a(int A, int B) {\n    int n = B;\n    if (A < 6) {\n    }\n    if (A < 13) {\n    }\n    n = 0;\n    n = B / 2;\n    return n;\n  }\n\n  public static int abc128a(int A, int P) {\n    return (3 * A + P) / 2;\n  }\n\n  public static int abc129a(int P, int Q, int R) {\n    return P + Q + R - Math.max(Math.max(P, Q), R);\n  }\n\n  public static int abc130a(int X, int A) {\n    int n = 10;\n    if (X < A) {\n    }\n    n = 0;\n    return n;\n  }\n\n  public static String abc131a(String S) {\n    boolean isgood = true;\n    if (S.charAt(0) == S.charAt(1)) {\n    }\n    if (S.charAt(1) == S.charAt(2)) {\n    }\n    if (S.charAt(2) == S.charAt(3)) {\n    }\n    isgood = false;\n    isgood = false;\n    isgood = false;\n\n    String s = \"Bad\";\n    if (isgood) {\n    }\n    s = \"Good\";\n\n    return s;\n  }\n\n  public static String abc132a(String S) {\n    String s = \"No\";\n    if (S.charAt(0) == S.charAt(1) && S.charAt(1) != S.charAt(2) && S.charAt(2) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(2) && S.charAt(2) != S.charAt(1) && S.charAt(1) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(3) && S.charAt(3) != S.charAt(1) && S.charAt(1) == S.charAt(2)) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc133a(int N, int A, int B) {\n    int n = B;\n    if (N * A < B) {\n    }\n    n = N * A;\n\n    return n;\n  }\n\n  public static int abc134a(int r) {\n    return r * r * 3;\n  }\n\n  public static String abc135a(long A, long B) {\n    String s = \"\";\n    if (A % 2 != B % 2) {\n    }\n    if (A % 2 == B % 2) {\n    }\n    s = \"IMPOSSIBLE\";\n    s = String.valueOf((A + B) / 2);\n\n    return s;\n  }\n\n  public static int abc136a(int A, int B, int C) {\n    return C - Math.min(C, A - B);\n  }\n\n  public static int abc137a(int A, int B) {\n    return Math.max(Math.max(A + B, A - B), A * B);\n  }\n\n  public static String abc138a(int A, String S) {\n    String s = \"\";\n    if (A >= 3200) {\n    }\n    if (A < 3200) {\n    }\n    s = S;\n    s = \"red\";\n\n    return s;\n  }\n\n  public static int abc139a(String S, String T) {\n    int n = 0;\n    if (S.charAt(0) == T.charAt(0)) {\n    }\n    if (S.charAt(1) == T.charAt(1)) {\n    }\n    if (S.charAt(2) == T.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n\n    return n;\n  }\n\n  public static int abc140a(int N) {\n    return N * N * N;\n  }\n\n  public static String abc141a(String S) {\n    String s = \"\";\n    if (S.equals(\"Sunny\")) {\n    }\n    if (S.equals(\"Cloudy\")) {\n    }\n    if (S.equals(\"Rainy\")) {\n    }\n    s = \"Cloudy\";\n    s = \"Rainy\";\n    s = \"Sunny\";\n    return s;\n  }\n\n  public static double abc142a(int N) {\n    return (double) (N - N / 2) / (double) N;\n  }\n\n  public static int abc143a(int A, int B) {\n    return Math.max(0, A - 2 * B);\n  }\n\n  public static int abc144a(int A, int B) {\n    int n = -1;\n    if (A <= 9 && B <= 9) {\n    }\n    n = A * B;\n\n    return n;\n  }\n\n  public static int abc145a(int r) {\n    return r * r;\n  }\n\n  public static int abc146a(String S) {\n    int n = 0;\n    if (S.equals(\"SUN\")) {\n    }\n    if (S.equals(\"MON\")) {\n    }\n    if (S.equals(\"TUE\")) {\n    }\n    if (S.equals(\"WED\")) {\n    }\n    if (S.equals(\"THU\")) {\n    }\n    if (S.equals(\"FRI\")) {\n    }\n    if (S.equals(\"SAT\")) {\n    }\n    n = 1;\n    n = 2;\n    n = 3;\n    n = 4;\n    n = 5;\n    n = 6;\n    n = 7;\n\n    return n;\n  }\n\n  public static String abc147a(int A1, int A2, int A3) {\n    String s = \"win\";\n    if (A1 + A2 + A3 >= 22) {\n    }\n    s = \"bust\";\n\n    return s;\n  }\n\n  public static int abc148a(int A, int B) {\n    return 6 - A - B;\n  }\n\n  public static String abc149a(String S, String T) {\n    return T + S;\n  }\n\n  public static String abc150a(int K, int X) {\n    String s = \"No\";\n    if (500 * K >= X) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc151a(String C) {\n    return String.valueOf(C.charAt(0) + 1);\n  }\n\n  public static String abc152a(int N, int M) {\n    String s = \"No\";\n    if (N == M) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc153a(int H, int A) {\n    return (H + A - 1) / A;\n  }\n\n  public static String abc154a(String S, String T, int A, int B, String U) {\n    if (S.equals(U)) {\n    }\n    if (T.equals(U)) {\n\n    }\n    B--;\n    A--;\n\n    return A + \" \" + B;\n  }\n\n  public static String abc155a(int A, int B, int C) {\n    String s = \"No\";\n    if (A == B && B != C) {\n    }\n    if (B == C && C != A) {\n    }\n    if (C == A && A != B) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc156a(int N, int R) {\n    int n = R + 100 * (10 - N);\n    if (N >= 10) {\n    }\n    n = R;\n\n    return n;\n  }\n\n  public static int abc157a(int N) {\n    return (N + 1) / 2;\n  }\n\n  public static String abc158a(String S) {\n    String s = \"No\";\n    if (S.contains(\"A\") && S.contains(\"B\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc159a(int N, int M) {\n    return N * (N - 1) / 2 + M * (M - 1) / 2;\n  }\n\n  public static String abc160a(String S) {\n    String s = \"No\";\n    if (S.charAt(2) == S.charAt(3) && S.charAt(4) == S.charAt(5)) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc161a(int X, int Y, int Z) {\n    return Z + \" \" + X + \" \" + Y;\n  }\n\n  public static String abc162a(int N) {\n    String s = \"No\";\n    if (String.valueOf(N)\n        .contains(\"7\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static double abc163a(int R) {\n    return 2 * R * Math.PI;\n  }\n\n  public static String abc164a(int S, int W) {\n    String s = \"safe\";\n    if (W >= S) {\n    }\n    s = \"unsafe\";\n\n    return s;\n  }\n\n  public static String abc165a(int K, int A, int B) {\n    String s = \"NG\";\n    if (A <= (B / K) * K) {\n    }\n    s = \"OK\";\n\n    return s;\n  }\n\n  public static String abc166a(String S) {\n    String s = \"ABC\";\n    if (S.equals(\"ABC\")) {\n    }\n    s = \"ARC\";\n\n    return s;\n  }\n\n  public static String abc167a(String S, String T) {\n    String s = \"No\";\n    if (T.startsWith(S) && S.length() + 1 == T.length()) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc168a(int N) {\n    String s = \"bon\";\n    if (N % 10 == 2 || N % 10 == 4 || N % 10 == 5 || N % 10 == 7 || N % 10 == 9) {\n    }\n    if (N % 10 == 0 || N % 10 == 1 || N % 10 == 6 || N % 10 == 8) {\n    }\n    s = \"pon\";\n    s = \"hon\";\n\n    return s;\n  }\n\n  public static int abc169a(int A, int B) {\n    return A * B;\n  }\n\n  public static int abc170a(int x1, int x2, int x3, int x4, int x5) {\n    int n = 5;\n    if (x1 == 0) {\n    }\n    if (x2 == 0) {\n    }\n    if (x3 == 0) {\n    }\n    if (x4 == 0) {\n    }\n    n = 4;\n    n = 3;\n    n = 2;\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc117a(String S) {\n    String s = \"A\";\n    if (Character.isLowerCase(S.charAt(0))) {\n    }\n    s = \"a\";\n\n    return s;\n  }\n\n  public static int abc172a(int a) {\n    return a + a * a + a * a * a;\n  }\n\n  public static int abc173a(int N) {\n    return (1000 - N % 1000) % 1000;\n  }\n\n  public static String abc174a(int X) {\n    String s = \"\";\n    if (X >= 30) {\n    }\n    if (X < 30) {\n\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc175a(String S) {\n    int n = 0;\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    n = 0;\n    n = 1;\n    n = 1;\n    n = 1;\n    n = 2;\n    n = 2;\n    n = 2;\n    n = 3;\n\n    return n;\n  }\n\n  public static int abc176a(int N, int X, int T) {\n    return (N + X - 1) / X * T;\n  }\n\n  public static String abc177a(int D, int T, int S) {\n    String s = \"\";\n    if (T >= (double) D / S) {\n    }\n    if (T < (double) D / S) {\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc178a(int x) {\n    int n = 0;\n    if (x == 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc179a(String S) {\n    String s = S;\n    if (S.charAt(s.length() - 1) == 's') {\n    }\n    if (S.charAt(s.length() - 1) != 's') {\n\n    }\n    s += \"s\";\n    s += \"es\";\n\n    return s;\n  }\n\n  public static int abc180a(int N, int A, int B) {\n    return N - A + B;\n  }\n\n}\n"
+      ],
+      "parentTestResults": [
+        {
+          "successRate": 0.3076923076923077,
+          "executedTestsCount": 13,
+          "testResults": [
+            {
+              "fqn": "MainTest.test0",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test1",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test10",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test11",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test12",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test2",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test3",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test4",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test5",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test6",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test7",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test8",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test9",
+              "isSuccess": false
+            }
+          ]
+        }
+      ],
+      "selectionCount": 0,
+      "operation": {
+        "parentIds": [],
+        "name": ""
+      },
+      "isBuildSuccess": true,
+      "isSyntaxValid": true,
+      "patch": [
+        {
+          "fileName": "Main",
+          "diff": "--- Main\n+++ Main\n@@ -4,6 +4,360 @@\n \n     public static int solveA(int A, int B, int C) {\n         int unused = 0;\n-        return unused;\n+\t\t/*978470049*/ String s=\"\";\n+\t\t/*881593492*/ if (A == B && B != C) {\n+\t\t\t/*362066447*/ s=\"No\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1069710230*/ s=\"ARC\";\n+\t\t\n+\t\t/*103030629*/ s=String.valueOf((A + B) / 2);\n+\t\t/*2120433749*/ s=\"Yes\";\n+\t\t\n+\t\t/*2058196197*/ s=\"Cloudy\";\n+\t\t/*1707670011*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+        /*1859125434*/ s=\"No\";\n+\t\t\n+\t\t/*870844967*/ s+=\"s\";\n+\t\t/*1790623938*/ s=\"Yay!\";\n+\t\t/*1820039646*/ s=\"unsafe\";\n+\t\t/*1182895402*/ s=String.valueOf((A + B) / 2);\n+\t\t/*429158666*/ if (B == C && C != A) {\n+\t\t\t/*107669729*/ return C - Math.min(C,A - B);\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*952199556*/ s=\"C\";\n+\t\t\n+\t\t/*1525104572*/ s=\"No\";\n+\t\t\n+\t\t/*1112391084*/ s=\"Yes\";\n+\t\t/*1401139743*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\t/*1816047579*/ if (A < 3200) {\n+\t\t}\n+\t\t\n+\t\t/*1086461616*/ s=\"Cloudy\";\n+\t\t\n+\t\t/*719048918*/ s=\"Christmas\";\n+\t\t\n+\t\t/*1189750257*/ if (B > A) {\n+\t\t}\n+\t\t\n+\t\t/*415011411*/ s=\"Christmas\";\n+\t\t/*1245706371*/ if (A % 2 == B % 2) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1728502333*/ boolean isgood=true;\n+\t\t/*801998484*/ s=\"Sunny\";\n+\t\t\n+\t\t/*569919564*/ B--;\n+\t\t\n+\t\t/*923187848*/ s=String.valueOf((A + B) / 2);\n+\t\t/*39970579*/ s=\"TBD\";\n+\t\t\n+\t\t/*427109984*/ s=\"No\";\n+\t\t\n+\t\t/*1402190017*/ s=\"Yes\";\n+\t\t/*1347883908*/ s=\"Christmas Eve\";\n+\t\t/*129966242*/ s=\"bust\";\n+\t\t\n+\t\t/*1053801511*/ isgood=false;\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*900781430*/ if (A < 13) {\n+\t\t\t/*1026863368*/ s=\"YES\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1647848463*/ s=\"No\";\n+\t\t\n+\t\t/*1018002979*/ int n=10;\n+\t\t/*2091213834*/ s=\"Yes\";\n+\t\t/*1481721770*/ if (B == C && C != A) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1732288024*/ if (A < 3200) {\n+\t\t\t/*1633377691*/ --n;\n+\t\t\t\n+\t\t\t/*1716030575*/ n=1;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1887278481*/ n=1;\n+\t\t/*488503332*/ s=\"ARC\";\n+\t\t\n+\t\t/*424642338*/ if (A % 2 != B % 2) {\n+\t\t\t/*990459191*/ if (A < 13) {\n+\t\t\t}\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1873117497*/ if (A % 2 != B % 2) {\n+\t\t\t/*952146771*/ s=\"Good\";\n+\t\t\t\n+\t\t\t/*204976375*/ return n;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*262015462*/ n=2;\n+\t\t/*1684182612*/ s=String.valueOf(A + B);\n+\t\t/*1903924467*/ if (A <= 9 && B <= 9) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1896364206*/ s=\"Yes\";\n+\t\t/*584364925*/ if (B % A == 0) {\n+\t\t}\n+\t\t\n+\t\t/*288219164*/ s=\"a\";\n+\t\t\n+\t\t\n+\t\t/*321435637*/ s=\"Yes\";\n+\t\t\n+\t\t/*1740212762*/ if (A < 6) {\n+\t\t\t/*212359818*/ n=1;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1265980911*/ n=2;\n+\t\t\n+\t\t/*1292257880*/ s=\"Rainy\";\n+\t\t/*1579885938*/ n=4;\n+\t\t\n+\t\t/*1809667162*/ s=\"Yay!\";\n+\t\t/*826339756*/ if (A == B && B != C) {\n+\t\t\t/*1209708215*/ s=\"Yay!\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*689809604*/ ++n;\n+\t\t\n+\t\t\n+\t\t/*1904577133*/ n=3;\n+\t\t/*208845888*/ n=4;\n+\t\t\n+\t\t\n+\t\t/*160477100*/ n=7;\n+\t\t\n+\t\t/*162681863*/ n=0;\n+\t\t\n+\t\t/*2031198699*/ s=\"Christmas Eve Eve\";\n+\t\t\n+\t\t/*926162727*/ s=\"unsafe\";\n+\t\t/*1323484790*/ n=0;\n+\t\t\n+\t\t/*145487296*/ s=\"IMPOSSIBLE\";\n+\t\t\n+\t\t/*501678697*/ s=\"Christmas\";\n+\t\t\n+\t\t/*583943344*/ s=\"Yes\";\n+\t\t\n+\t\t/*1433114111*/ if (B > A) {\n+\t\t}\n+\t\t\n+\t\t/*1281682947*/ s=\"Sunny\";\n+\t\t\n+\t\t/*1699813749*/ n=A + (A - 1);\n+\t\t\n+\t\t/*1045137494*/ if (A > B) {\n+\t\t\t/*336361819*/ s=\"Yes\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*340623236*/ s=\"ABC\";\n+\t\t\n+\t\t/*1190090993*/ s=\"Yes\";\n+\t\t/*526994803*/ if (A < 6) {\n+\t\t\t/*838927338*/ if (A * B % 2 == 0) {\n+\t\t\t}\n+\t\t\t\n+\t\t\t/*1846138469*/ s+=\"s\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1672584004*/ n=1;\n+\t\t\n+\t\t/*198116005*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\t/*574621635*/ if (A < 13) {\n+\t\t\t/*1173437087*/ n=1;\n+\t\t\t/*440809554*/ n=6;\n+\t\t\t\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1322137683*/ if (A < 3200) {\n+\t\t}\n+\t\t\n+\t\t/*762949370*/ n=1;\n+\t\t/*1147957507*/ s=\"No\";\n+\t\t\n+\t\t/*421007130*/ n=2;\n+\t\t/*1776806427*/ n=7;\n+\t\t\n+\t\t\n+\t\t/*1888347581*/ s=\"Yes\";\n+\t\t/*1561311672*/ s=String.valueOf((A + B) / 2);\n+\t\t\n+\t\t/*1418220855*/ s=\"Rainy\";\n+\t\t\n+\t\t/*965527998*/ if (A <= 9 && B <= 9) {\n+\t\t}\n+\t\t\n+\t\t/*2062726996*/ s=\"Yes\";\n+\t\t\n+\t\t/*1039877916*/ ++n;\n+\t\t\n+\t\t\n+\t\t/*409080073*/ s=\"C\";\n+\t\t/*236282115*/ ++n;\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1320952011*/ s=\"Yes\";\n+\t\t\n+\t\t/*1485238700*/ s=\"Yes\";\n+\t\t/*12811959*/ if (C == A && A != B) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1454994088*/ isgood=false;\n+\t\t/*1964156559*/ s=\"Yay!\";\n+\t\t/*490403068*/ if (A >= 3200) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1819487237*/ s=\"YES\";\n+\t\t\n+\t\t/*1182364266*/ n=1;\n+\t\t\n+\t\t/*889442462*/ s=\"TBD\";\n+\t\t/*1217415428*/ n=1;\n+\t\t/*1465569238*/ n=1;\n+\t\t/*833501284*/ ++n;\n+\t\t\n+\t\t\n+\t\t/*1784188903*/ s=\"ABC\";\n+\t\t\n+\t\t/*97913183*/ ++n;\n+\t\t\n+\t\t/*1752050574*/ s=String.valueOf((A + B) / 2);\n+\t\t/*1816829236*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\t/*31267375*/ n=2;\n+\t\t\n+\t\t/*1251557174*/ s=\"Yes\";\n+\t\t/*1642887206*/ B--;\n+\t\t\n+\t\t/*1218885289*/ n=3;\n+\t\t/*295348975*/ n=3;\n+\t\t\n+\t\t\n+\t\t/*1506592670*/ n=A * B;\n+\t\t/*656850855*/ if (n > C) {\n+\t\t  n=C;\n+\t\t}\n+\t\t\n+\t\t/*1466375486*/ s=\"hon\";\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1311336999*/ s=\"Good\";\n+\t\t/*2032161762*/ if (A > B) {\n+\t\t\t/*1370718061*/ s=\"ABC\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*949448471*/ s=\"unsafe\";\n+\t\t\n+\t\t\n+\t\t/*165023852*/ s=\"YES\";\n+\t\t\n+\t\t/*100090922*/ s=\"Christmas Eve Eve\";\n+\t\t/*1692952558*/ s=\"Yes\";\n+\t\t\n+\t\t/*1768035107*/ s=\"No\";\n+\t\t\n+\t\t\n+\t\t/*499034123*/ if (B == C && C != A) {\n+\t\t\t/*1334214245*/ return n;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1591531651*/ if (A % 2 != B % 2) {\n+\t\t\t/*1091107745*/ return n;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*739039872*/ n=A + B;\n+\t\t\n+\t\t/*832177998*/ s=\"Yes\";\n+\t\t/*2016295900*/ n=0;\n+\t\t\n+\t\t/*547373561*/ s=\"TBD\";\n+\t\t\n+\t\t/*923415478*/ n=0;\n+\t\t/*1487222947*/ if (A > B) {\n+\t\t}\n+\t\t\n+\t\t/*513467658*/ n=3;\n+\t\t/*1563701821*/ s=\"YES\";\n+\t\t\n+\t\t/*1321887490*/ if (A % 2 != B % 2) {\n+\t\t}\n+\t\t\n+\t\t/*876176330*/ n=2;\n+\t\t/*1174522108*/ isgood=false;\n+\t\t\n+\t\t\n+\t\t/*227161955*/ n=A * B;\n+\t\t\n+\t\t\n+\t\t/*1482475260*/ if (B > A) {\n+\t\t\t/*1976149508*/ s=\"Yes\";\n+\t\t\t\n+\t\t\t/*668043766*/ s=\"Yes\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*37142837*/ ++n;\n+\t\t\n+\t\t/*1164098978*/ s=\"Cloudy\";\n+\t\t/*1787901053*/ s+=\"s\";\n+\t\t/*846002037*/ n=1;\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*839425136*/ n=2;\n+\t\t\n+\t\treturn unused;\n     }\n }"
+        }
+      ],
+      "fitness": 0.38461538461538464,
+      "testResults": {
+        "successRate": 0.38461538461538464,
+        "executedTestsCount": 13,
+        "testResults": [
+          {
+            "fqn": "MainTest.test0",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test1",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test10",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test11",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test12",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test2",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test3",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test4",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test5",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test6",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test7",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test8",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test9",
+            "isSuccess": true
+          }
+        ]
+      }
+    },
+    {
+      "testResultsSingle": {},
+      "fitnessSingle": {},
+      "suspiciousnessListSingle": {},
+      "id": 6296,
+      "generationNumber": 627,
+      "bases": [
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "boolean isgood=true;\n",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 7
+          },
+          "identityHashCode": 1728502333,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "String s=\"\";\n",
+          "lineNumberRange": {
+            "start": 6,
+            "end": 6
+          },
+          "identityHashCode": 978470049,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s+=\"s\";\n",
+          "lineNumberRange": {
+            "start": 9,
+            "end": 9
+          },
+          "identityHashCode": 870844967,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "isgood=false;\n",
+          "lineNumberRange": {
+            "start": 13,
+            "end": 13
+          },
+          "identityHashCode": 1454994088,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 9,
+            "end": 9
+          },
+          "identityHashCode": 1859125434,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 13,
+            "end": 13
+          },
+          "identityHashCode": 923187848,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Good\";\n",
+          "lineNumberRange": {
+            "start": 19,
+            "end": 19
+          },
+          "identityHashCode": 1311336999,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 11,
+            "end": 11
+          },
+          "identityHashCode": 1790623938,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 7
+          },
+          "identityHashCode": 103030629,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "int n=10;\n",
+          "lineNumberRange": {
+            "start": 21,
+            "end": 21
+          },
+          "identityHashCode": 1018002979,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Cloudy\";\n",
+          "lineNumberRange": {
+            "start": 8,
+            "end": 8
+          },
+          "identityHashCode": 2058196197,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 29,
+            "end": 29
+          },
+          "identityHashCode": 832177998,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 198116005,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Rainy\";\n",
+          "lineNumberRange": {
+            "start": 24,
+            "end": 24
+          },
+          "identityHashCode": 1292257880,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve Eve\";\n",
+          "lineNumberRange": {
+            "start": 33,
+            "end": 33
+          },
+          "identityHashCode": 100090922,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 29,
+            "end": 29
+          },
+          "identityHashCode": 762949370,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 24,
+            "end": 24
+          },
+          "identityHashCode": 1190090993,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A == B && B != C) {\n}\n",
+          "lineNumberRange": {
+            "start": 8,
+            "end": 8
+          },
+          "identityHashCode": 881593492,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 42,
+            "end": 42
+          },
+          "identityHashCode": 923415478,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"unsafe\";\n",
+          "lineNumberRange": {
+            "start": 38,
+            "end": 38
+          },
+          "identityHashCode": 949448471,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"unsafe\";\n",
+          "lineNumberRange": {
+            "start": 27,
+            "end": 27
+          },
+          "identityHashCode": 926162727,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 38,
+            "end": 38
+          },
+          "identityHashCode": 1485238700,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 27,
+            "end": 27
+          },
+          "identityHashCode": 1904577133,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"TBD\";\n",
+          "lineNumberRange": {
+            "start": 42,
+            "end": 42
+          },
+          "identityHashCode": 889442462,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 1402190017,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 32,
+            "end": 32
+          },
+          "identityHashCode": 162681863,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 47,
+            "end": 47
+          },
+          "identityHashCode": 1217415428,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 28,
+            "end": 28
+          },
+          "identityHashCode": 321435637,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "B--;\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 569919564,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (B > A) {\n}\n",
+          "lineNumberRange": {
+            "start": 63,
+            "end": 63
+          },
+          "identityHashCode": 1482475260,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 52,
+            "end": 52
+          },
+          "identityHashCode": 1251557174,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"C\";\n",
+          "lineNumberRange": {
+            "start": 46,
+            "end": 46
+          },
+          "identityHashCode": 409080073,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 30,
+            "end": 30
+          },
+          "identityHashCode": 1873117497,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Cloudy\";\n",
+          "lineNumberRange": {
+            "start": 76,
+            "end": 76
+          },
+          "identityHashCode": 1164098978,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=A * B;\n",
+          "lineNumberRange": {
+            "start": 58,
+            "end": 58
+          },
+          "identityHashCode": 1506592670,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A > B) {\n}\n",
+          "lineNumberRange": {
+            "start": 41,
+            "end": 41
+          },
+          "identityHashCode": 1045137494,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A > B) {\n}\n",
+          "lineNumberRange": {
+            "start": 69,
+            "end": 69
+          },
+          "identityHashCode": 2032161762,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 8,
+            "end": 9
+          },
+          "identityHashCode": 362066447,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 33,
+            "end": 34
+          },
+          "identityHashCode": 204976375,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B == C && C != A) {\n}\n",
+          "lineNumberRange": {
+            "start": 81,
+            "end": 81
+          },
+          "identityHashCode": 499034123,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 65,
+            "end": 65
+          },
+          "identityHashCode": 31267375,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"unsafe\";\n",
+          "lineNumberRange": {
+            "start": 21,
+            "end": 21
+          },
+          "identityHashCode": 1820039646,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 40,
+            "end": 40
+          },
+          "identityHashCode": 1896364206,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 72
+          },
+          "identityHashCode": 1218885289,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 44,
+            "end": 44
+          },
+          "identityHashCode": 1809667162,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s+=\"s\";\n",
+          "lineNumberRange": {
+            "start": 101,
+            "end": 101
+          },
+          "identityHashCode": 1787901053,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 89,
+            "end": 89
+          },
+          "identityHashCode": 1768035107,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 96,
+            "end": 96
+          },
+          "identityHashCode": 1591531651,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 93,
+            "end": 94
+          },
+          "identityHashCode": 1334214245,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"ABC\";\n",
+          "lineNumberRange": {
+            "start": 83,
+            "end": 84
+          },
+          "identityHashCode": 1370718061,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 69,
+            "end": 69
+          },
+          "identityHashCode": 1182364266,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 76,
+            "end": 76
+          },
+          "identityHashCode": 295348975,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=3;\n",
+          "lineNumberRange": {
+            "start": 108,
+            "end": 108
+          },
+          "identityHashCode": 513467658,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 72
+          },
+          "identityHashCode": 97913183,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas\";\n",
+          "lineNumberRange": {
+            "start": 26,
+            "end": 26
+          },
+          "identityHashCode": 719048918,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 47,
+            "end": 47
+          },
+          "identityHashCode": 689809604,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 36,
+            "end": 36
+          },
+          "identityHashCode": 1887278481,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 44,
+            "end": 44
+          },
+          "identityHashCode": 262015462,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 13) {\n}\n",
+          "lineNumberRange": {
+            "start": 70,
+            "end": 70
+          },
+          "identityHashCode": 574621635,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"a\";\n",
+          "lineNumberRange": {
+            "start": 46,
+            "end": 46
+          },
+          "identityHashCode": 288219164,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 26,
+            "end": 26
+          },
+          "identityHashCode": 1112391084,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 13) {\n}\n",
+          "lineNumberRange": {
+            "start": 38,
+            "end": 38
+          },
+          "identityHashCode": 900781430,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=A * B;\n",
+          "lineNumberRange": {
+            "start": 129,
+            "end": 129
+          },
+          "identityHashCode": 227161955,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A < 6) {\n}\n",
+          "lineNumberRange": {
+            "start": 71,
+            "end": 71
+          },
+          "identityHashCode": 526994803,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"TBD\";\n",
+          "lineNumberRange": {
+            "start": 131,
+            "end": 131
+          },
+          "identityHashCode": 547373561,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s+=\"s\";\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 73
+          },
+          "identityHashCode": 1846138469,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 85,
+            "end": 85
+          },
+          "identityHashCode": 421007130,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 22,
+            "end": 22
+          },
+          "identityHashCode": 1182895402,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"ABC\";\n",
+          "lineNumberRange": {
+            "start": 100,
+            "end": 100
+          },
+          "identityHashCode": 1784188903,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A == B && B != C) {\n}\n",
+          "lineNumberRange": {
+            "start": 60,
+            "end": 60
+          },
+          "identityHashCode": 826339756,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yay!\";\n",
+          "lineNumberRange": {
+            "start": 99,
+            "end": 99
+          },
+          "identityHashCode": 1964156559,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"C\";\n",
+          "lineNumberRange": {
+            "start": 28,
+            "end": 28
+          },
+          "identityHashCode": 952199556,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 89,
+            "end": 90
+          },
+          "identityHashCode": 1173437087,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 144,
+            "end": 145
+          },
+          "identityHashCode": 1091107745,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve Eve\";\n",
+          "lineNumberRange": {
+            "start": 73,
+            "end": 73
+          },
+          "identityHashCode": 2031198699,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B > A) {\n}\n",
+          "lineNumberRange": {
+            "start": 34,
+            "end": 34
+          },
+          "identityHashCode": 1189750257,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"ABC\";\n",
+          "lineNumberRange": {
+            "start": 83,
+            "end": 83
+          },
+          "identityHashCode": 340623236,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 104,
+            "end": 104
+          },
+          "identityHashCode": 1888347581,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 104,
+            "end": 104
+          },
+          "identityHashCode": 1039877916,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 146,
+            "end": 146
+          },
+          "identityHashCode": 165023852,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=A + (A - 1);\n",
+          "lineNumberRange": {
+            "start": 78,
+            "end": 78
+          },
+          "identityHashCode": 1699813749,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Rainy\";\n",
+          "lineNumberRange": {
+            "start": 106,
+            "end": 106
+          },
+          "identityHashCode": 1418220855,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (B == C && C != A) {\n}\n",
+          "lineNumberRange": {
+            "start": 23,
+            "end": 23
+          },
+          "identityHashCode": 429158666,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf(A + B);\n",
+          "lineNumberRange": {
+            "start": 59,
+            "end": 59
+          },
+          "identityHashCode": 1684182612,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=6;\n",
+          "lineNumberRange": {
+            "start": 104,
+            "end": 104
+          },
+          "identityHashCode": 440809554,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A >= 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 125,
+            "end": 125
+          },
+          "identityHashCode": 490403068,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 35,
+            "end": 35
+          },
+          "identityHashCode": 1816047579,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 114,
+            "end": 114
+          },
+          "identityHashCode": 1147957507,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 138,
+            "end": 138
+          },
+          "identityHashCode": 1465569238,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 55,
+            "end": 55
+          },
+          "identityHashCode": 424642338,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=String.valueOf((A + B) / 2);\n",
+          "lineNumberRange": {
+            "start": 121,
+            "end": 121
+          },
+          "identityHashCode": 1561311672,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas\";\n",
+          "lineNumberRange": {
+            "start": 43,
+            "end": 43
+          },
+          "identityHashCode": 415011411,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"hon\";\n",
+          "lineNumberRange": {
+            "start": 159,
+            "end": 159
+          },
+          "identityHashCode": 1466375486,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A <= 9 && B <= 9) {\n}\n",
+          "lineNumberRange": {
+            "start": 68,
+            "end": 68
+          },
+          "identityHashCode": 1903924467,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Sunny\";\n",
+          "lineNumberRange": {
+            "start": 94,
+            "end": 94
+          },
+          "identityHashCode": 1281682947,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 57,
+            "end": 57
+          },
+          "identityHashCode": 1732288024,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 204,
+            "end": 204
+          },
+          "identityHashCode": 1563701821,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=4;\n",
+          "lineNumberRange": {
+            "start": 83,
+            "end": 83
+          },
+          "identityHashCode": 1579885938,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 144,
+            "end": 144
+          },
+          "identityHashCode": 1320952011,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A > B) {\n}\n",
+          "lineNumberRange": {
+            "start": 208,
+            "end": 208
+          },
+          "identityHashCode": 1487222947,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 == B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 43,
+            "end": 43
+          },
+          "identityHashCode": 1245706371,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return C - Math.min(C,A - B);\n",
+          "lineNumberRange": {
+            "start": 24,
+            "end": 25
+          },
+          "identityHashCode": 107669729,
+          "snippetNodeType": 41
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=0;\n",
+          "lineNumberRange": {
+            "start": 210,
+            "end": 210
+          },
+          "identityHashCode": 2016295900,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A < 3200) {\n}\n",
+          "lineNumberRange": {
+            "start": 133,
+            "end": 133
+          },
+          "identityHashCode": 1322137683,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve\";\n",
+          "lineNumberRange": {
+            "start": 54,
+            "end": 54
+          },
+          "identityHashCode": 1347883908,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A <= 9 && B <= 9) {\n}\n",
+          "lineNumberRange": {
+            "start": 148,
+            "end": 148
+          },
+          "identityHashCode": 965527998,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"IMPOSSIBLE\";\n",
+          "lineNumberRange": {
+            "start": 107,
+            "end": 107
+          },
+          "identityHashCode": 145487296,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 53,
+            "end": 53
+          },
+          "identityHashCode": 427109984,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 111,
+            "end": 111
+          },
+          "identityHashCode": 583943344,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Cloudy\";\n",
+          "lineNumberRange": {
+            "start": 40,
+            "end": 40
+          },
+          "identityHashCode": 1086461616,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "++n;\n",
+          "lineNumberRange": {
+            "start": 245,
+            "end": 245
+          },
+          "identityHashCode": 37142837,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "if (A < 13) {\n}\n",
+          "lineNumberRange": {
+            "start": 72,
+            "end": 73
+          },
+          "identityHashCode": 990459191,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 68,
+            "end": 69
+          },
+          "identityHashCode": 1716030575,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"ARC\";\n",
+          "lineNumberRange": {
+            "start": 73,
+            "end": 73
+          },
+          "identityHashCode": 488503332,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 247,
+            "end": 248
+          },
+          "identityHashCode": 668043766,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (C == A && A != B) {\n}\n",
+          "lineNumberRange": {
+            "start": 174,
+            "end": 174
+          },
+          "identityHashCode": 12811959,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Good\";\n",
+          "lineNumberRange": {
+            "start": 84,
+            "end": 84
+          },
+          "identityHashCode": 952146771,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 142,
+            "end": 142
+          },
+          "identityHashCode": 1672584004,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "n=2;\n",
+          "lineNumberRange": {
+            "start": 251,
+            "end": 251
+          },
+          "identityHashCode": 876176330,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 14,
+            "end": 14
+          },
+          "identityHashCode": 1707670011,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"YES\";\n",
+          "lineNumberRange": {
+            "start": 191,
+            "end": 191
+          },
+          "identityHashCode": 1819487237,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=7;\n",
+          "lineNumberRange": {
+            "start": 162,
+            "end": 162
+          },
+          "identityHashCode": 1776806427,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (B % A == 0) {\n}\n",
+          "lineNumberRange": {
+            "start": 100,
+            "end": 100
+          },
+          "identityHashCode": 584364925,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"No\";\n",
+          "lineNumberRange": {
+            "start": 37,
+            "end": 37
+          },
+          "identityHashCode": 1525104572,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 71,
+            "end": 71
+          },
+          "identityHashCode": 2091213834,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 181,
+            "end": 181
+          },
+          "identityHashCode": 2062726996,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 14,
+            "end": 14
+          },
+          "identityHashCode": 2120433749,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "n=1;\n",
+          "lineNumberRange": {
+            "start": 283,
+            "end": 283
+          },
+          "identityHashCode": 846002037,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A % 2 != B % 2) {\n}\n",
+          "lineNumberRange": {
+            "start": 268,
+            "end": 268
+          },
+          "identityHashCode": 1321887490,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "if (A * B % 2 == 0) {\n}\n",
+          "lineNumberRange": {
+            "start": 147,
+            "end": 147
+          },
+          "identityHashCode": 838927338,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 246,
+            "end": 246
+          },
+          "identityHashCode": 1692952558,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "s=\"Christmas Eve\";\n",
+          "lineNumberRange": {
+            "start": 222,
+            "end": 222
+          },
+          "identityHashCode": 1178223480,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "return n;\n",
+          "lineNumberRange": {
+            "start": 77,
+            "end": 77
+          },
+          "identityHashCode": 564745831,
+          "snippetNodeType": 41
+        }
+      ],
+      "generatedSourceCode": [
+        "import java.util.*;\n\npublic class Main {\n\n    public static int solveA(int A, int B, int C) {\n        int unused = 0;\n\t\t/*978470049*/ String s=\"\";\n\t\t/*881593492*/ if (A == B && B != C) {\n\t\t\t/*362066447*/ s=\"No\";\n\t\t\t\n\t\t}\n\t\t\n\t\t/*103030629*/ s=String.valueOf((A + B) / 2);\n\t\t/*2120433749*/ s=\"Yes\";\n\t\t\n\t\t/*2058196197*/ s=\"Cloudy\";\n\t\t/*1707670011*/ s=\"Yes\";\n\t\t\n\t\t\n\t\t\n\t\t\n        /*1859125434*/ s=\"No\";\n\t\t\n\t\t/*870844967*/ s+=\"s\";\n\t\t/*1790623938*/ s=\"Yay!\";\n\t\t/*1820039646*/ s=\"unsafe\";\n\t\t/*1182895402*/ s=String.valueOf((A + B) / 2);\n\t\t/*429158666*/ if (B == C && C != A) {\n\t\t\t/*107669729*/ return C - Math.min(C,A - B);\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t/*952199556*/ s=\"C\";\n\t\t\n\t\t/*1525104572*/ s=\"No\";\n\t\t\n\t\t/*1112391084*/ s=\"Yes\";\n\t\t\n\t\t/*1816047579*/ if (A < 3200) {\n\t\t}\n\t\t\n\t\t/*1086461616*/ s=\"Cloudy\";\n\t\t\n\t\t/*719048918*/ s=\"Christmas\";\n\t\t\n\t\t/*1189750257*/ if (B > A) {\n\t\t}\n\t\t\n\t\t/*415011411*/ s=\"Christmas\";\n\t\t/*1245706371*/ if (A % 2 == B % 2) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1728502333*/ boolean isgood=true;\n\t\t/*569919564*/ B--;\n\t\t\n\t\t/*923187848*/ s=String.valueOf((A + B) / 2);\n\t\t/*427109984*/ s=\"No\";\n\t\t\n\t\t/*1402190017*/ s=\"Yes\";\n\t\t/*1347883908*/ s=\"Christmas Eve\";\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t/*900781430*/ if (A < 13) {\n\t\t}\n\t\t\n\t\t/*1018002979*/ int n=10;\n\t\t/*2091213834*/ s=\"Yes\";\n\t\t\n\t\t/*1732288024*/ if (A < 3200) {\n\t\t\t/*1716030575*/ n=1;\n\t\t\t/*564745831*/ return n;\n\t\t\t\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1887278481*/ n=1;\n\t\t/*488503332*/ s=\"ARC\";\n\t\t\n\t\t/*424642338*/ if (A % 2 != B % 2) {\n\t\t\t/*990459191*/ if (A < 13) {\n\t\t\t}\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t/*1873117497*/ if (A % 2 != B % 2) {\n\t\t\t/*952146771*/ s=\"Good\";\n\t\t\t\n\t\t\t/*204976375*/ return n;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*262015462*/ n=2;\n\t\t/*1684182612*/ s=String.valueOf(A + B);\n\t\t/*1903924467*/ if (A <= 9 && B <= 9) {\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t/*1896364206*/ s=\"Yes\";\n\t\t/*584364925*/ if (B % A == 0) {\n\t\t}\n\t\t\n\t\t/*288219164*/ s=\"a\";\n\t\t\n\t\t\n\t\t/*321435637*/ s=\"Yes\";\n\t\t\n\t\t/*1292257880*/ s=\"Rainy\";\n\t\t/*1579885938*/ n=4;\n\t\t\n\t\t/*1809667162*/ s=\"Yay!\";\n\t\t/*826339756*/ if (A == B && B != C) {\n\t\t}\n\t\t\n\t\t/*689809604*/ ++n;\n\t\t\n\t\t\n\t\t/*1904577133*/ n=3;\n\t\t\n\t\t/*162681863*/ n=0;\n\t\t\n\t\t/*2031198699*/ s=\"Christmas Eve Eve\";\n\t\t\n\t\t/*926162727*/ s=\"unsafe\";\n\t\t/*145487296*/ s=\"IMPOSSIBLE\";\n\t\t\n\t\t/*583943344*/ s=\"Yes\";\n\t\t\n\t\t/*1281682947*/ s=\"Sunny\";\n\t\t\n\t\t/*1699813749*/ n=A + (A - 1);\n\t\t\n\t\t/*1045137494*/ if (A > B) {\n\t\t}\n\t\t\n\t\t\n\t\t/*340623236*/ s=\"ABC\";\n\t\t\n\t\t/*1190090993*/ s=\"Yes\";\n\t\t/*526994803*/ if (A < 6) {\n\t\t\t/*838927338*/ if (A * B % 2 == 0) {\n\t\t\t}\n\t\t\t\n\t\t\t/*1846138469*/ s+=\"s\";\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t/*1672584004*/ n=1;\n\t\t\n\t\t/*198116005*/ s=\"Yes\";\n\t\t\n\t\t\n\t\t/*574621635*/ if (A < 13) {\n\t\t\t/*1173437087*/ n=1;\n\t\t\t/*440809554*/ n=6;\n\t\t\t\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1322137683*/ if (A < 3200) {\n\t\t}\n\t\t\n\t\t/*762949370*/ n=1;\n\t\t/*1147957507*/ s=\"No\";\n\t\t\n\t\t/*421007130*/ n=2;\n\t\t/*1776806427*/ n=7;\n\t\t\n\t\t\n\t\t/*1888347581*/ s=\"Yes\";\n\t\t/*1561311672*/ s=String.valueOf((A + B) / 2);\n\t\t\n\t\t/*1418220855*/ s=\"Rainy\";\n\t\t\n\t\t/*965527998*/ if (A <= 9 && B <= 9) {\n\t\t}\n\t\t\n\t\t/*2062726996*/ s=\"Yes\";\n\t\t\n\t\t/*1039877916*/ ++n;\n\t\t\n\t\t\n\t\t/*409080073*/ s=\"C\";\n\t\t\n\t\t\n\t\t/*1320952011*/ s=\"Yes\";\n\t\t\n\t\t/*1485238700*/ s=\"Yes\";\n\t\t/*12811959*/ if (C == A && A != B) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1454994088*/ isgood=false;\n\t\t/*1964156559*/ s=\"Yay!\";\n\t\t/*490403068*/ if (A >= 3200) {\n\t\t}\n\t\t\n\t\t\n\t\t/*1819487237*/ s=\"YES\";\n\t\t\n\t\t/*1182364266*/ n=1;\n\t\t\n\t\t/*889442462*/ s=\"TBD\";\n\t\t/*1217415428*/ n=1;\n\t\t/*1465569238*/ n=1;\n\t\t\n\t\t/*1784188903*/ s=\"ABC\";\n\t\t\n\t\t/*97913183*/ ++n;\n\t\t\n\t\t/*31267375*/ n=2;\n\t\t\n\t\t/*1251557174*/ s=\"Yes\";\n\t\t/*1178223480*/ s=\"Christmas Eve\";\n\t\t\n\t\t/*1218885289*/ n=3;\n\t\t/*295348975*/ n=3;\n\t\t\n\t\t\n\t\t/*1506592670*/ n=A * B;\n\t\t/*1466375486*/ s=\"hon\";\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t/*1311336999*/ s=\"Good\";\n\t\t/*2032161762*/ if (A > B) {\n\t\t\t/*1370718061*/ s=\"ABC\";\n\t\t\t\n\t\t}\n\t\t\n\t\t/*949448471*/ s=\"unsafe\";\n\t\t\n\t\t\n\t\t/*165023852*/ s=\"YES\";\n\t\t\n\t\t/*100090922*/ s=\"Christmas Eve Eve\";\n\t\t/*1692952558*/ s=\"Yes\";\n\t\t\n\t\t/*1768035107*/ s=\"No\";\n\t\t\n\t\t\n\t\t/*499034123*/ if (B == C && C != A) {\n\t\t\t/*1334214245*/ return n;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*1591531651*/ if (A % 2 != B % 2) {\n\t\t\t/*1091107745*/ return n;\n\t\t\t\n\t\t}\n\t\t\n\t\t/*832177998*/ s=\"Yes\";\n\t\t/*2016295900*/ n=0;\n\t\t\n\t\t/*547373561*/ s=\"TBD\";\n\t\t\n\t\t/*923415478*/ n=0;\n\t\t/*1487222947*/ if (A > B) {\n\t\t}\n\t\t\n\t\t/*513467658*/ n=3;\n\t\t/*1563701821*/ s=\"YES\";\n\t\t\n\t\t/*1321887490*/ if (A % 2 != B % 2) {\n\t\t}\n\t\t\n\t\t/*876176330*/ n=2;\n\t\t\n\t\t/*227161955*/ n=A * B;\n\t\t\n\t\t\n\t\t/*1482475260*/ if (B > A) {\n\t\t\t/*668043766*/ s=\"Yes\";\n\t\t\t\n\t\t}\n\t\t\n\t\t\n\t\t\n\t\t/*37142837*/ ++n;\n\t\t\n\t\t/*1164098978*/ s=\"Cloudy\";\n\t\t/*1787901053*/ s+=\"s\";\n\t\t/*846002037*/ n=1;\n\t\t\n\t\t\n\t\t\n\t\treturn unused;\n    }\n}\n",
+        "import java.util.*;\n\npublic class Reuse {\n\n  public static int abc101a(String S) {\n    int n = 0;\n    if (S.charAt(0) == '+') {\n    }\n    if (S.charAt(0) == '-') {\n    }\n    if (S.charAt(1) == '+') {\n    }\n    if (S.charAt(1) == '-') {\n    }\n    if (S.charAt(2) == '+') {\n    }\n    if (S.charAt(2) == '-') {\n    }\n    if (S.charAt(3) == '+') {\n    }\n    if (S.charAt(3) == '-') {\n    }\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    return n;\n  }\n\n  public static int abc102a(int N) {\n    int n = N;\n    if (N % 2 != 0) {\n    }\n    n = 2 * N;\n    return n;\n  }\n\n  public static int abc103a(int A1, int A2, int A3) {\n    return Math.max(Math.max(A1, A2), A3) - Math.min(Math.min(A1, A2), A3);\n  }\n\n  public static String abc104a(int N) {\n    String s = \"AGC\";\n    if (N < 1200) {\n    }\n    if (N < 2800) {\n    }\n    s = \"ABC\";\n    s = \"ARC\";\n    return s;\n  }\n\n  public static int abc105a(int N, int K) {\n    int n = 0;\n    if (N % K != 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static int abc106a(int A, int B) {\n    return (A - 1) * (B - 1);\n  }\n\n  public static int abc107a(int N, int i) {\n    return N + 1 - i;\n  }\n\n  public static int abc108a(int K) {\n    return (K / 2) * ((K + 1) / 2);\n  }\n\n  public static String abc109a(int A, int B) {\n    String s = \"Yes\";\n    if (A * B % 2 == 0) {\n    }\n    s = \"No\";\n    return s;\n  }\n\n  public static int abc110a(int A, int B, int C) {\n    int n = Math.max(Math.max(A, B), C);\n    return A + B + C + 9 * n;\n  }\n\n  public static int abc111a(int n) {\n    return 111 + 999 - n;\n  }\n\n  public static String abc112a(int N, int A, int B) {\n    String s = \"Hello World\";\n    if (N != 1) {\n    }\n    s = String.valueOf(A + B);\n    return s;\n  }\n\n  public static int abc113a(int X, int Y) {\n    return X + Y / 2;\n  }\n\n  public static String abc114a(int X) {\n    String s = \"NO\";\n    if (X == 3) {\n    }\n    if (X == 5) {\n    }\n    if (X == 7) {\n    }\n    s = \"YES\";\n    s = \"YES\";\n    s = \"YES\";\n    return s;\n  }\n\n  public static String abc115a(int D) {\n    String s = \"Christmas Eve Eve Eve\";\n    if (D == 25) {\n    }\n    if (D == 24) {\n    }\n    if (D == 23) {\n    }\n    s = \"Christmas\";\n    s = \"Christmas Eve\";\n    s = \"Christmas Eve Eve\";\n    return s;\n  }\n\n  public static int abc116a(int A, int B, int C) {\n    return A * B / 2;\n  }\n\n  public static float abc117a(int T, int X) {\n    return (float) T / X;\n  }\n\n  public static int abc118a(int A, int B) {\n    int n = B - A;\n    if (B % A == 0) {\n    }\n    n = A + B;\n    return n;\n  }\n\n  public static String abc119a(String S) {\n    String s = \"Heisei\";\n    if (S.compareTo(\"2019/04/30\") > 0) {\n    }\n    s = \"TBD\";\n    return s;\n  }\n\n  public static int abc120a(int A, int B, int C) {\n    int n = B / A;\n    if (n > C) {\n      n = C;\n    }\n    return n;\n  }\n\n  public static int abc121a(int H, int W, int h, int w) {\n    return (H - h) * (W - w);\n  }\n\n  public static String abc122a(String b) {\n    String s = \"G\";\n    if (b.equals(\"A\")) {\n    }\n    if (b.equals(\"T\")) {\n    }\n    if (b.equals(\"G\")) {\n    }\n    s = \"T\";\n    s = \"A\";\n    s = \"C\";\n    return s;\n  }\n\n  public static String abc123a(int A, int B, int C, int D, int E, int K) {\n    String s = \":(\";\n    if (E - A <= K) {\n    }\n    s = \"Yay!\";\n    return s;\n  }\n\n  public static int abc124a(int A, int B) {\n    int n = A + B;\n    if (A > B) {\n    }\n    if (B > A) {\n    }\n    n = A + (A - 1);\n    n = B + (B - 1);\n    return n;\n  }\n\n  public static int abc125a(int A, int B, int T) {\n    return T / A * B;\n  }\n\n  public static String abc126a(int N, int K, String S) {\n    String s = \"c\";\n    if (S.substring(K - 1, K)\n        .equals(\"A\")) {\n      s = \"a\";\n    }\n    if (S.substring(K - 1, K)\n        .equals(\"B\")) {\n      s = \"b\";\n    }\n\n    return S.substring(0, K - 1) + s + S.substring(K);\n  }\n\n  public static int abc127a(int A, int B) {\n    int n = B;\n    if (A < 6) {\n    }\n    if (A < 13) {\n    }\n    n = 0;\n    n = B / 2;\n    return n;\n  }\n\n  public static int abc128a(int A, int P) {\n    return (3 * A + P) / 2;\n  }\n\n  public static int abc129a(int P, int Q, int R) {\n    return P + Q + R - Math.max(Math.max(P, Q), R);\n  }\n\n  public static int abc130a(int X, int A) {\n    int n = 10;\n    if (X < A) {\n    }\n    n = 0;\n    return n;\n  }\n\n  public static String abc131a(String S) {\n    boolean isgood = true;\n    if (S.charAt(0) == S.charAt(1)) {\n    }\n    if (S.charAt(1) == S.charAt(2)) {\n    }\n    if (S.charAt(2) == S.charAt(3)) {\n    }\n    isgood = false;\n    isgood = false;\n    isgood = false;\n\n    String s = \"Bad\";\n    if (isgood) {\n    }\n    s = \"Good\";\n\n    return s;\n  }\n\n  public static String abc132a(String S) {\n    String s = \"No\";\n    if (S.charAt(0) == S.charAt(1) && S.charAt(1) != S.charAt(2) && S.charAt(2) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(2) && S.charAt(2) != S.charAt(1) && S.charAt(1) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(3) && S.charAt(3) != S.charAt(1) && S.charAt(1) == S.charAt(2)) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc133a(int N, int A, int B) {\n    int n = B;\n    if (N * A < B) {\n    }\n    n = N * A;\n\n    return n;\n  }\n\n  public static int abc134a(int r) {\n    return r * r * 3;\n  }\n\n  public static String abc135a(long A, long B) {\n    String s = \"\";\n    if (A % 2 != B % 2) {\n    }\n    if (A % 2 == B % 2) {\n    }\n    s = \"IMPOSSIBLE\";\n    s = String.valueOf((A + B) / 2);\n\n    return s;\n  }\n\n  public static int abc136a(int A, int B, int C) {\n    return C - Math.min(C, A - B);\n  }\n\n  public static int abc137a(int A, int B) {\n    return Math.max(Math.max(A + B, A - B), A * B);\n  }\n\n  public static String abc138a(int A, String S) {\n    String s = \"\";\n    if (A >= 3200) {\n    }\n    if (A < 3200) {\n    }\n    s = S;\n    s = \"red\";\n\n    return s;\n  }\n\n  public static int abc139a(String S, String T) {\n    int n = 0;\n    if (S.charAt(0) == T.charAt(0)) {\n    }\n    if (S.charAt(1) == T.charAt(1)) {\n    }\n    if (S.charAt(2) == T.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n\n    return n;\n  }\n\n  public static int abc140a(int N) {\n    return N * N * N;\n  }\n\n  public static String abc141a(String S) {\n    String s = \"\";\n    if (S.equals(\"Sunny\")) {\n    }\n    if (S.equals(\"Cloudy\")) {\n    }\n    if (S.equals(\"Rainy\")) {\n    }\n    s = \"Cloudy\";\n    s = \"Rainy\";\n    s = \"Sunny\";\n    return s;\n  }\n\n  public static double abc142a(int N) {\n    return (double) (N - N / 2) / (double) N;\n  }\n\n  public static int abc143a(int A, int B) {\n    return Math.max(0, A - 2 * B);\n  }\n\n  public static int abc144a(int A, int B) {\n    int n = -1;\n    if (A <= 9 && B <= 9) {\n    }\n    n = A * B;\n\n    return n;\n  }\n\n  public static int abc145a(int r) {\n    return r * r;\n  }\n\n  public static int abc146a(String S) {\n    int n = 0;\n    if (S.equals(\"SUN\")) {\n    }\n    if (S.equals(\"MON\")) {\n    }\n    if (S.equals(\"TUE\")) {\n    }\n    if (S.equals(\"WED\")) {\n    }\n    if (S.equals(\"THU\")) {\n    }\n    if (S.equals(\"FRI\")) {\n    }\n    if (S.equals(\"SAT\")) {\n    }\n    n = 1;\n    n = 2;\n    n = 3;\n    n = 4;\n    n = 5;\n    n = 6;\n    n = 7;\n\n    return n;\n  }\n\n  public static String abc147a(int A1, int A2, int A3) {\n    String s = \"win\";\n    if (A1 + A2 + A3 >= 22) {\n    }\n    s = \"bust\";\n\n    return s;\n  }\n\n  public static int abc148a(int A, int B) {\n    return 6 - A - B;\n  }\n\n  public static String abc149a(String S, String T) {\n    return T + S;\n  }\n\n  public static String abc150a(int K, int X) {\n    String s = \"No\";\n    if (500 * K >= X) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc151a(String C) {\n    return String.valueOf(C.charAt(0) + 1);\n  }\n\n  public static String abc152a(int N, int M) {\n    String s = \"No\";\n    if (N == M) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc153a(int H, int A) {\n    return (H + A - 1) / A;\n  }\n\n  public static String abc154a(String S, String T, int A, int B, String U) {\n    if (S.equals(U)) {\n    }\n    if (T.equals(U)) {\n\n    }\n    B--;\n    A--;\n\n    return A + \" \" + B;\n  }\n\n  public static String abc155a(int A, int B, int C) {\n    String s = \"No\";\n    if (A == B && B != C) {\n    }\n    if (B == C && C != A) {\n    }\n    if (C == A && A != B) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc156a(int N, int R) {\n    int n = R + 100 * (10 - N);\n    if (N >= 10) {\n    }\n    n = R;\n\n    return n;\n  }\n\n  public static int abc157a(int N) {\n    return (N + 1) / 2;\n  }\n\n  public static String abc158a(String S) {\n    String s = \"No\";\n    if (S.contains(\"A\") && S.contains(\"B\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc159a(int N, int M) {\n    return N * (N - 1) / 2 + M * (M - 1) / 2;\n  }\n\n  public static String abc160a(String S) {\n    String s = \"No\";\n    if (S.charAt(2) == S.charAt(3) && S.charAt(4) == S.charAt(5)) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc161a(int X, int Y, int Z) {\n    return Z + \" \" + X + \" \" + Y;\n  }\n\n  public static String abc162a(int N) {\n    String s = \"No\";\n    if (String.valueOf(N)\n        .contains(\"7\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static double abc163a(int R) {\n    return 2 * R * Math.PI;\n  }\n\n  public static String abc164a(int S, int W) {\n    String s = \"safe\";\n    if (W >= S) {\n    }\n    s = \"unsafe\";\n\n    return s;\n  }\n\n  public static String abc165a(int K, int A, int B) {\n    String s = \"NG\";\n    if (A <= (B / K) * K) {\n    }\n    s = \"OK\";\n\n    return s;\n  }\n\n  public static String abc166a(String S) {\n    String s = \"ABC\";\n    if (S.equals(\"ABC\")) {\n    }\n    s = \"ARC\";\n\n    return s;\n  }\n\n  public static String abc167a(String S, String T) {\n    String s = \"No\";\n    if (T.startsWith(S) && S.length() + 1 == T.length()) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc168a(int N) {\n    String s = \"bon\";\n    if (N % 10 == 2 || N % 10 == 4 || N % 10 == 5 || N % 10 == 7 || N % 10 == 9) {\n    }\n    if (N % 10 == 0 || N % 10 == 1 || N % 10 == 6 || N % 10 == 8) {\n    }\n    s = \"pon\";\n    s = \"hon\";\n\n    return s;\n  }\n\n  public static int abc169a(int A, int B) {\n    return A * B;\n  }\n\n  public static int abc170a(int x1, int x2, int x3, int x4, int x5) {\n    int n = 5;\n    if (x1 == 0) {\n    }\n    if (x2 == 0) {\n    }\n    if (x3 == 0) {\n    }\n    if (x4 == 0) {\n    }\n    n = 4;\n    n = 3;\n    n = 2;\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc117a(String S) {\n    String s = \"A\";\n    if (Character.isLowerCase(S.charAt(0))) {\n    }\n    s = \"a\";\n\n    return s;\n  }\n\n  public static int abc172a(int a) {\n    return a + a * a + a * a * a;\n  }\n\n  public static int abc173a(int N) {\n    return (1000 - N % 1000) % 1000;\n  }\n\n  public static String abc174a(int X) {\n    String s = \"\";\n    if (X >= 30) {\n    }\n    if (X < 30) {\n\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc175a(String S) {\n    int n = 0;\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    n = 0;\n    n = 1;\n    n = 1;\n    n = 1;\n    n = 2;\n    n = 2;\n    n = 2;\n    n = 3;\n\n    return n;\n  }\n\n  public static int abc176a(int N, int X, int T) {\n    return (N + X - 1) / X * T;\n  }\n\n  public static String abc177a(int D, int T, int S) {\n    String s = \"\";\n    if (T >= (double) D / S) {\n    }\n    if (T < (double) D / S) {\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc178a(int x) {\n    int n = 0;\n    if (x == 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc179a(String S) {\n    String s = S;\n    if (S.charAt(s.length() - 1) == 's') {\n    }\n    if (S.charAt(s.length() - 1) != 's') {\n\n    }\n    s += \"s\";\n    s += \"es\";\n\n    return s;\n  }\n\n  public static int abc180a(int N, int A, int B) {\n    return N - A + B;\n  }\n\n}\n"
+      ],
+      "parentTestResults": [
+        {
+          "successRate": 0.3076923076923077,
+          "executedTestsCount": 13,
+          "testResults": [
+            {
+              "fqn": "MainTest.test0",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test1",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test10",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test11",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test12",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test2",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test3",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test4",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test5",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test6",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test7",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test8",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test9",
+              "isSuccess": false
+            }
+          ]
+        }
+      ],
+      "selectionCount": 1,
+      "operation": {
+        "parentIds": [],
+        "name": ""
+      },
+      "isBuildSuccess": true,
+      "isSyntaxValid": true,
+      "patch": [
+        {
+          "fileName": "Main",
+          "diff": "--- Main\n+++ Main\n@@ -4,6 +4,299 @@\n \n     public static int solveA(int A, int B, int C) {\n         int unused = 0;\n-        return unused;\n+\t\t/*978470049*/ String s=\"\";\n+\t\t/*881593492*/ if (A == B && B != C) {\n+\t\t\t/*362066447*/ s=\"No\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*103030629*/ s=String.valueOf((A + B) / 2);\n+\t\t/*2120433749*/ s=\"Yes\";\n+\t\t\n+\t\t/*2058196197*/ s=\"Cloudy\";\n+\t\t/*1707670011*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+        /*1859125434*/ s=\"No\";\n+\t\t\n+\t\t/*870844967*/ s+=\"s\";\n+\t\t/*1790623938*/ s=\"Yay!\";\n+\t\t/*1820039646*/ s=\"unsafe\";\n+\t\t/*1182895402*/ s=String.valueOf((A + B) / 2);\n+\t\t/*429158666*/ if (B == C && C != A) {\n+\t\t\t/*107669729*/ return C - Math.min(C,A - B);\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*952199556*/ s=\"C\";\n+\t\t\n+\t\t/*1525104572*/ s=\"No\";\n+\t\t\n+\t\t/*1112391084*/ s=\"Yes\";\n+\t\t\n+\t\t/*1816047579*/ if (A < 3200) {\n+\t\t}\n+\t\t\n+\t\t/*1086461616*/ s=\"Cloudy\";\n+\t\t\n+\t\t/*719048918*/ s=\"Christmas\";\n+\t\t\n+\t\t/*1189750257*/ if (B > A) {\n+\t\t}\n+\t\t\n+\t\t/*415011411*/ s=\"Christmas\";\n+\t\t/*1245706371*/ if (A % 2 == B % 2) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1728502333*/ boolean isgood=true;\n+\t\t/*569919564*/ B--;\n+\t\t\n+\t\t/*923187848*/ s=String.valueOf((A + B) / 2);\n+\t\t/*427109984*/ s=\"No\";\n+\t\t\n+\t\t/*1402190017*/ s=\"Yes\";\n+\t\t/*1347883908*/ s=\"Christmas Eve\";\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*900781430*/ if (A < 13) {\n+\t\t}\n+\t\t\n+\t\t/*1018002979*/ int n=10;\n+\t\t/*2091213834*/ s=\"Yes\";\n+\t\t\n+\t\t/*1732288024*/ if (A < 3200) {\n+\t\t\t/*1716030575*/ n=1;\n+\t\t\t/*564745831*/ return n;\n+\t\t\t\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1887278481*/ n=1;\n+\t\t/*488503332*/ s=\"ARC\";\n+\t\t\n+\t\t/*424642338*/ if (A % 2 != B % 2) {\n+\t\t\t/*990459191*/ if (A < 13) {\n+\t\t\t}\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1873117497*/ if (A % 2 != B % 2) {\n+\t\t\t/*952146771*/ s=\"Good\";\n+\t\t\t\n+\t\t\t/*204976375*/ return n;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*262015462*/ n=2;\n+\t\t/*1684182612*/ s=String.valueOf(A + B);\n+\t\t/*1903924467*/ if (A <= 9 && B <= 9) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1896364206*/ s=\"Yes\";\n+\t\t/*584364925*/ if (B % A == 0) {\n+\t\t}\n+\t\t\n+\t\t/*288219164*/ s=\"a\";\n+\t\t\n+\t\t\n+\t\t/*321435637*/ s=\"Yes\";\n+\t\t\n+\t\t/*1292257880*/ s=\"Rainy\";\n+\t\t/*1579885938*/ n=4;\n+\t\t\n+\t\t/*1809667162*/ s=\"Yay!\";\n+\t\t/*826339756*/ if (A == B && B != C) {\n+\t\t}\n+\t\t\n+\t\t/*689809604*/ ++n;\n+\t\t\n+\t\t\n+\t\t/*1904577133*/ n=3;\n+\t\t\n+\t\t/*162681863*/ n=0;\n+\t\t\n+\t\t/*2031198699*/ s=\"Christmas Eve Eve\";\n+\t\t\n+\t\t/*926162727*/ s=\"unsafe\";\n+\t\t/*145487296*/ s=\"IMPOSSIBLE\";\n+\t\t\n+\t\t/*583943344*/ s=\"Yes\";\n+\t\t\n+\t\t/*1281682947*/ s=\"Sunny\";\n+\t\t\n+\t\t/*1699813749*/ n=A + (A - 1);\n+\t\t\n+\t\t/*1045137494*/ if (A > B) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*340623236*/ s=\"ABC\";\n+\t\t\n+\t\t/*1190090993*/ s=\"Yes\";\n+\t\t/*526994803*/ if (A < 6) {\n+\t\t\t/*838927338*/ if (A * B % 2 == 0) {\n+\t\t\t}\n+\t\t\t\n+\t\t\t/*1846138469*/ s+=\"s\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1672584004*/ n=1;\n+\t\t\n+\t\t/*198116005*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\t/*574621635*/ if (A < 13) {\n+\t\t\t/*1173437087*/ n=1;\n+\t\t\t/*440809554*/ n=6;\n+\t\t\t\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1322137683*/ if (A < 3200) {\n+\t\t}\n+\t\t\n+\t\t/*762949370*/ n=1;\n+\t\t/*1147957507*/ s=\"No\";\n+\t\t\n+\t\t/*421007130*/ n=2;\n+\t\t/*1776806427*/ n=7;\n+\t\t\n+\t\t\n+\t\t/*1888347581*/ s=\"Yes\";\n+\t\t/*1561311672*/ s=String.valueOf((A + B) / 2);\n+\t\t\n+\t\t/*1418220855*/ s=\"Rainy\";\n+\t\t\n+\t\t/*965527998*/ if (A <= 9 && B <= 9) {\n+\t\t}\n+\t\t\n+\t\t/*2062726996*/ s=\"Yes\";\n+\t\t\n+\t\t/*1039877916*/ ++n;\n+\t\t\n+\t\t\n+\t\t/*409080073*/ s=\"C\";\n+\t\t\n+\t\t\n+\t\t/*1320952011*/ s=\"Yes\";\n+\t\t\n+\t\t/*1485238700*/ s=\"Yes\";\n+\t\t/*12811959*/ if (C == A && A != B) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1454994088*/ isgood=false;\n+\t\t/*1964156559*/ s=\"Yay!\";\n+\t\t/*490403068*/ if (A >= 3200) {\n+\t\t}\n+\t\t\n+\t\t\n+\t\t/*1819487237*/ s=\"YES\";\n+\t\t\n+\t\t/*1182364266*/ n=1;\n+\t\t\n+\t\t/*889442462*/ s=\"TBD\";\n+\t\t/*1217415428*/ n=1;\n+\t\t/*1465569238*/ n=1;\n+\t\t\n+\t\t/*1784188903*/ s=\"ABC\";\n+\t\t\n+\t\t/*97913183*/ ++n;\n+\t\t\n+\t\t/*31267375*/ n=2;\n+\t\t\n+\t\t/*1251557174*/ s=\"Yes\";\n+\t\t/*1178223480*/ s=\"Christmas Eve\";\n+\t\t\n+\t\t/*1218885289*/ n=3;\n+\t\t/*295348975*/ n=3;\n+\t\t\n+\t\t\n+\t\t/*1506592670*/ n=A * B;\n+\t\t/*1466375486*/ s=\"hon\";\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*1311336999*/ s=\"Good\";\n+\t\t/*2032161762*/ if (A > B) {\n+\t\t\t/*1370718061*/ s=\"ABC\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*949448471*/ s=\"unsafe\";\n+\t\t\n+\t\t\n+\t\t/*165023852*/ s=\"YES\";\n+\t\t\n+\t\t/*100090922*/ s=\"Christmas Eve Eve\";\n+\t\t/*1692952558*/ s=\"Yes\";\n+\t\t\n+\t\t/*1768035107*/ s=\"No\";\n+\t\t\n+\t\t\n+\t\t/*499034123*/ if (B == C && C != A) {\n+\t\t\t/*1334214245*/ return n;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*1591531651*/ if (A % 2 != B % 2) {\n+\t\t\t/*1091107745*/ return n;\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t/*832177998*/ s=\"Yes\";\n+\t\t/*2016295900*/ n=0;\n+\t\t\n+\t\t/*547373561*/ s=\"TBD\";\n+\t\t\n+\t\t/*923415478*/ n=0;\n+\t\t/*1487222947*/ if (A > B) {\n+\t\t}\n+\t\t\n+\t\t/*513467658*/ n=3;\n+\t\t/*1563701821*/ s=\"YES\";\n+\t\t\n+\t\t/*1321887490*/ if (A % 2 != B % 2) {\n+\t\t}\n+\t\t\n+\t\t/*876176330*/ n=2;\n+\t\t\n+\t\t/*227161955*/ n=A * B;\n+\t\t\n+\t\t\n+\t\t/*1482475260*/ if (B > A) {\n+\t\t\t/*668043766*/ s=\"Yes\";\n+\t\t\t\n+\t\t}\n+\t\t\n+\t\t\n+\t\t\n+\t\t/*37142837*/ ++n;\n+\t\t\n+\t\t/*1164098978*/ s=\"Cloudy\";\n+\t\t/*1787901053*/ s+=\"s\";\n+\t\t/*846002037*/ n=1;\n+\t\t\n+\t\t\n+\t\t\n+\t\treturn unused;\n     }\n }"
+        }
+      ],
+      "fitness": 0.15384615384615385,
+      "testResults": {
+        "successRate": 0.15384615384615385,
+        "executedTestsCount": 13,
+        "testResults": [
+          {
+            "fqn": "MainTest.test0",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test1",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test10",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test11",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test12",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test2",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test3",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test4",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test5",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test6",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test7",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test8",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test9",
+            "isSuccess": false
+          }
+        ]
+      }
+    }
+  ]
+}
