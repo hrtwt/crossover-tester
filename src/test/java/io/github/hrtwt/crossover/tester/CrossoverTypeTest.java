@@ -27,9 +27,9 @@ public class CrossoverTypeTest {
     final List<JsonVariant> jsons = parsedVariants(project.resolve("ABC102A-1-0.json"));
     final Variant v1 = VariantBuilder.makeVariant(jsons.get(0), Util.createVariantStore(project));
     final Variant v2 = VariantBuilder.makeVariant(jsons.get(1), Util.createVariantStore(project));
-    //    final List<Variant> children =
-    //        CrossoverType.Linkage.makeVariants(v1, v2, new Random(0), setupVariantStore());
-    //    assertThat(children).isNotNull(); // todo
+    final List<Variant> children =
+        CrossoverType.Linkage.makeVariants(v1, v2, new Random(0), Util.createVariantStore(project));
+    assertThat(children).isNotNull(); // todo
 
     VariantStore vs = Util.createVariantStore(project);
     final List<Variant> minified1 =
@@ -52,5 +52,15 @@ public class CrossoverTypeTest {
         CrossoverType.SinglePoint.makeVariants(
             v1, v2, new Random(0), Util.createVariantStore(project));
     assertThat(children).isNotNull();
+  }
+
+  @Test
+  void UniformCrossoverTest() throws Exception {
+    final Path project = Paths.get("./example/ABC120A");
+    final List<JsonVariant> jsons = parsedVariants(project.resolve("ABC120A-1-40.json"));
+    final Variant v1 = VariantBuilder.makeVariant(jsons.get(0), Util.createVariantStore(project));
+    final Variant v2 = VariantBuilder.makeVariant(jsons.get(1), Util.createVariantStore(project));
+    final CrossoverResults r = new CrossoverTester(project, null, 10, 0).execCrossover(v1, v2, CrossoverType.Uniform);
+    System.out.println(r);
   }
 }
