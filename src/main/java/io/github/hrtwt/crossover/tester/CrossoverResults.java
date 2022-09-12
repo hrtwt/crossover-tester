@@ -3,6 +3,7 @@ package io.github.hrtwt.crossover.tester;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Predicate;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.project.test.EmptyTestResults;
@@ -17,6 +18,8 @@ public class CrossoverResults {
   private long dominatedByAllParentsCount = -1;
   private long buildSuccessChildrenCount = -1;
   private long syntaxValidChildrenCount = -1;
+  private long makeChildrenCount = -1;
+  private long buildFailedChildrenCount = -1;
 
   public CrossoverResults(final CrossoverType type, final List<Variant> parents) {
     this.crossoverType = type;
@@ -35,7 +38,9 @@ public class CrossoverResults {
     updateDominatedByParentsCount();
     updateDominatedByAllParentsCount();
 
+    updateMakeChildrenCount();
     updateBuildSuccessChildrenCount();
+    updateBuildFailedChildrenCount();
     updateSyntaxValidChildrenCount();
   }
 
@@ -69,6 +74,15 @@ public class CrossoverResults {
         children.stream().filter(VariantWithDominance::isSyntaxValid).count();
   }
 
+  private void updateMakeChildrenCount() {
+    makeChildrenCount = children.size();
+  }
+
+  private void updateBuildFailedChildrenCount() {
+    buildFailedChildrenCount =
+        children.stream().filter(Predicate.not(VariantWithDominance::isBuildSuccess)).count();
+  }
+
   public long getDominateAllParentsCount() {
     return dominateAllParentsCount;
   }
@@ -93,6 +107,14 @@ public class CrossoverResults {
     return syntaxValidChildrenCount;
   }
 
+  public long getMakeChildrenCount() {
+    return makeChildrenCount;
+  }
+
+  public long getBuildFailedChildrenCount() {
+    return buildFailedChildrenCount;
+  }
+
   public static class VariantWithDominance {
     public final Variant child;
     public final String failedCause;
@@ -100,6 +122,9 @@ public class CrossoverResults {
     public final boolean isDominateParents;
     public final boolean isDominatedByParents;
     public final boolean isDominatedByAllParents;
+
+    public final boolean isBuildSuccess;
+    public final boolean isSyntaxValid;
 
     public VariantWithDominance(final Variant child, final Collection<Variant> parents) {
       this.child = child;
@@ -112,6 +137,8 @@ public class CrossoverResults {
       this.isDominateParents = Util.isDominateParents(parents, child);
       this.isDominatedByParents = Util.isDominatedByParents(parents, child);
       this.isDominatedByAllParents = Util.isDominatedByAllParents(parents, child);
+      this.isBuildSuccess = child.isBuildSucceeded();
+      this.isSyntaxValid = child.isSyntaxValid();
     }
 
     public boolean isDominateParents() {
@@ -131,11 +158,11 @@ public class CrossoverResults {
     }
 
     public boolean isBuildSuccess() {
-      return child.isBuildSucceeded();
+      return isBuildSuccess;
     }
 
     public boolean isSyntaxValid() {
-      return child.isSyntaxValid();
+      return isSyntaxValid;
     }
   }
 }

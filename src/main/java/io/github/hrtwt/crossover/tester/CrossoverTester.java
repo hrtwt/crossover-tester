@@ -115,7 +115,9 @@ public class CrossoverTester implements Runnable {
 
     ret.addProperty("crossoverType", results.crossoverType.name());
 
+    ret.addProperty("makeChildrenCount", results.getMakeChildrenCount());
     ret.addProperty("buildSuccessChildrenCount", results.getBuildSuccessChildrenCount());
+    ret.addProperty("buildFailedChildrenCount", results.getBuildFailedChildrenCount());
     ret.addProperty("syntaxValidChildrenCount", results.getSyntaxValidChildrenCount());
 
     ret.addProperty("dominateAllParentsCount", results.getDominateAllParentsCount());
