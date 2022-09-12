@@ -1,0 +1,337 @@
+{
+  "adam": {
+    "testResultsSingle": {},
+    "fitnessSingle": {},
+    "suspiciousnessListSingle": {},
+    "id": 0,
+    "generationNumber": 0,
+    "bases": [],
+    "generatedSourceCode": [
+      "import java.util.*;\n\npublic class Main {\n\n    public static int solveA(int N, int K) {\n        int unused = 0;\n        return unused;\n    }\n}\n",
+      "import java.util.*;\n\npublic class Reuse {\n\n  public static int abc101a(String S) {\n    int n = 0;\n    if (S.charAt(0) == '+') {\n    }\n    if (S.charAt(0) == '-') {\n    }\n    if (S.charAt(1) == '+') {\n    }\n    if (S.charAt(1) == '-') {\n    }\n    if (S.charAt(2) == '+') {\n    }\n    if (S.charAt(2) == '-') {\n    }\n    if (S.charAt(3) == '+') {\n    }\n    if (S.charAt(3) == '-') {\n    }\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    return n;\n  }\n\n  public static int abc102a(int N) {\n    int n = N;\n    if (N % 2 != 0) {\n    }\n    n = 2 * N;\n    return n;\n  }\n\n  public static int abc103a(int A1, int A2, int A3) {\n    return Math.max(Math.max(A1, A2), A3) - Math.min(Math.min(A1, A2), A3);\n  }\n\n  public static String abc104a(int N) {\n    String s = \"AGC\";\n    if (N < 1200) {\n    }\n    if (N < 2800) {\n    }\n    s = \"ABC\";\n    s = \"ARC\";\n    return s;\n  }\n\n  public static int abc105a(int N, int K) {\n    int n = 0;\n    if (N % K != 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static int abc106a(int A, int B) {\n    return (A - 1) * (B - 1);\n  }\n\n  public static int abc107a(int N, int i) {\n    return N + 1 - i;\n  }\n\n  public static int abc108a(int K) {\n    return (K / 2) * ((K + 1) / 2);\n  }\n\n  public static String abc109a(int A, int B) {\n    String s = \"Yes\";\n    if (A * B % 2 == 0) {\n    }\n    s = \"No\";\n    return s;\n  }\n\n  public static int abc110a(int A, int B, int C) {\n    int n = Math.max(Math.max(A, B), C);\n    return A + B + C + 9 * n;\n  }\n\n  public static int abc111a(int n) {\n    return 111 + 999 - n;\n  }\n\n  public static String abc112a(int N, int A, int B) {\n    String s = \"Hello World\";\n    if (N != 1) {\n    }\n    s = String.valueOf(A + B);\n    return s;\n  }\n\n  public static int abc113a(int X, int Y) {\n    return X + Y / 2;\n  }\n\n  public static String abc114a(int X) {\n    String s = \"NO\";\n    if (X == 3) {\n    }\n    if (X == 5) {\n    }\n    if (X == 7) {\n    }\n    s = \"YES\";\n    s = \"YES\";\n    s = \"YES\";\n    return s;\n  }\n\n  public static String abc115a(int D) {\n    String s = \"Christmas Eve Eve Eve\";\n    if (D == 25) {\n    }\n    if (D == 24) {\n    }\n    if (D == 23) {\n    }\n    s = \"Christmas\";\n    s = \"Christmas Eve\";\n    s = \"Christmas Eve Eve\";\n    return s;\n  }\n\n  public static int abc116a(int A, int B, int C) {\n    return A * B / 2;\n  }\n\n  public static float abc117a(int T, int X) {\n    return (float) T / X;\n  }\n\n  public static int abc118a(int A, int B) {\n    int n = B - A;\n    if (B % A == 0) {\n    }\n    n = A + B;\n    return n;\n  }\n\n  public static String abc119a(String S) {\n    String s = \"Heisei\";\n    if (S.compareTo(\"2019/04/30\") > 0) {\n    }\n    s = \"TBD\";\n    return s;\n  }\n\n  public static int abc120a(int A, int B, int C) {\n    int n = B / A;\n    if (n > C) {\n      n = C;\n    }\n    return n;\n  }\n\n  public static int abc121a(int H, int W, int h, int w) {\n    return (H - h) * (W - w);\n  }\n\n  public static String abc122a(String b) {\n    String s = \"G\";\n    if (b.equals(\"A\")) {\n    }\n    if (b.equals(\"T\")) {\n    }\n    if (b.equals(\"G\")) {\n    }\n    s = \"T\";\n    s = \"A\";\n    s = \"C\";\n    return s;\n  }\n\n  public static String abc123a(int A, int B, int C, int D, int E, int K) {\n    String s = \":(\";\n    if (E - A <= K) {\n    }\n    s = \"Yay!\";\n    return s;\n  }\n\n  public static int abc124a(int A, int B) {\n    int n = A + B;\n    if (A > B) {\n    }\n    if (B > A) {\n    }\n    n = A + (A - 1);\n    n = B + (B - 1);\n    return n;\n  }\n\n  public static int abc125a(int A, int B, int T) {\n    return T / A * B;\n  }\n\n  public static String abc126a(int N, int K, String S) {\n    String s = \"c\";\n    if (S.substring(K - 1, K)\n        .equals(\"A\")) {\n      s = \"a\";\n    }\n    if (S.substring(K - 1, K)\n        .equals(\"B\")) {\n      s = \"b\";\n    }\n\n    return S.substring(0, K - 1) + s + S.substring(K);\n  }\n\n  public static int abc127a(int A, int B) {\n    int n = B;\n    if (A < 6) {\n    }\n    if (A < 13) {\n    }\n    n = 0;\n    n = B / 2;\n    return n;\n  }\n\n  public static int abc128a(int A, int P) {\n    return (3 * A + P) / 2;\n  }\n\n  public static int abc129a(int P, int Q, int R) {\n    return P + Q + R - Math.max(Math.max(P, Q), R);\n  }\n\n  public static int abc130a(int X, int A) {\n    int n = 10;\n    if (X < A) {\n    }\n    n = 0;\n    return n;\n  }\n\n  public static String abc131a(String S) {\n    boolean isgood = true;\n    if (S.charAt(0) == S.charAt(1)) {\n    }\n    if (S.charAt(1) == S.charAt(2)) {\n    }\n    if (S.charAt(2) == S.charAt(3)) {\n    }\n    isgood = false;\n    isgood = false;\n    isgood = false;\n\n    String s = \"Bad\";\n    if (isgood) {\n    }\n    s = \"Good\";\n\n    return s;\n  }\n\n  public static String abc132a(String S) {\n    String s = \"No\";\n    if (S.charAt(0) == S.charAt(1) && S.charAt(1) != S.charAt(2) && S.charAt(2) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(2) && S.charAt(2) != S.charAt(1) && S.charAt(1) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(3) && S.charAt(3) != S.charAt(1) && S.charAt(1) == S.charAt(2)) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc133a(int N, int A, int B) {\n    int n = B;\n    if (N * A < B) {\n    }\n    n = N * A;\n\n    return n;\n  }\n\n  public static int abc134a(int r) {\n    return r * r * 3;\n  }\n\n  public static String abc135a(long A, long B) {\n    String s = \"\";\n    if (A % 2 != B % 2) {\n    }\n    if (A % 2 == B % 2) {\n    }\n    s = \"IMPOSSIBLE\";\n    s = String.valueOf((A + B) / 2);\n\n    return s;\n  }\n\n  public static int abc136a(int A, int B, int C) {\n    return C - Math.min(C, A - B);\n  }\n\n  public static int abc137a(int A, int B) {\n    return Math.max(Math.max(A + B, A - B), A * B);\n  }\n\n  public static String abc138a(int A, String S) {\n    String s = \"\";\n    if (A >= 3200) {\n    }\n    if (A < 3200) {\n    }\n    s = S;\n    s = \"red\";\n\n    return s;\n  }\n\n  public static int abc139a(String S, String T) {\n    int n = 0;\n    if (S.charAt(0) == T.charAt(0)) {\n    }\n    if (S.charAt(1) == T.charAt(1)) {\n    }\n    if (S.charAt(2) == T.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n\n    return n;\n  }\n\n  public static int abc140a(int N) {\n    return N * N * N;\n  }\n\n  public static String abc141a(String S) {\n    String s = \"\";\n    if (S.equals(\"Sunny\")) {\n    }\n    if (S.equals(\"Cloudy\")) {\n    }\n    if (S.equals(\"Rainy\")) {\n    }\n    s = \"Cloudy\";\n    s = \"Rainy\";\n    s = \"Sunny\";\n    return s;\n  }\n\n  public static double abc142a(int N) {\n    return (double) (N - N / 2) / (double) N;\n  }\n\n  public static int abc143a(int A, int B) {\n    return Math.max(0, A - 2 * B);\n  }\n\n  public static int abc144a(int A, int B) {\n    int n = -1;\n    if (A <= 9 && B <= 9) {\n    }\n    n = A * B;\n\n    return n;\n  }\n\n  public static int abc145a(int r) {\n    return r * r;\n  }\n\n  public static int abc146a(String S) {\n    int n = 0;\n    if (S.equals(\"SUN\")) {\n    }\n    if (S.equals(\"MON\")) {\n    }\n    if (S.equals(\"TUE\")) {\n    }\n    if (S.equals(\"WED\")) {\n    }\n    if (S.equals(\"THU\")) {\n    }\n    if (S.equals(\"FRI\")) {\n    }\n    if (S.equals(\"SAT\")) {\n    }\n    n = 1;\n    n = 2;\n    n = 3;\n    n = 4;\n    n = 5;\n    n = 6;\n    n = 7;\n\n    return n;\n  }\n\n  public static String abc147a(int A1, int A2, int A3) {\n    String s = \"win\";\n    if (A1 + A2 + A3 >= 22) {\n    }\n    s = \"bust\";\n\n    return s;\n  }\n\n  public static int abc148a(int A, int B) {\n    return 6 - A - B;\n  }\n\n  public static String abc149a(String S, String T) {\n    return T + S;\n  }\n\n  public static String abc150a(int K, int X) {\n    String s = \"No\";\n    if (500 * K >= X) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc151a(String C) {\n    return String.valueOf(C.charAt(0) + 1);\n  }\n\n  public static String abc152a(int N, int M) {\n    String s = \"No\";\n    if (N == M) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc153a(int H, int A) {\n    return (H + A - 1) / A;\n  }\n\n  public static String abc154a(String S, String T, int A, int B, String U) {\n    if (S.equals(U)) {\n    }\n    if (T.equals(U)) {\n\n    }\n    B--;\n    A--;\n\n    return A + \" \" + B;\n  }\n\n  public static String abc155a(int A, int B, int C) {\n    String s = \"No\";\n    if (A == B && B != C) {\n    }\n    if (B == C && C != A) {\n    }\n    if (C == A && A != B) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc156a(int N, int R) {\n    int n = R + 100 * (10 - N);\n    if (N >= 10) {\n    }\n    n = R;\n\n    return n;\n  }\n\n  public static int abc157a(int N) {\n    return (N + 1) / 2;\n  }\n\n  public static String abc158a(String S) {\n    String s = \"No\";\n    if (S.contains(\"A\") && S.contains(\"B\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc159a(int N, int M) {\n    return N * (N - 1) / 2 + M * (M - 1) / 2;\n  }\n\n  public static String abc160a(String S) {\n    String s = \"No\";\n    if (S.charAt(2) == S.charAt(3) && S.charAt(4) == S.charAt(5)) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc161a(int X, int Y, int Z) {\n    return Z + \" \" + X + \" \" + Y;\n  }\n\n  public static String abc162a(int N) {\n    String s = \"No\";\n    if (String.valueOf(N)\n        .contains(\"7\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static double abc163a(int R) {\n    return 2 * R * Math.PI;\n  }\n\n  public static String abc164a(int S, int W) {\n    String s = \"safe\";\n    if (W >= S) {\n    }\n    s = \"unsafe\";\n\n    return s;\n  }\n\n  public static String abc165a(int K, int A, int B) {\n    String s = \"NG\";\n    if (A <= (B / K) * K) {\n    }\n    s = \"OK\";\n\n    return s;\n  }\n\n  public static String abc166a(String S) {\n    String s = \"ABC\";\n    if (S.equals(\"ABC\")) {\n    }\n    s = \"ARC\";\n\n    return s;\n  }\n\n  public static String abc167a(String S, String T) {\n    String s = \"No\";\n    if (T.startsWith(S) && S.length() + 1 == T.length()) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc168a(int N) {\n    String s = \"bon\";\n    if (N % 10 == 2 || N % 10 == 4 || N % 10 == 5 || N % 10 == 7 || N % 10 == 9) {\n    }\n    if (N % 10 == 0 || N % 10 == 1 || N % 10 == 6 || N % 10 == 8) {\n    }\n    s = \"pon\";\n    s = \"hon\";\n\n    return s;\n  }\n\n  public static int abc169a(int A, int B) {\n    return A * B;\n  }\n\n  public static int abc170a(int x1, int x2, int x3, int x4, int x5) {\n    int n = 5;\n    if (x1 == 0) {\n    }\n    if (x2 == 0) {\n    }\n    if (x3 == 0) {\n    }\n    if (x4 == 0) {\n    }\n    n = 4;\n    n = 3;\n    n = 2;\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc117a(String S) {\n    String s = \"A\";\n    if (Character.isLowerCase(S.charAt(0))) {\n    }\n    s = \"a\";\n\n    return s;\n  }\n\n  public static int abc172a(int a) {\n    return a + a * a + a * a * a;\n  }\n\n  public static int abc173a(int N) {\n    return (1000 - N % 1000) % 1000;\n  }\n\n  public static String abc174a(int X) {\n    String s = \"\";\n    if (X >= 30) {\n    }\n    if (X < 30) {\n\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc175a(String S) {\n    int n = 0;\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    n = 0;\n    n = 1;\n    n = 1;\n    n = 1;\n    n = 2;\n    n = 2;\n    n = 2;\n    n = 3;\n\n    return n;\n  }\n\n  public static int abc176a(int N, int X, int T) {\n    return (N + X - 1) / X * T;\n  }\n\n  public static String abc177a(int D, int T, int S) {\n    String s = \"\";\n    if (T >= (double) D / S) {\n    }\n    if (T < (double) D / S) {\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc178a(int x) {\n    int n = 0;\n    if (x == 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc179a(String S) {\n    String s = S;\n    if (S.charAt(s.length() - 1) == 's') {\n    }\n    if (S.charAt(s.length() - 1) != 's') {\n\n    }\n    s += \"s\";\n    s += \"es\";\n\n    return s;\n  }\n\n  public static int abc180a(int N, int A, int B) {\n    return N - A + B;\n  }\n\n}\n"
+    ],
+    "parentTestResults": [],
+    "selectionCount": 25,
+    "operation": {
+      "parentIds": [],
+      "name": ""
+    },
+    "isBuildSuccess": true,
+    "isSyntaxValid": true,
+    "patch": [],
+    "fitness": 0.5,
+    "testResults": {
+      "successRate": 0.5,
+      "executedTestsCount": 12,
+      "testResults": [
+        {
+          "fqn": "MainTest.test0",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test1",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test10",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test11",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test2",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test3",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test4",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test5",
+          "isSuccess": false
+        },
+        {
+          "fqn": "MainTest.test6",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test7",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test8",
+          "isSuccess": true
+        },
+        {
+          "fqn": "MainTest.test9",
+          "isSuccess": false
+        }
+      ]
+    }
+  },
+  "parents": [
+    {
+      "testResultsSingle": {},
+      "fitnessSingle": {},
+      "suspiciousnessListSingle": {},
+      "id": 0,
+      "generationNumber": 0,
+      "bases": [],
+      "generatedSourceCode": [
+        "import java.util.*;\n\npublic class Main {\n\n    public static int solveA(int N, int K) {\n        int unused = 0;\n        return unused;\n    }\n}\n",
+        "import java.util.*;\n\npublic class Reuse {\n\n  public static int abc101a(String S) {\n    int n = 0;\n    if (S.charAt(0) == '+') {\n    }\n    if (S.charAt(0) == '-') {\n    }\n    if (S.charAt(1) == '+') {\n    }\n    if (S.charAt(1) == '-') {\n    }\n    if (S.charAt(2) == '+') {\n    }\n    if (S.charAt(2) == '-') {\n    }\n    if (S.charAt(3) == '+') {\n    }\n    if (S.charAt(3) == '-') {\n    }\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    return n;\n  }\n\n  public static int abc102a(int N) {\n    int n = N;\n    if (N % 2 != 0) {\n    }\n    n = 2 * N;\n    return n;\n  }\n\n  public static int abc103a(int A1, int A2, int A3) {\n    return Math.max(Math.max(A1, A2), A3) - Math.min(Math.min(A1, A2), A3);\n  }\n\n  public static String abc104a(int N) {\n    String s = \"AGC\";\n    if (N < 1200) {\n    }\n    if (N < 2800) {\n    }\n    s = \"ABC\";\n    s = \"ARC\";\n    return s;\n  }\n\n  public static int abc105a(int N, int K) {\n    int n = 0;\n    if (N % K != 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static int abc106a(int A, int B) {\n    return (A - 1) * (B - 1);\n  }\n\n  public static int abc107a(int N, int i) {\n    return N + 1 - i;\n  }\n\n  public static int abc108a(int K) {\n    return (K / 2) * ((K + 1) / 2);\n  }\n\n  public static String abc109a(int A, int B) {\n    String s = \"Yes\";\n    if (A * B % 2 == 0) {\n    }\n    s = \"No\";\n    return s;\n  }\n\n  public static int abc110a(int A, int B, int C) {\n    int n = Math.max(Math.max(A, B), C);\n    return A + B + C + 9 * n;\n  }\n\n  public static int abc111a(int n) {\n    return 111 + 999 - n;\n  }\n\n  public static String abc112a(int N, int A, int B) {\n    String s = \"Hello World\";\n    if (N != 1) {\n    }\n    s = String.valueOf(A + B);\n    return s;\n  }\n\n  public static int abc113a(int X, int Y) {\n    return X + Y / 2;\n  }\n\n  public static String abc114a(int X) {\n    String s = \"NO\";\n    if (X == 3) {\n    }\n    if (X == 5) {\n    }\n    if (X == 7) {\n    }\n    s = \"YES\";\n    s = \"YES\";\n    s = \"YES\";\n    return s;\n  }\n\n  public static String abc115a(int D) {\n    String s = \"Christmas Eve Eve Eve\";\n    if (D == 25) {\n    }\n    if (D == 24) {\n    }\n    if (D == 23) {\n    }\n    s = \"Christmas\";\n    s = \"Christmas Eve\";\n    s = \"Christmas Eve Eve\";\n    return s;\n  }\n\n  public static int abc116a(int A, int B, int C) {\n    return A * B / 2;\n  }\n\n  public static float abc117a(int T, int X) {\n    return (float) T / X;\n  }\n\n  public static int abc118a(int A, int B) {\n    int n = B - A;\n    if (B % A == 0) {\n    }\n    n = A + B;\n    return n;\n  }\n\n  public static String abc119a(String S) {\n    String s = \"Heisei\";\n    if (S.compareTo(\"2019/04/30\") > 0) {\n    }\n    s = \"TBD\";\n    return s;\n  }\n\n  public static int abc120a(int A, int B, int C) {\n    int n = B / A;\n    if (n > C) {\n      n = C;\n    }\n    return n;\n  }\n\n  public static int abc121a(int H, int W, int h, int w) {\n    return (H - h) * (W - w);\n  }\n\n  public static String abc122a(String b) {\n    String s = \"G\";\n    if (b.equals(\"A\")) {\n    }\n    if (b.equals(\"T\")) {\n    }\n    if (b.equals(\"G\")) {\n    }\n    s = \"T\";\n    s = \"A\";\n    s = \"C\";\n    return s;\n  }\n\n  public static String abc123a(int A, int B, int C, int D, int E, int K) {\n    String s = \":(\";\n    if (E - A <= K) {\n    }\n    s = \"Yay!\";\n    return s;\n  }\n\n  public static int abc124a(int A, int B) {\n    int n = A + B;\n    if (A > B) {\n    }\n    if (B > A) {\n    }\n    n = A + (A - 1);\n    n = B + (B - 1);\n    return n;\n  }\n\n  public static int abc125a(int A, int B, int T) {\n    return T / A * B;\n  }\n\n  public static String abc126a(int N, int K, String S) {\n    String s = \"c\";\n    if (S.substring(K - 1, K)\n        .equals(\"A\")) {\n      s = \"a\";\n    }\n    if (S.substring(K - 1, K)\n        .equals(\"B\")) {\n      s = \"b\";\n    }\n\n    return S.substring(0, K - 1) + s + S.substring(K);\n  }\n\n  public static int abc127a(int A, int B) {\n    int n = B;\n    if (A < 6) {\n    }\n    if (A < 13) {\n    }\n    n = 0;\n    n = B / 2;\n    return n;\n  }\n\n  public static int abc128a(int A, int P) {\n    return (3 * A + P) / 2;\n  }\n\n  public static int abc129a(int P, int Q, int R) {\n    return P + Q + R - Math.max(Math.max(P, Q), R);\n  }\n\n  public static int abc130a(int X, int A) {\n    int n = 10;\n    if (X < A) {\n    }\n    n = 0;\n    return n;\n  }\n\n  public static String abc131a(String S) {\n    boolean isgood = true;\n    if (S.charAt(0) == S.charAt(1)) {\n    }\n    if (S.charAt(1) == S.charAt(2)) {\n    }\n    if (S.charAt(2) == S.charAt(3)) {\n    }\n    isgood = false;\n    isgood = false;\n    isgood = false;\n\n    String s = \"Bad\";\n    if (isgood) {\n    }\n    s = \"Good\";\n\n    return s;\n  }\n\n  public static String abc132a(String S) {\n    String s = \"No\";\n    if (S.charAt(0) == S.charAt(1) && S.charAt(1) != S.charAt(2) && S.charAt(2) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(2) && S.charAt(2) != S.charAt(1) && S.charAt(1) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(3) && S.charAt(3) != S.charAt(1) && S.charAt(1) == S.charAt(2)) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc133a(int N, int A, int B) {\n    int n = B;\n    if (N * A < B) {\n    }\n    n = N * A;\n\n    return n;\n  }\n\n  public static int abc134a(int r) {\n    return r * r * 3;\n  }\n\n  public static String abc135a(long A, long B) {\n    String s = \"\";\n    if (A % 2 != B % 2) {\n    }\n    if (A % 2 == B % 2) {\n    }\n    s = \"IMPOSSIBLE\";\n    s = String.valueOf((A + B) / 2);\n\n    return s;\n  }\n\n  public static int abc136a(int A, int B, int C) {\n    return C - Math.min(C, A - B);\n  }\n\n  public static int abc137a(int A, int B) {\n    return Math.max(Math.max(A + B, A - B), A * B);\n  }\n\n  public static String abc138a(int A, String S) {\n    String s = \"\";\n    if (A >= 3200) {\n    }\n    if (A < 3200) {\n    }\n    s = S;\n    s = \"red\";\n\n    return s;\n  }\n\n  public static int abc139a(String S, String T) {\n    int n = 0;\n    if (S.charAt(0) == T.charAt(0)) {\n    }\n    if (S.charAt(1) == T.charAt(1)) {\n    }\n    if (S.charAt(2) == T.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n\n    return n;\n  }\n\n  public static int abc140a(int N) {\n    return N * N * N;\n  }\n\n  public static String abc141a(String S) {\n    String s = \"\";\n    if (S.equals(\"Sunny\")) {\n    }\n    if (S.equals(\"Cloudy\")) {\n    }\n    if (S.equals(\"Rainy\")) {\n    }\n    s = \"Cloudy\";\n    s = \"Rainy\";\n    s = \"Sunny\";\n    return s;\n  }\n\n  public static double abc142a(int N) {\n    return (double) (N - N / 2) / (double) N;\n  }\n\n  public static int abc143a(int A, int B) {\n    return Math.max(0, A - 2 * B);\n  }\n\n  public static int abc144a(int A, int B) {\n    int n = -1;\n    if (A <= 9 && B <= 9) {\n    }\n    n = A * B;\n\n    return n;\n  }\n\n  public static int abc145a(int r) {\n    return r * r;\n  }\n\n  public static int abc146a(String S) {\n    int n = 0;\n    if (S.equals(\"SUN\")) {\n    }\n    if (S.equals(\"MON\")) {\n    }\n    if (S.equals(\"TUE\")) {\n    }\n    if (S.equals(\"WED\")) {\n    }\n    if (S.equals(\"THU\")) {\n    }\n    if (S.equals(\"FRI\")) {\n    }\n    if (S.equals(\"SAT\")) {\n    }\n    n = 1;\n    n = 2;\n    n = 3;\n    n = 4;\n    n = 5;\n    n = 6;\n    n = 7;\n\n    return n;\n  }\n\n  public static String abc147a(int A1, int A2, int A3) {\n    String s = \"win\";\n    if (A1 + A2 + A3 >= 22) {\n    }\n    s = \"bust\";\n\n    return s;\n  }\n\n  public static int abc148a(int A, int B) {\n    return 6 - A - B;\n  }\n\n  public static String abc149a(String S, String T) {\n    return T + S;\n  }\n\n  public static String abc150a(int K, int X) {\n    String s = \"No\";\n    if (500 * K >= X) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc151a(String C) {\n    return String.valueOf(C.charAt(0) + 1);\n  }\n\n  public static String abc152a(int N, int M) {\n    String s = \"No\";\n    if (N == M) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc153a(int H, int A) {\n    return (H + A - 1) / A;\n  }\n\n  public static String abc154a(String S, String T, int A, int B, String U) {\n    if (S.equals(U)) {\n    }\n    if (T.equals(U)) {\n\n    }\n    B--;\n    A--;\n\n    return A + \" \" + B;\n  }\n\n  public static String abc155a(int A, int B, int C) {\n    String s = \"No\";\n    if (A == B && B != C) {\n    }\n    if (B == C && C != A) {\n    }\n    if (C == A && A != B) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc156a(int N, int R) {\n    int n = R + 100 * (10 - N);\n    if (N >= 10) {\n    }\n    n = R;\n\n    return n;\n  }\n\n  public static int abc157a(int N) {\n    return (N + 1) / 2;\n  }\n\n  public static String abc158a(String S) {\n    String s = \"No\";\n    if (S.contains(\"A\") && S.contains(\"B\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc159a(int N, int M) {\n    return N * (N - 1) / 2 + M * (M - 1) / 2;\n  }\n\n  public static String abc160a(String S) {\n    String s = \"No\";\n    if (S.charAt(2) == S.charAt(3) && S.charAt(4) == S.charAt(5)) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc161a(int X, int Y, int Z) {\n    return Z + \" \" + X + \" \" + Y;\n  }\n\n  public static String abc162a(int N) {\n    String s = \"No\";\n    if (String.valueOf(N)\n        .contains(\"7\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static double abc163a(int R) {\n    return 2 * R * Math.PI;\n  }\n\n  public static String abc164a(int S, int W) {\n    String s = \"safe\";\n    if (W >= S) {\n    }\n    s = \"unsafe\";\n\n    return s;\n  }\n\n  public static String abc165a(int K, int A, int B) {\n    String s = \"NG\";\n    if (A <= (B / K) * K) {\n    }\n    s = \"OK\";\n\n    return s;\n  }\n\n  public static String abc166a(String S) {\n    String s = \"ABC\";\n    if (S.equals(\"ABC\")) {\n    }\n    s = \"ARC\";\n\n    return s;\n  }\n\n  public static String abc167a(String S, String T) {\n    String s = \"No\";\n    if (T.startsWith(S) && S.length() + 1 == T.length()) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc168a(int N) {\n    String s = \"bon\";\n    if (N % 10 == 2 || N % 10 == 4 || N % 10 == 5 || N % 10 == 7 || N % 10 == 9) {\n    }\n    if (N % 10 == 0 || N % 10 == 1 || N % 10 == 6 || N % 10 == 8) {\n    }\n    s = \"pon\";\n    s = \"hon\";\n\n    return s;\n  }\n\n  public static int abc169a(int A, int B) {\n    return A * B;\n  }\n\n  public static int abc170a(int x1, int x2, int x3, int x4, int x5) {\n    int n = 5;\n    if (x1 == 0) {\n    }\n    if (x2 == 0) {\n    }\n    if (x3 == 0) {\n    }\n    if (x4 == 0) {\n    }\n    n = 4;\n    n = 3;\n    n = 2;\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc117a(String S) {\n    String s = \"A\";\n    if (Character.isLowerCase(S.charAt(0))) {\n    }\n    s = \"a\";\n\n    return s;\n  }\n\n  public static int abc172a(int a) {\n    return a + a * a + a * a * a;\n  }\n\n  public static int abc173a(int N) {\n    return (1000 - N % 1000) % 1000;\n  }\n\n  public static String abc174a(int X) {\n    String s = \"\";\n    if (X >= 30) {\n    }\n    if (X < 30) {\n\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc175a(String S) {\n    int n = 0;\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    n = 0;\n    n = 1;\n    n = 1;\n    n = 1;\n    n = 2;\n    n = 2;\n    n = 2;\n    n = 3;\n\n    return n;\n  }\n\n  public static int abc176a(int N, int X, int T) {\n    return (N + X - 1) / X * T;\n  }\n\n  public static String abc177a(int D, int T, int S) {\n    String s = \"\";\n    if (T >= (double) D / S) {\n    }\n    if (T < (double) D / S) {\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc178a(int x) {\n    int n = 0;\n    if (x == 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc179a(String S) {\n    String s = S;\n    if (S.charAt(s.length() - 1) == 's') {\n    }\n    if (S.charAt(s.length() - 1) != 's') {\n\n    }\n    s += \"s\";\n    s += \"es\";\n\n    return s;\n  }\n\n  public static int abc180a(int N, int A, int B) {\n    return N - A + B;\n  }\n\n}\n"
+      ],
+      "parentTestResults": [],
+      "selectionCount": 25,
+      "operation": {
+        "parentIds": [],
+        "name": ""
+      },
+      "isBuildSuccess": true,
+      "isSyntaxValid": true,
+      "patch": [],
+      "fitness": 0.5,
+      "testResults": {
+        "successRate": 0.5,
+        "executedTestsCount": 12,
+        "testResults": [
+          {
+            "fqn": "MainTest.test0",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test1",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test10",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test11",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test2",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test3",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test4",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test5",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test6",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test7",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test8",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test9",
+            "isSuccess": false
+          }
+        ]
+      }
+    },
+    {
+      "testResultsSingle": {},
+      "fitnessSingle": {},
+      "suspiciousnessListSingle": {},
+      "id": 298,
+      "generationNumber": 30,
+      "bases": [
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "if (N < 2800) {\n}\n",
+          "lineNumberRange": {
+            "start": 6,
+            "end": 6
+          },
+          "identityHashCode": 672493939,
+          "snippetNodeType": 25
+        },
+        {
+          "name": "insert_before",
+          "fileName": "Main.java",
+          "snippet": "String s=\"c\";\n",
+          "lineNumberRange": {
+            "start": 10,
+            "end": 10
+          },
+          "identityHashCode": 1060932448,
+          "snippetNodeType": 60
+        },
+        {
+          "name": "insert_after",
+          "fileName": "Main.java",
+          "snippet": "s=\"Yes\";\n",
+          "lineNumberRange": {
+            "start": 10,
+            "end": 10
+          },
+          "identityHashCode": 434359962,
+          "snippetNodeType": 21
+        },
+        {
+          "name": "insert_into_block",
+          "fileName": "Main.java",
+          "snippet": "return (K / 2) * ((K + 1) / 2);\n",
+          "lineNumberRange": {
+            "start": 7,
+            "end": 8
+          },
+          "identityHashCode": 345667898,
+          "snippetNodeType": 41
+        }
+      ],
+      "generatedSourceCode": [
+        "import java.util.*;\n\npublic class Main {\n\n    public static int solveA(int N, int K) {\n        int unused = 0;\n\t\t/*672493939*/ if (N < 2800) {\n\t\t\t/*345667898*/ return (K / 2) * ((K + 1) / 2);\n\t\t\t\n\t\t}\n\t\t\n        /*1060932448*/ String s=\"c\";\n\t\t/*434359962*/ s=\"Yes\";\n\t\t\n\t\t\n\t\treturn unused;\n    }\n}\n",
+        "import java.util.*;\n\npublic class Reuse {\n\n  public static int abc101a(String S) {\n    int n = 0;\n    if (S.charAt(0) == '+') {\n    }\n    if (S.charAt(0) == '-') {\n    }\n    if (S.charAt(1) == '+') {\n    }\n    if (S.charAt(1) == '-') {\n    }\n    if (S.charAt(2) == '+') {\n    }\n    if (S.charAt(2) == '-') {\n    }\n    if (S.charAt(3) == '+') {\n    }\n    if (S.charAt(3) == '-') {\n    }\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    ++n;\n    --n;\n    return n;\n  }\n\n  public static int abc102a(int N) {\n    int n = N;\n    if (N % 2 != 0) {\n    }\n    n = 2 * N;\n    return n;\n  }\n\n  public static int abc103a(int A1, int A2, int A3) {\n    return Math.max(Math.max(A1, A2), A3) - Math.min(Math.min(A1, A2), A3);\n  }\n\n  public static String abc104a(int N) {\n    String s = \"AGC\";\n    if (N < 1200) {\n    }\n    if (N < 2800) {\n    }\n    s = \"ABC\";\n    s = \"ARC\";\n    return s;\n  }\n\n  public static int abc105a(int N, int K) {\n    int n = 0;\n    if (N % K != 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static int abc106a(int A, int B) {\n    return (A - 1) * (B - 1);\n  }\n\n  public static int abc107a(int N, int i) {\n    return N + 1 - i;\n  }\n\n  public static int abc108a(int K) {\n    return (K / 2) * ((K + 1) / 2);\n  }\n\n  public static String abc109a(int A, int B) {\n    String s = \"Yes\";\n    if (A * B % 2 == 0) {\n    }\n    s = \"No\";\n    return s;\n  }\n\n  public static int abc110a(int A, int B, int C) {\n    int n = Math.max(Math.max(A, B), C);\n    return A + B + C + 9 * n;\n  }\n\n  public static int abc111a(int n) {\n    return 111 + 999 - n;\n  }\n\n  public static String abc112a(int N, int A, int B) {\n    String s = \"Hello World\";\n    if (N != 1) {\n    }\n    s = String.valueOf(A + B);\n    return s;\n  }\n\n  public static int abc113a(int X, int Y) {\n    return X + Y / 2;\n  }\n\n  public static String abc114a(int X) {\n    String s = \"NO\";\n    if (X == 3) {\n    }\n    if (X == 5) {\n    }\n    if (X == 7) {\n    }\n    s = \"YES\";\n    s = \"YES\";\n    s = \"YES\";\n    return s;\n  }\n\n  public static String abc115a(int D) {\n    String s = \"Christmas Eve Eve Eve\";\n    if (D == 25) {\n    }\n    if (D == 24) {\n    }\n    if (D == 23) {\n    }\n    s = \"Christmas\";\n    s = \"Christmas Eve\";\n    s = \"Christmas Eve Eve\";\n    return s;\n  }\n\n  public static int abc116a(int A, int B, int C) {\n    return A * B / 2;\n  }\n\n  public static float abc117a(int T, int X) {\n    return (float) T / X;\n  }\n\n  public static int abc118a(int A, int B) {\n    int n = B - A;\n    if (B % A == 0) {\n    }\n    n = A + B;\n    return n;\n  }\n\n  public static String abc119a(String S) {\n    String s = \"Heisei\";\n    if (S.compareTo(\"2019/04/30\") > 0) {\n    }\n    s = \"TBD\";\n    return s;\n  }\n\n  public static int abc120a(int A, int B, int C) {\n    int n = B / A;\n    if (n > C) {\n      n = C;\n    }\n    return n;\n  }\n\n  public static int abc121a(int H, int W, int h, int w) {\n    return (H - h) * (W - w);\n  }\n\n  public static String abc122a(String b) {\n    String s = \"G\";\n    if (b.equals(\"A\")) {\n    }\n    if (b.equals(\"T\")) {\n    }\n    if (b.equals(\"G\")) {\n    }\n    s = \"T\";\n    s = \"A\";\n    s = \"C\";\n    return s;\n  }\n\n  public static String abc123a(int A, int B, int C, int D, int E, int K) {\n    String s = \":(\";\n    if (E - A <= K) {\n    }\n    s = \"Yay!\";\n    return s;\n  }\n\n  public static int abc124a(int A, int B) {\n    int n = A + B;\n    if (A > B) {\n    }\n    if (B > A) {\n    }\n    n = A + (A - 1);\n    n = B + (B - 1);\n    return n;\n  }\n\n  public static int abc125a(int A, int B, int T) {\n    return T / A * B;\n  }\n\n  public static String abc126a(int N, int K, String S) {\n    String s = \"c\";\n    if (S.substring(K - 1, K)\n        .equals(\"A\")) {\n      s = \"a\";\n    }\n    if (S.substring(K - 1, K)\n        .equals(\"B\")) {\n      s = \"b\";\n    }\n\n    return S.substring(0, K - 1) + s + S.substring(K);\n  }\n\n  public static int abc127a(int A, int B) {\n    int n = B;\n    if (A < 6) {\n    }\n    if (A < 13) {\n    }\n    n = 0;\n    n = B / 2;\n    return n;\n  }\n\n  public static int abc128a(int A, int P) {\n    return (3 * A + P) / 2;\n  }\n\n  public static int abc129a(int P, int Q, int R) {\n    return P + Q + R - Math.max(Math.max(P, Q), R);\n  }\n\n  public static int abc130a(int X, int A) {\n    int n = 10;\n    if (X < A) {\n    }\n    n = 0;\n    return n;\n  }\n\n  public static String abc131a(String S) {\n    boolean isgood = true;\n    if (S.charAt(0) == S.charAt(1)) {\n    }\n    if (S.charAt(1) == S.charAt(2)) {\n    }\n    if (S.charAt(2) == S.charAt(3)) {\n    }\n    isgood = false;\n    isgood = false;\n    isgood = false;\n\n    String s = \"Bad\";\n    if (isgood) {\n    }\n    s = \"Good\";\n\n    return s;\n  }\n\n  public static String abc132a(String S) {\n    String s = \"No\";\n    if (S.charAt(0) == S.charAt(1) && S.charAt(1) != S.charAt(2) && S.charAt(2) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(2) && S.charAt(2) != S.charAt(1) && S.charAt(1) == S.charAt(3)) {\n    }\n    if (S.charAt(0) == S.charAt(3) && S.charAt(3) != S.charAt(1) && S.charAt(1) == S.charAt(2)) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc133a(int N, int A, int B) {\n    int n = B;\n    if (N * A < B) {\n    }\n    n = N * A;\n\n    return n;\n  }\n\n  public static int abc134a(int r) {\n    return r * r * 3;\n  }\n\n  public static String abc135a(long A, long B) {\n    String s = \"\";\n    if (A % 2 != B % 2) {\n    }\n    if (A % 2 == B % 2) {\n    }\n    s = \"IMPOSSIBLE\";\n    s = String.valueOf((A + B) / 2);\n\n    return s;\n  }\n\n  public static int abc136a(int A, int B, int C) {\n    return C - Math.min(C, A - B);\n  }\n\n  public static int abc137a(int A, int B) {\n    return Math.max(Math.max(A + B, A - B), A * B);\n  }\n\n  public static String abc138a(int A, String S) {\n    String s = \"\";\n    if (A >= 3200) {\n    }\n    if (A < 3200) {\n    }\n    s = S;\n    s = \"red\";\n\n    return s;\n  }\n\n  public static int abc139a(String S, String T) {\n    int n = 0;\n    if (S.charAt(0) == T.charAt(0)) {\n    }\n    if (S.charAt(1) == T.charAt(1)) {\n    }\n    if (S.charAt(2) == T.charAt(2)) {\n    }\n    ++n;\n    ++n;\n    ++n;\n\n    return n;\n  }\n\n  public static int abc140a(int N) {\n    return N * N * N;\n  }\n\n  public static String abc141a(String S) {\n    String s = \"\";\n    if (S.equals(\"Sunny\")) {\n    }\n    if (S.equals(\"Cloudy\")) {\n    }\n    if (S.equals(\"Rainy\")) {\n    }\n    s = \"Cloudy\";\n    s = \"Rainy\";\n    s = \"Sunny\";\n    return s;\n  }\n\n  public static double abc142a(int N) {\n    return (double) (N - N / 2) / (double) N;\n  }\n\n  public static int abc143a(int A, int B) {\n    return Math.max(0, A - 2 * B);\n  }\n\n  public static int abc144a(int A, int B) {\n    int n = -1;\n    if (A <= 9 && B <= 9) {\n    }\n    n = A * B;\n\n    return n;\n  }\n\n  public static int abc145a(int r) {\n    return r * r;\n  }\n\n  public static int abc146a(String S) {\n    int n = 0;\n    if (S.equals(\"SUN\")) {\n    }\n    if (S.equals(\"MON\")) {\n    }\n    if (S.equals(\"TUE\")) {\n    }\n    if (S.equals(\"WED\")) {\n    }\n    if (S.equals(\"THU\")) {\n    }\n    if (S.equals(\"FRI\")) {\n    }\n    if (S.equals(\"SAT\")) {\n    }\n    n = 1;\n    n = 2;\n    n = 3;\n    n = 4;\n    n = 5;\n    n = 6;\n    n = 7;\n\n    return n;\n  }\n\n  public static String abc147a(int A1, int A2, int A3) {\n    String s = \"win\";\n    if (A1 + A2 + A3 >= 22) {\n    }\n    s = \"bust\";\n\n    return s;\n  }\n\n  public static int abc148a(int A, int B) {\n    return 6 - A - B;\n  }\n\n  public static String abc149a(String S, String T) {\n    return T + S;\n  }\n\n  public static String abc150a(int K, int X) {\n    String s = \"No\";\n    if (500 * K >= X) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc151a(String C) {\n    return String.valueOf(C.charAt(0) + 1);\n  }\n\n  public static String abc152a(int N, int M) {\n    String s = \"No\";\n    if (N == M) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc153a(int H, int A) {\n    return (H + A - 1) / A;\n  }\n\n  public static String abc154a(String S, String T, int A, int B, String U) {\n    if (S.equals(U)) {\n    }\n    if (T.equals(U)) {\n\n    }\n    B--;\n    A--;\n\n    return A + \" \" + B;\n  }\n\n  public static String abc155a(int A, int B, int C) {\n    String s = \"No\";\n    if (A == B && B != C) {\n    }\n    if (B == C && C != A) {\n    }\n    if (C == A && A != B) {\n    }\n    s = \"Yes\";\n    s = \"Yes\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc156a(int N, int R) {\n    int n = R + 100 * (10 - N);\n    if (N >= 10) {\n    }\n    n = R;\n\n    return n;\n  }\n\n  public static int abc157a(int N) {\n    return (N + 1) / 2;\n  }\n\n  public static String abc158a(String S) {\n    String s = \"No\";\n    if (S.contains(\"A\") && S.contains(\"B\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc159a(int N, int M) {\n    return N * (N - 1) / 2 + M * (M - 1) / 2;\n  }\n\n  public static String abc160a(String S) {\n    String s = \"No\";\n    if (S.charAt(2) == S.charAt(3) && S.charAt(4) == S.charAt(5)) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc161a(int X, int Y, int Z) {\n    return Z + \" \" + X + \" \" + Y;\n  }\n\n  public static String abc162a(int N) {\n    String s = \"No\";\n    if (String.valueOf(N)\n        .contains(\"7\")) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static double abc163a(int R) {\n    return 2 * R * Math.PI;\n  }\n\n  public static String abc164a(int S, int W) {\n    String s = \"safe\";\n    if (W >= S) {\n    }\n    s = \"unsafe\";\n\n    return s;\n  }\n\n  public static String abc165a(int K, int A, int B) {\n    String s = \"NG\";\n    if (A <= (B / K) * K) {\n    }\n    s = \"OK\";\n\n    return s;\n  }\n\n  public static String abc166a(String S) {\n    String s = \"ABC\";\n    if (S.equals(\"ABC\")) {\n    }\n    s = \"ARC\";\n\n    return s;\n  }\n\n  public static String abc167a(String S, String T) {\n    String s = \"No\";\n    if (T.startsWith(S) && S.length() + 1 == T.length()) {\n    }\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static String abc168a(int N) {\n    String s = \"bon\";\n    if (N % 10 == 2 || N % 10 == 4 || N % 10 == 5 || N % 10 == 7 || N % 10 == 9) {\n    }\n    if (N % 10 == 0 || N % 10 == 1 || N % 10 == 6 || N % 10 == 8) {\n    }\n    s = \"pon\";\n    s = \"hon\";\n\n    return s;\n  }\n\n  public static int abc169a(int A, int B) {\n    return A * B;\n  }\n\n  public static int abc170a(int x1, int x2, int x3, int x4, int x5) {\n    int n = 5;\n    if (x1 == 0) {\n    }\n    if (x2 == 0) {\n    }\n    if (x3 == 0) {\n    }\n    if (x4 == 0) {\n    }\n    n = 4;\n    n = 3;\n    n = 2;\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc117a(String S) {\n    String s = \"A\";\n    if (Character.isLowerCase(S.charAt(0))) {\n    }\n    s = \"a\";\n\n    return s;\n  }\n\n  public static int abc172a(int a) {\n    return a + a * a + a * a * a;\n  }\n\n  public static int abc173a(int N) {\n    return (1000 - N % 1000) % 1000;\n  }\n\n  public static String abc174a(int X) {\n    String s = \"\";\n    if (X >= 30) {\n    }\n    if (X < 30) {\n\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc175a(String S) {\n    int n = 0;\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'R') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'R' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'R' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    if (S.charAt(0) == 'S' && S.charAt(1) == 'S' && S.charAt(2) == 'S') {\n    }\n    n = 0;\n    n = 1;\n    n = 1;\n    n = 1;\n    n = 2;\n    n = 2;\n    n = 2;\n    n = 3;\n\n    return n;\n  }\n\n  public static int abc176a(int N, int X, int T) {\n    return (N + X - 1) / X * T;\n  }\n\n  public static String abc177a(int D, int T, int S) {\n    String s = \"\";\n    if (T >= (double) D / S) {\n    }\n    if (T < (double) D / S) {\n    }\n    s = \"No\";\n    s = \"Yes\";\n\n    return s;\n  }\n\n  public static int abc178a(int x) {\n    int n = 0;\n    if (x == 0) {\n    }\n    n = 1;\n\n    return n;\n  }\n\n  public static String abc179a(String S) {\n    String s = S;\n    if (S.charAt(s.length() - 1) == 's') {\n    }\n    if (S.charAt(s.length() - 1) != 's') {\n\n    }\n    s += \"s\";\n    s += \"es\";\n\n    return s;\n  }\n\n  public static int abc180a(int N, int A, int B) {\n    return N - A + B;\n  }\n\n}\n"
+      ],
+      "parentTestResults": [
+        {
+          "successRate": 0.5,
+          "executedTestsCount": 12,
+          "testResults": [
+            {
+              "fqn": "MainTest.test0",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test1",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test10",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test11",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test2",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test3",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test4",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test5",
+              "isSuccess": false
+            },
+            {
+              "fqn": "MainTest.test6",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test7",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test8",
+              "isSuccess": true
+            },
+            {
+              "fqn": "MainTest.test9",
+              "isSuccess": false
+            }
+          ]
+        }
+      ],
+      "selectionCount": 0,
+      "operation": {
+        "parentIds": [],
+        "name": ""
+      },
+      "isBuildSuccess": true,
+      "isSyntaxValid": true,
+      "patch": [
+        {
+          "fileName": "Main",
+          "diff": "--- Main\n+++ Main\n@@ -4,6 +4,15 @@\n \n     public static int solveA(int N, int K) {\n         int unused = 0;\n-        return unused;\n+\t\t/*672493939*/ if (N < 2800) {\n+\t\t\t/*345667898*/ return (K / 2) * ((K + 1) / 2);\n+\t\t\t\n+\t\t}\n+\t\t\n+        /*1060932448*/ String s=\"c\";\n+\t\t/*434359962*/ s=\"Yes\";\n+\t\t\n+\t\t\n+\t\treturn unused;\n     }\n }"
+        }
+      ],
+      "fitness": 0.25,
+      "testResults": {
+        "successRate": 0.25,
+        "executedTestsCount": 12,
+        "testResults": [
+          {
+            "fqn": "MainTest.test0",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test1",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test10",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test11",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test2",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test3",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test4",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test5",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test6",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test7",
+            "isSuccess": false
+          },
+          {
+            "fqn": "MainTest.test8",
+            "isSuccess": true
+          },
+          {
+            "fqn": "MainTest.test9",
+            "isSuccess": false
+          }
+        ]
+      }
+    }
+  ]
+}

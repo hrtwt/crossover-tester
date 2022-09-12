@@ -10,8 +10,12 @@ import jp.kusumotolab.kgenprog.ga.crossover.Crossover.Type;
 import jp.kusumotolab.kgenprog.ga.crossover.FirstVariantRandomSelection;
 import jp.kusumotolab.kgenprog.ga.crossover.LinkageCrossover;
 import jp.kusumotolab.kgenprog.ga.crossover.SecondVariantRandomSelection;
+import jp.kusumotolab.kgenprog.ga.validation.MultiObjectiveFitness;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.ga.variant.VariantStore;
+import jp.kusumotolab.kgenprog.project.GenerationFailedSourceCode;
+import jp.kusumotolab.kgenprog.project.test.EmptyTestResults;
+import jp.kusumotolab.kgenprog.project.test.TestResults;
 
 public enum CrossoverType {
   Random(Type.Random) {},
@@ -58,7 +62,19 @@ public enum CrossoverType {
       final List<?> v = (List<?>) execMethod.invoke(co, List.of(v1, v2), vs);
       return (List<Variant>) v;
     } catch (final ReflectiveOperationException e) {
-      throw new IllegalStateException("can not crossover with" + this.name(), e);
+      final String errMsg = "can not crossover with" + this.name() + ": " + e.getMessage();
+      final TestResults tr = new EmptyTestResults(errMsg);
+      final Variant emptyVariant =
+          new Variant(
+              -1,
+              -1,
+              null,
+              new GenerationFailedSourceCode(errMsg),
+              tr,
+              new MultiObjectiveFitness(tr),
+              null,
+              null);
+      return List.of(emptyVariant);
     }
   }
 

@@ -12,8 +12,9 @@ class AppTest {
 
   public static Stream<Arguments> exampleProvider() {
     return Stream.of(
-        arguments(Paths.get("./example/ABC139A/"), Paths.get("./example/ABC139A/variants.json")),
-        arguments(Paths.get("./example/ABC102A/"), Paths.get("./example/ABC102A/ABC102A-0-1.json")));
+        arguments(Paths.get("./example/ABC102A/"), Paths.get("./example/ABC102A/ABC102A-0-1.json")),
+        arguments(Paths.get("./example/ABC105A/"), Paths.get("./example/ABC105A/ABC105A-0-0.json")),
+        arguments(Paths.get("./example/ABC139A/"), Paths.get("./example/ABC139A/variants.json")));
   }
 
   @ParameterizedTest
