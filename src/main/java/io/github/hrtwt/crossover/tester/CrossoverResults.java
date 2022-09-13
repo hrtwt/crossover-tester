@@ -16,6 +16,9 @@ public class CrossoverResults {
   private long dominateParentsCount = -1;
   private long dominatedByParentsCount = -1;
   private long dominatedByAllParentsCount = -1;
+
+  private long complementaryParentsCount = -1;
+  private long complementaryAllParentsCount = -1;
   private long buildSuccessChildrenCount = -1;
   private long syntaxValidChildrenCount = -1;
   private long makeChildrenCount = -1;
@@ -38,6 +41,9 @@ public class CrossoverResults {
     updateDominatedByParentsCount();
     updateDominatedByAllParentsCount();
 
+    updateComplementaryParentsCount();
+    updateComplementaryAllParentsCount();
+
     updateMakeChildrenCount();
     updateBuildSuccessChildrenCount();
     updateBuildFailedChildrenCount();
@@ -46,22 +52,50 @@ public class CrossoverResults {
 
   private void updateDominateAllParentsCount() {
     dominateAllParentsCount =
-        children.stream().filter(VariantWithDominance::isDominateAllParents).count();
+        children.stream()
+            .filter(VariantWithDominance::isBuildSuccess)
+            .filter(VariantWithDominance::isDominateAllParents)
+            .count();
   }
 
   private void updateDominateParentsCount() {
     dominateParentsCount =
-        children.stream().filter(VariantWithDominance::isDominateParents).count();
+        children.stream()
+            .filter(VariantWithDominance::isBuildSuccess)
+            .filter(VariantWithDominance::isDominateParents)
+            .count();
   }
 
   private void updateDominatedByParentsCount() {
     dominatedByParentsCount =
-        children.stream().filter(VariantWithDominance::isDominatedByParents).count();
+        children.stream()
+            .filter(VariantWithDominance::isBuildSuccess)
+            .filter(VariantWithDominance::isDominatedByParents)
+            .count();
   }
 
   private void updateDominatedByAllParentsCount() {
     dominatedByAllParentsCount =
-        children.stream().filter(VariantWithDominance::isDominatedByAllParents).count();
+        children.stream()
+            .filter(VariantWithDominance::isBuildSuccess)
+            .filter(VariantWithDominance::isDominatedByAllParents)
+            .count();
+  }
+
+  private void updateComplementaryParentsCount() {
+    complementaryParentsCount =
+        children.stream()
+            .filter(VariantWithDominance::isBuildSuccess)
+            .filter(VariantWithDominance::isComplementaryParents)
+            .count();
+  }
+
+  private void updateComplementaryAllParentsCount() {
+    complementaryAllParentsCount =
+        children.stream()
+            .filter(VariantWithDominance::isBuildSuccess)
+            .filter(VariantWithDominance::isComplementaryAllParents)
+            .count();
   }
 
   private void updateBuildSuccessChildrenCount() {
@@ -99,6 +133,14 @@ public class CrossoverResults {
     return dominatedByAllParentsCount;
   }
 
+  public long getComplementaryParentsCount() {
+    return complementaryParentsCount;
+  }
+
+  public long getComplementaryAllParentsCount() {
+    return complementaryAllParentsCount;
+  }
+
   public long getBuildSuccessChildrenCount() {
     return buildSuccessChildrenCount;
   }
@@ -122,9 +164,13 @@ public class CrossoverResults {
     public final boolean isDominateParents;
     public final boolean isDominatedByParents;
     public final boolean isDominatedByAllParents;
+    public final boolean isComplementaryParents;
+    public final boolean isComplementaryAllParents;
 
     public final boolean isBuildSuccess;
     public final boolean isSyntaxValid;
+
+    public final long numberOfLines;
 
     public VariantWithDominance(final Variant child, final Collection<Variant> parents) {
       this.child = child;
@@ -137,8 +183,15 @@ public class CrossoverResults {
       this.isDominateParents = Util.isDominateParents(parents, child);
       this.isDominatedByParents = Util.isDominatedByParents(parents, child);
       this.isDominatedByAllParents = Util.isDominatedByAllParents(parents, child);
+      this.isComplementaryParents = Util.isComplementaryParents(parents, child);
+      this.isComplementaryAllParents = Util.isComplementaryAllParents(parents, child);
       this.isBuildSuccess = child.isBuildSucceeded();
       this.isSyntaxValid = child.isSyntaxValid();
+      if (isBuildSuccess) {
+        numberOfLines = child.getGeneratedSourceCode().getProductAsts().get(0).getNumberOfLines();
+      } else {
+        numberOfLines = -1;
+      }
     }
 
     public boolean isDominateParents() {
@@ -155,6 +208,14 @@ public class CrossoverResults {
 
     public boolean isDominateAllParents() {
       return isDominateAllParents;
+    }
+
+    public boolean isComplementaryParents() {
+      return isComplementaryParents;
+    }
+
+    public boolean isComplementaryAllParents() {
+      return isComplementaryAllParents;
     }
 
     public boolean isBuildSuccess() {

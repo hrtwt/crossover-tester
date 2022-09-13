@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -59,7 +60,10 @@ public class CrossoverTester implements Runnable {
 
     final CrossoverResults results = new CrossoverResults(type, parents);
 
-    children.subList(0, this.generatingVariants).forEach(v -> results.addChild(v, parents));
+    children.stream()
+        .sorted(Comparator.comparing(Variant::getFitness).reversed())
+        .limit(this.generatingVariants)
+        .forEach(c -> results.addChild(c, parents));
 
     return results;
   }
@@ -116,15 +120,17 @@ public class CrossoverTester implements Runnable {
     ret.addProperty("crossoverType", results.crossoverType.name());
 
     ret.addProperty("makeChildrenCount", results.getMakeChildrenCount());
-    ret.addProperty("buildSuccessChildrenCount", results.getBuildSuccessChildrenCount());
-    ret.addProperty("buildFailedChildrenCount", results.getBuildFailedChildrenCount());
     ret.addProperty("syntaxValidChildrenCount", results.getSyntaxValidChildrenCount());
+    ret.addProperty("buildFailedChildrenCount", results.getBuildFailedChildrenCount());
+    ret.addProperty("buildSuccessChildrenCount", results.getBuildSuccessChildrenCount());
 
     ret.addProperty("dominateAllParentsCount", results.getDominateAllParentsCount());
     ret.addProperty("dominateParentsCount", results.getDominateParentsCount());
     ret.addProperty("dominatedByParentsCount", results.getDominatedByParentsCount());
     ret.addProperty("dominatedByAllParentsCount", results.getDominatedByAllParentsCount());
 
+    ret.addProperty("complementaryParentsCount", results.getComplementaryParentsCount());
+    ret.addProperty("complementaryAllParentsCount", results.getComplementaryAllParentsCount());
     return ret;
   }
 

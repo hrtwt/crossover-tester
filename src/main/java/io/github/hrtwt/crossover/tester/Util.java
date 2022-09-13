@@ -113,4 +113,28 @@ public class Util {
     }
     return false;
   }
+
+  public static boolean isComplementaryParents(
+      final Collection<Variant> parents, final Variant child) {
+    final MultiObjectiveFitness childFitness = (MultiObjectiveFitness) child.getFitness();
+    for (final Variant parent : parents) {
+      final MultiObjectiveFitness parentFitness = (MultiObjectiveFitness) parent.getFitness();
+      if (childFitness.compareTo(parentFitness) == 0) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public static boolean isComplementaryAllParents(
+      final Collection<Variant> parents, final Variant child) {
+    final MultiObjectiveFitness childFitness = (MultiObjectiveFitness) child.getFitness();
+    for (final Variant parent : parents) {
+      final MultiObjectiveFitness parentFitness = (MultiObjectiveFitness) parent.getFitness();
+      if (childFitness.compareTo(parentFitness) != 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
