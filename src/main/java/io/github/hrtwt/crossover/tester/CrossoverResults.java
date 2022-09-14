@@ -1,9 +1,9 @@
 package io.github.hrtwt.crossover.tester;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.project.test.EmptyTestResults;
@@ -12,210 +12,201 @@ public class CrossoverResults {
   public final CrossoverType crossoverType;
   public final List<Variant> parents;
   public final List<VariantWithDominance> children = new ArrayList<>();
-  private long dominateAllParentsCount = -1;
-  private long dominateParentsCount = -1;
-  private long dominatedByParentsCount = -1;
-  private long dominatedByAllParentsCount = -1;
-
-  private long complementaryParentsCount = -1;
-  private long complementaryAllParentsCount = -1;
-  private long buildSuccessChildrenCount = -1;
-  private long syntaxValidChildrenCount = -1;
   private long makeChildrenCount = -1;
-  private long buildFailedChildrenCount = -1;
+  private long syntaxValidChildrenCount = -1;
+  private long buildSuccessChildrenCount = -1;
+  private long dominateAllParentsCount = -1;
+  private long dominatedByAllParentsCount = -1;
+  private long complementaryAllParentsCount = -1;
+  private long equalAllParentsCount = -1;
+
+  private long dominateDominatedCount = -1;
+  private long dominateComplementaryCount = -1;
+  private long dominatedComplementaryCount = -1;
+  private long dominateEqualCount = -1;
+  private long dominatedEqualCount = -1;
+  private long complementaryEqualCount = -1;
 
   public CrossoverResults(final CrossoverType type, final List<Variant> parents) {
     this.crossoverType = type;
     this.parents = parents;
   }
 
-  public void addChild(final Variant child, final Collection<Variant> parents) {
+  public void addChild(final Variant child, final List<Variant> parents) {
     final VariantWithDominance v = new VariantWithDominance(child, parents);
     children.add(v);
     updateCounts();
   }
 
   public void updateCounts() {
-    updateDominateAllParentsCount();
-    updateDominateParentsCount();
-    updateDominatedByParentsCount();
-    updateDominatedByAllParentsCount();
+    makeChildrenCount = children.size();
 
-    updateComplementaryParentsCount();
-    updateComplementaryAllParentsCount();
-
-    updateMakeChildrenCount();
-    updateBuildSuccessChildrenCount();
-    updateBuildFailedChildrenCount();
-    updateSyntaxValidChildrenCount();
-  }
-
-  private void updateDominateAllParentsCount() {
-    dominateAllParentsCount =
-        children.stream()
-            .filter(VariantWithDominance::isBuildSuccess)
-            .filter(VariantWithDominance::isDominateAllParents)
-            .count();
-  }
-
-  private void updateDominateParentsCount() {
-    dominateParentsCount =
-        children.stream()
-            .filter(VariantWithDominance::isBuildSuccess)
-            .filter(VariantWithDominance::isDominateParents)
-            .count();
-  }
-
-  private void updateDominatedByParentsCount() {
-    dominatedByParentsCount =
-        children.stream()
-            .filter(VariantWithDominance::isBuildSuccess)
-            .filter(VariantWithDominance::isDominatedByParents)
-            .count();
-  }
-
-  private void updateDominatedByAllParentsCount() {
-    dominatedByAllParentsCount =
-        children.stream()
-            .filter(VariantWithDominance::isBuildSuccess)
-            .filter(VariantWithDominance::isDominatedByAllParents)
-            .count();
-  }
-
-  private void updateComplementaryParentsCount() {
-    complementaryParentsCount =
-        children.stream()
-            .filter(VariantWithDominance::isBuildSuccess)
-            .filter(VariantWithDominance::isComplementaryParents)
-            .count();
-  }
-
-  private void updateComplementaryAllParentsCount() {
-    complementaryAllParentsCount =
-        children.stream()
-            .filter(VariantWithDominance::isBuildSuccess)
-            .filter(VariantWithDominance::isComplementaryAllParents)
-            .count();
-  }
-
-  private void updateBuildSuccessChildrenCount() {
-    buildSuccessChildrenCount =
-        children.stream().filter(VariantWithDominance::isBuildSuccess).count();
-  }
-
-  private void updateSyntaxValidChildrenCount() {
     syntaxValidChildrenCount =
         children.stream().filter(VariantWithDominance::isSyntaxValid).count();
-  }
 
-  private void updateMakeChildrenCount() {
-    makeChildrenCount = children.size();
-  }
+    buildSuccessChildrenCount =
+        children.stream().filter(VariantWithDominance::isBuildSuccess).count();
 
-  private void updateBuildFailedChildrenCount() {
-    buildFailedChildrenCount =
-        children.stream().filter(Predicate.not(VariantWithDominance::isBuildSuccess)).count();
-  }
+    final List<VariantWithDominance> buildableChildren =
+        children.stream().filter(VariantWithDominance::isBuildSuccess).collect(Collectors.toList());
 
-  public long getDominateAllParentsCount() {
-    return dominateAllParentsCount;
-  }
+    dominateAllParentsCount =
+        buildableChildren.stream().filter(VariantWithDominance::isDominateAllParents).count();
 
-  public long getDominateParentsCount() {
-    return dominateParentsCount;
-  }
+    dominatedByAllParentsCount =
+        buildableChildren.stream().filter(VariantWithDominance::isDominatedByAllParents).count();
 
-  public long getDominatedByParentsCount() {
-    return dominatedByParentsCount;
-  }
+    complementaryAllParentsCount =
+        buildableChildren.stream().filter(VariantWithDominance::isComplementaryAllParents).count();
 
-  public long getDominatedByAllParentsCount() {
-    return dominatedByAllParentsCount;
-  }
+    equalAllParentsCount =
+        buildableChildren.stream().filter(VariantWithDominance::isEqualAllParents).count();
 
-  public long getComplementaryParentsCount() {
-    return complementaryParentsCount;
-  }
+    dominateDominatedCount =
+        buildableChildren.stream()
+            .filter(c -> c.isDominateParents() && c.isDominatedByParents())
+            .count();
 
-  public long getComplementaryAllParentsCount() {
-    return complementaryAllParentsCount;
-  }
+    dominateComplementaryCount =
+        buildableChildren.stream()
+            .filter(c -> c.isDominateParents() && c.isComplementaryParents())
+            .count();
 
-  public long getBuildSuccessChildrenCount() {
-    return buildSuccessChildrenCount;
-  }
+    dominatedComplementaryCount =
+        buildableChildren.stream()
+            .filter(c -> c.isDominatedByParents() && c.isComplementaryParents())
+            .count();
 
-  public long getSyntaxValidChildrenCount() {
-    return syntaxValidChildrenCount;
+    dominateEqualCount =
+        buildableChildren.stream().filter(c -> c.isDominateParents() && c.isEqualParents()).count();
+
+    dominatedEqualCount =
+        buildableChildren.stream()
+            .filter(c -> c.isDominatedByParents() && c.isEqualParents())
+            .count();
+
+    complementaryEqualCount =
+        buildableChildren.stream()
+            .filter(c -> c.isComplementaryParents() && c.isEqualParents())
+            .count();
   }
 
   public long getMakeChildrenCount() {
     return makeChildrenCount;
   }
 
-  public long getBuildFailedChildrenCount() {
-    return buildFailedChildrenCount;
+  public long getSyntaxValidChildrenCount() {
+    return syntaxValidChildrenCount;
+  }
+
+  public long getBuildSuccessChildrenCount() {
+    return buildSuccessChildrenCount;
+  }
+
+  public long getDominateAllParentsCount() {
+    return dominateAllParentsCount;
+  }
+
+  public long getDominatedByAllParentsCount() {
+    return dominatedByAllParentsCount;
+  }
+
+  public long getComplementaryAllParentsCount() {
+    return complementaryAllParentsCount;
+  }
+
+  public long getEqualAllParentsCount() {
+    return equalAllParentsCount;
+  }
+
+  public long getDominateDominatedCount() {
+    return dominateDominatedCount;
+  }
+
+  public long getDominateComplementaryCount() {
+    return dominateComplementaryCount;
+  }
+
+  public long getDominatedComplementaryCount() {
+    return dominatedComplementaryCount;
+  }
+
+  public long getDominateEqualCount() {
+    return dominateEqualCount;
+  }
+
+  public long getDominatedEqualCount() {
+    return dominatedEqualCount;
+  }
+
+  public long getComplementaryEqualCount() {
+    return complementaryEqualCount;
   }
 
   public static class VariantWithDominance {
     public final Variant child;
     public final String failedCause;
-    public final boolean isDominateAllParents;
-    public final boolean isDominateParents;
-    public final boolean isDominatedByParents;
-    public final boolean isDominatedByAllParents;
-    public final boolean isComplementaryParents;
-    public final boolean isComplementaryAllParents;
-
+    public final List<VariantRelation> parentRelation;
     public final boolean isBuildSuccess;
     public final boolean isSyntaxValid;
 
     public final long numberOfLines;
 
-    public VariantWithDominance(final Variant child, final Collection<Variant> parents) {
+    public VariantWithDominance(final Variant child, final List<Variant> parents) {
       this.child = child;
+
       if (child.getTestResults() instanceof EmptyTestResults) {
         failedCause = ((EmptyTestResults) child.getTestResults()).getCause();
       } else {
         failedCause = "";
       }
-      this.isDominateAllParents = Util.isDominateAllParents(parents, child);
-      this.isDominateParents = Util.isDominateParents(parents, child);
-      this.isDominatedByParents = Util.isDominatedByParents(parents, child);
-      this.isDominatedByAllParents = Util.isDominatedByAllParents(parents, child);
-      this.isComplementaryParents = Util.isComplementaryParents(parents, child);
-      this.isComplementaryAllParents = Util.isComplementaryAllParents(parents, child);
+
       this.isBuildSuccess = child.isBuildSucceeded();
       this.isSyntaxValid = child.isSyntaxValid();
+
       if (isBuildSuccess) {
+        this.parentRelation =
+            parents.stream()
+                .map(p -> VariantRelation.compare(child, p))
+                .collect(Collectors.toList());
+
         numberOfLines = child.getGeneratedSourceCode().getProductAsts().get(0).getNumberOfLines();
       } else {
+        this.parentRelation = Collections.emptyList();
         numberOfLines = -1;
       }
     }
 
     public boolean isDominateParents() {
-      return isDominateParents;
+      return parentRelation.contains(VariantRelation.DOMINATE);
     }
 
     public boolean isDominatedByParents() {
-      return isDominatedByParents;
+      return parentRelation.contains(VariantRelation.DOMINATED);
     }
 
     public boolean isDominatedByAllParents() {
-      return isDominatedByAllParents;
+      return VariantRelation.isDominatedAll(parentRelation);
     }
 
     public boolean isDominateAllParents() {
-      return isDominateAllParents;
+      return VariantRelation.isDominateAll(parentRelation);
     }
 
     public boolean isComplementaryParents() {
-      return isComplementaryParents;
+      return parentRelation.contains(VariantRelation.COMPLEMENT);
     }
 
     public boolean isComplementaryAllParents() {
-      return isComplementaryAllParents;
+      return VariantRelation.isComplementAll(parentRelation);
+    }
+
+    public boolean isEqualAllParents() {
+      return VariantRelation.isEqualAll(parentRelation);
+    }
+
+    public boolean isEqualParents() {
+      return parentRelation.contains(VariantRelation.EQUAL);
     }
 
     public boolean isBuildSuccess() {

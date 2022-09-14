@@ -55,12 +55,12 @@ public class CrossoverTypeTest {
   }
 
   @Test
-  void UniformCrossoverTest() throws Exception {
+  void UniformCrossoverTest() {
     final Path project = Paths.get("./example/ABC120A");
-    final List<JsonVariant> jsons = parsedVariants(project.resolve("ABC120A-1-40.json"));
-    final Variant v1 = VariantBuilder.makeVariant(jsons.get(0), Util.createVariantStore(project));
-    final Variant v2 = VariantBuilder.makeVariant(jsons.get(1), Util.createVariantStore(project));
-    final CrossoverResults r = new CrossoverTester(project, null, 10, 0).execCrossover(v1, v2, CrossoverType.Uniform);
-    System.out.println(r);
+    final String json = Util.readString(project.resolve("ABC120A-1-40.json"));
+    final List<CrossoverResults> r =
+        new CrossoverTester(project, json, 10, 0).execCrossover(List.of(CrossoverType.Uniform));
+    assertThat(r.size()).isGreaterThan(0);
+    //    System.out.println(r);
   }
 }

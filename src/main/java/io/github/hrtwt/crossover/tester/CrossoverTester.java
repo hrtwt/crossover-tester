@@ -36,6 +36,9 @@ public class CrossoverTester implements Runnable {
     this.randomSeed = seed;
     this.inputJson = inputJson;
     this.generatingVariants = generatingVariants;
+
+    final List<JsonVariant> jsonVariants = JsonVariantParser.parseComplementaryVariants(inputJson);
+    parents.addAll(makeVariant(jsonVariants));
   }
 
   public List<CrossoverResults> execCrossover(final Collection<CrossoverType> types) {
@@ -106,32 +109,12 @@ public class CrossoverTester implements Runnable {
     ret.add("config", buildMetaInfoAsJson());
 
     final List<JsonElement> stats =
-        results.stream().map(this::buildCrossoverStatsAsJson).collect(Collectors.toList());
+        results.stream().map(CrossoverSummary::new).map(gson::toJsonTree).collect(Collectors.toList());
     ret.add("stats", gson.toJsonTree(stats));
 
     ret.add("results", gson.toJsonTree(results));
 
     return gson.toJson(ret);
-  }
-
-  private JsonElement buildCrossoverStatsAsJson(final CrossoverResults results) {
-    final JsonObject ret = new JsonObject();
-
-    ret.addProperty("crossoverType", results.crossoverType.name());
-
-    ret.addProperty("makeChildrenCount", results.getMakeChildrenCount());
-    ret.addProperty("syntaxValidChildrenCount", results.getSyntaxValidChildrenCount());
-    ret.addProperty("buildFailedChildrenCount", results.getBuildFailedChildrenCount());
-    ret.addProperty("buildSuccessChildrenCount", results.getBuildSuccessChildrenCount());
-
-    ret.addProperty("dominateAllParentsCount", results.getDominateAllParentsCount());
-    ret.addProperty("dominateParentsCount", results.getDominateParentsCount());
-    ret.addProperty("dominatedByParentsCount", results.getDominatedByParentsCount());
-    ret.addProperty("dominatedByAllParentsCount", results.getDominatedByAllParentsCount());
-
-    ret.addProperty("complementaryParentsCount", results.getComplementaryParentsCount());
-    ret.addProperty("complementaryAllParentsCount", results.getComplementaryAllParentsCount());
-    return ret;
   }
 
   private JsonElement buildMetaInfoAsJson() {
@@ -146,9 +129,6 @@ public class CrossoverTester implements Runnable {
 
   @Override
   public void run() {
-    final List<JsonVariant> jsonVariants = JsonVariantParser.parseComplementaryVariants(inputJson);
-    parents.addAll(makeVariant(jsonVariants));
-
     final List<CrossoverResults> results = execCrossover(List.of(CrossoverType.values()));
 
     final String out = toJson(results);
