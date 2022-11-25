@@ -19,7 +19,7 @@ public class CrossoverSummary {
   public final long complementaryEqualCount;
 
   public CrossoverSummary(final CrossoverResults results) {
-    crossoverType = results.crossoverType.name();
+    crossoverType = results.getCrossoverType().name();
     makeChildrenCount = results.getMakeChildrenCount();
     syntaxValidChildrenCount = results.getSyntaxValidChildrenCount();
     buildSuccessChildrenCount = results.getBuildSuccessChildrenCount();

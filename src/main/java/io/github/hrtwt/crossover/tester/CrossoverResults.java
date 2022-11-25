@@ -7,11 +7,13 @@ import java.util.stream.Collectors;
 import io.github.hrtwt.crossover.tester.kgp.CrossoverType;
 import jp.kusumotolab.kgenprog.ga.variant.Variant;
 import jp.kusumotolab.kgenprog.project.test.EmptyTestResults;
+import lombok.Getter;
 
+@Getter
 public class CrossoverResults {
-  public final CrossoverType crossoverType;
-  public final List<Variant> parents;
-  public final List<VariantWithDominance> children = new ArrayList<>();
+  private final CrossoverType crossoverType;
+  private final List<Variant> parents;
+  private final List<VariantWithDominance> children = new ArrayList<>();
   private long makeChildrenCount = -1;
   private long syntaxValidChildrenCount = -1;
   private long buildSuccessChildrenCount = -1;
@@ -91,57 +93,6 @@ public class CrossoverResults {
             .count();
   }
 
-  public long getMakeChildrenCount() {
-    return makeChildrenCount;
-  }
-
-  public long getSyntaxValidChildrenCount() {
-    return syntaxValidChildrenCount;
-  }
-
-  public long getBuildSuccessChildrenCount() {
-    return buildSuccessChildrenCount;
-  }
-
-  public long getDominateAllParentsCount() {
-    return dominateAllParentsCount;
-  }
-
-  public long getDominatedByAllParentsCount() {
-    return dominatedByAllParentsCount;
-  }
-
-  public long getComplementaryAllParentsCount() {
-    return complementaryAllParentsCount;
-  }
-
-  public long getEqualAllParentsCount() {
-    return equalAllParentsCount;
-  }
-
-  public long getDominateDominatedCount() {
-    return dominateDominatedCount;
-  }
-
-  public long getDominateComplementaryCount() {
-    return dominateComplementaryCount;
-  }
-
-  public long getDominatedComplementaryCount() {
-    return dominatedComplementaryCount;
-  }
-
-  public long getDominateEqualCount() {
-    return dominateEqualCount;
-  }
-
-  public long getDominatedEqualCount() {
-    return dominatedEqualCount;
-  }
-
-  public long getComplementaryEqualCount() {
-    return complementaryEqualCount;
-  }
 
   public static class VariantWithDominance {
     public final Variant child;
