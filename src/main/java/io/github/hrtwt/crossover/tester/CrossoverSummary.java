@@ -11,12 +11,12 @@ public class CrossoverSummary {
   public final long equalAllParentsCount;
   public final long complementaryAllParentsCount;
 
-  public long dominateDominatedCount;
-  public long dominateComplementaryCount;
-  public long dominatedComplementaryCount;
-  public long dominateEqualCount;
-  public long dominatedEqualCount;
-  public long complementaryEqualCount;
+  public final long dominateDominatedCount;
+  public final long dominateComplementaryCount;
+  public final long dominatedComplementaryCount;
+  public final long dominateEqualCount;
+  public final long dominatedEqualCount;
+  public final long complementaryEqualCount;
 
   public CrossoverSummary(final CrossoverResults results) {
     crossoverType = results.crossoverType.name();
