@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -46,7 +47,7 @@ public class VariantBuilder {
       parent = store.createVariant(new Gene(bases), EmptyHistoricalElement.instance);
 
       if (!parent.isBuildSucceeded()) {
-        throw new IllegalStateException("failed to build variant: while making variant");
+        throw new IllegalStateException("failed to build variant: while making base");
       }
     }
 
@@ -62,16 +63,12 @@ public class VariantBuilder {
     final TestResults one = variant.getTestResults();
     final Map<TestFullyQualifiedName, Boolean> other = json.testResults;
 
-    if (one.getExecutedTestFQNs().size() != other.size()) {
+    if (!Objects.equals(one.getExecutedTestFQNs(), other.keySet())) {
       return false;
     }
 
-    for (final TestFullyQualifiedName fqn : other.keySet()) {
-      if (one.getTestResult(fqn).failed == other.get(fqn)) {
-        return false;
-      }
-    }
-    return true;
+    return one.getExecutedTestFQNs().stream()
+        .noneMatch(fqn -> one.getTestResult(fqn).failed == other.get(fqn));
   }
 
   public static Base makeBase(final JsonBase jsonBase, final Variant parent) {
