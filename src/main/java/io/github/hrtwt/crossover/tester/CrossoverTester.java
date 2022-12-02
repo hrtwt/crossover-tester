@@ -1,7 +1,6 @@
 package io.github.hrtwt.crossover.tester;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,6 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import org.apache.commons.lang3.reflect.MethodUtils;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -84,7 +84,6 @@ public class CrossoverTester implements Runnable {
   }
 
   private Gson retrieveGsonFromKGP() {
-    Gson gson = null;
     try {
       Class<?> clazz = Class.forName("jp.kusumotolab.kgenprog.output.JSONExporter");
 
@@ -92,14 +91,10 @@ public class CrossoverTester implements Runnable {
       constructor.setAccessible(true);
       Object obj = constructor.newInstance(Path.of(""));
 
-      Method method = clazz.getDeclaredMethod("setupGson");
-      method.setAccessible(true);
-      gson = (Gson) method.invoke(obj);
+      return (Gson) MethodUtils.invokeMethod(obj, true, "setupGson");
     } catch (final ReflectiveOperationException e) {
-      e.printStackTrace();
+      throw new IllegalStateException("can not retrieve gson from kgp:", e);
     }
-
-    return gson;
   }
 
   private String toJson(List<CrossoverResults> results) {
