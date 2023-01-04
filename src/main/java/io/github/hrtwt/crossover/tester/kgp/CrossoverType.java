@@ -74,7 +74,7 @@ public enum CrossoverType {
         random,
         new FirstVariantRandomSelection(random),
         new SecondVariantRandomSelection(random),
-        10,
-        10);
+        10, // number of variants per generation
+        Integer.MAX_VALUE); // number of required solution
   }
 }
